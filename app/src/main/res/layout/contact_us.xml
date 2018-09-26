@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:backgroundTint="@color/black_font"
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="30dp"
+            android:layout_centerVertical="true"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Bold_TextView
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Contact us"
+            android:layout_marginLeft="60dp"
+            android:gravity="left"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<LinearLayout
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <sportsfight.com.s.common.Bold_TextView
+
+        android:textSize="16dp"
+        android:textColor="@color/black_font"
+        android:text="Contact 24x7 Help"
+
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <sportsfight.com.s.common.Heading
+        android:textSize="12dp"
+        android:gravity="center"
+        android:text="Our executive will help you"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <sportsfight.com.s.common.Bold_TextView
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:textColor="@color/black_font"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:text="Sports Fight"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:textSize="12dp"
+android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:text="A-Wing, 2nd Floor,#4, Infocity,Madhapur, Hyderabad,
+Telangana, India -500 081"
+           android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+
+        android:layout_margin="20dp"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_marginLeft="10dp"
+               android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_contact_us"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+            <View
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/black_font"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"/>
+    <sportsfight.com.s.common.Heading
+        android:textSize="12dp"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:text="+91 40 6688 5666"
+        android:layout_height="match_parent" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/black_font"
+            android:layout_height="0.5dp"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/email_black"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+            <View
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/black_font"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"/>
+            <sportsfight.com.s.common.Heading
+
+                android:textSize="12dp"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:gravity="center_vertical"
+                android:text="ashishk@dmss.co.in"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

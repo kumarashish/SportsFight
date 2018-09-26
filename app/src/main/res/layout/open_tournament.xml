@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <sportsfight.com.s.common.Heading
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textSize="18dp"
+            android:text="Tournament (02)"
+            android:textColor="@color/black_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/viewAllResult"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/viewall"
+            android:gravity="end|center_vertical"
+            android:layout_alignParentRight="true"
+            android:textSize="16dp"
+            android:textColor="@color/black_overlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center">
+        <LinearLayout
+            android:background="@drawable/light_brown_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/foosball"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/mini_basketball" />
+
+                    <sportsfight.com.s.common.BoldFont
+                        android:id="@+id/info_text"
+                        android:layout_marginTop="-5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/tticon"
+                        android:gravity="center_vertical"
+                        android:text="MINI BASKETBALL"
+                        android:textColor="@color/lightbrown"
+                        android:textSize="23dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/middleView"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/linearLayout"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+
+                        android:layout_weight="0.5"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_marginTop="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:textSize="12dp"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/black_font"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="From : 05-02-2018" />
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+                                android:textSize="12dp"
+                                android:textColor="@color/black_font"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="To: 09-feb-2018" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_gravity="center"
+                            android:src="@drawable/mini_basketball"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/rightView"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+<Button
+    android:layout_marginTop="20dp"
+   android:gravity="center"
+    android:text="Join"
+    android:textColor="@color/white"
+    android:background="@drawable/purplebutton"
+    android:layout_width="100dp"
+    android:layout_height="40dp" />
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingLeft="5dp"
+
+                    android:paddingRight="5dp"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/linearLayout2"
+                    android:layout_below="@+id/middleView"
+                    android:layout_alignParentStart="true">
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/black_font"
+                        android:text="Schedule will be announced soon."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </LinearLayout>
+</LinearLayout>
+</LinearLayout>

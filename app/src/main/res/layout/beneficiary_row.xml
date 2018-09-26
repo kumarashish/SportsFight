@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <sportsfight.com.s.common.Heading
+        android:id="@+id/userName"
+
+        android:gravity="left"
+        android:text="Name"
+        android:textColor="@color/purple"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"  />
+    <sportsfight.com.s.common.Heading
+        android:id="@+id/userAccount"
+
+
+        android:text="Account Number"
+        android:textColor="@color/black_font"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:id="@+id/bankDetails"
+
+        android:gravity="left"
+        android:text="Bank"
+        android:textColor="@color/black_font"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:id="@+id/ifsccode"
+
+        android:gravity="left"
+        android:text="IFSC Code"
+        android:textColor="@color/black_font"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <View
+        android:layout_marginTop="10dp"
+        android:background="@color/black_font"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:layout_alignParentTop="true" />
+</RelativeLayout>

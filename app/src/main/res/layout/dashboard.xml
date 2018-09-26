@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_bg">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/menu"
+            android:layout_alignParentLeft="true"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:textColor="@color/black_font"
+            android:text="Home"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/logout"
+
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/logout"
+            android:layout_alignParentRight="true"
+            android:layout_width="25dp"
+            android:layout_height="28dp" />
+    </RelativeLayout>
+    <View
+        android:layout_above="@+id/footer"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <android.support.v7.widget.RecyclerView
+android:visibility="gone"
+          android:layout_marginBottom="50dp"
+          android:id="@+id/dashboardItemList"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:scrollbars="vertical"
+
+          />
+        <sportsfight.com.s.common.Heading
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="No Data "
+            android:textColor="@color/black_font"
+            android:textSize="20dp"
+            android:id="@+id/noItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <ImageButton
+            android:id="@+id/ipl"
+android:visibility="gone"
+            android:padding="1dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="70dp"
+            android:layout_marginRight="10dp"
+
+            android:background="@drawable/icon" />
+
+<View
+    android:layout_above="@+id/footer"
+    android:background="@color/light_grey"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    />
+        <LinearLayout
+            android:weightSum="6"
+            android:orientation="horizontal"
+            android:id="@+id/footer"
+            android:background="@color/silver"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+<LinearLayout
+    android:id="@+id/wallet_layout"
+    android:orientation="vertical"
+    android:layout_weight="1.2"
+    android:layout_width="0dp"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/wallet_icon"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/wallet"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"/>
+    <TextView
+        android:id="@+id/wallet_tv"
+        android:padding="2dp"
+        android:textSize="12dp"
+        android:textColor="@color/black_font"
+        android:text="Wallet"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+            <LinearLayout
+                android:id="@+id/reminder_layout"
+                android:orientation="vertical"
+                android:layout_weight="1.2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/reminder_icon"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"/>
+                <TextView
+                    android:id="@+id/reminder_tv"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/black_font"
+                    android:text="Reminders"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/alert_layout"
+                android:orientation="vertical"
+                android:layout_weight="1.2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/alert_icon"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/alert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"/>
+                <TextView
+                    android:id="@+id/alert_tv"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/black_font"
+                    android:text="Alerts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/myprofile_layout"
+                android:orientation="vertical"
+                android:layout_weight="1.2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/myprofile_icon"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"/>
+                <TextView
+                    android:id="@+id/myprofile_tv"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/black_font"
+                    android:text="My Profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/challenge_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/challenge_selector"
+            android:layout_width="75dp"
+            android:layout_height="75dp">
+            <ImageView
+
+                android:id="@+id/challenge_icon"
+                android:src="@drawable/challengehand"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <TextView
+                android:id="@+id/challenge_tv"
+                android:layout_below="@+id/challenge_icon"
+                android:text="Challenge"
+                android:textSize="13dp"
+                android:layout_marginTop="-5dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+</LinearLayout>

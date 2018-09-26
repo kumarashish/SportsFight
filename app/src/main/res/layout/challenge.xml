@@ -1,0 +1,1896 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Heading
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Challenge"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+    <View
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/view1"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <sportsfight.com.s.common.Heading
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"
+        android:textColor="@color/black_font"
+        android:text="Select Preffered Game"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:layout_marginTop="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textSize="16dp"
+        android:textColor="@color/light_grey"
+        android:text="Click to choose the game you want to challenge on"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+<LinearLayout
+    android:layout_margin="5dp"
+    android:weightSum="2"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="45dp"
+            android:layout_height="40dp">
+
+        <ImageView
+            android:id="@+id/tt_icon"
+            android:src="@drawable/tt_orange_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/tt_Selected"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="-5dp"
+                android:layout_marginBottom="1dp"
+                android:layout_alignRight="@+id/tt_icon"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/selected" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView2"
+          android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:text="Table Tennis"
+            android:textColor="@color/black_font"
+            android:textSize="18dp" />
+    </LinearLayout>
+        <View
+            android:id="@+id/tt_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+    <LinearLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_width="45dp"
+            android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/chess_icon"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/chess_orange"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/chess_selected"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="-5dp"
+                android:layout_marginBottom="1dp"
+                android:layout_alignRight="@+id/chess_icon"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/selected" />
+        </RelativeLayout>
+        <TextView
+            android:textColor="@color/black_font"
+            android:textSize="18dp"
+            android:layout_marginLeft="5dp"
+            android:text="Chess"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+        <View
+            android:id="@+id/chess_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+</LinearLayout>
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <LinearLayout
+
+                android:orientation="horizontal"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp">
+                <ImageView
+                    android:id="@+id/snookers_icon"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/pool_orange"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/snookers_selected"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="-5dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_alignRight="@+id/snookers_icon"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/selected" />
+                </RelativeLayout>
+                <TextView
+                    android:textColor="@color/black_font"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Pool/Snookers"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+                <View
+                    android:id="@+id/pool_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <LinearLayout
+
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp">
+                <ImageView
+                    android:id="@+id/foosball_icon"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/foos_ball_orange"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/foosball_selected"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="-5dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_alignRight="@+id/foosball_icon"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/selected" />
+                </RelativeLayout>
+                <TextView
+                    android:textColor="@color/black_font"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Foosball"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+                <View
+                    android:id="@+id/foosBall_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp">
+                <ImageView
+                    android:id="@+id/basketball_icon"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/basket_ball"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/basketball_selected"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="-5dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_alignRight="@+id/basketball_icon"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/selected" />
+
+                </RelativeLayout>
+                <TextView
+                    android:textColor="@color/black_font"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Mini BasketBall"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+                <View
+                    android:id="@+id/minibasketBall_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp">
+                <ImageView
+                    android:id="@+id/golf_icon"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/golf_orange"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/golf_selected"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="-5dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_alignRight="@+id/golf_icon"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/selected" />
+                </RelativeLayout>
+                <TextView
+                    android:textColor="@color/black_font"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Mini Golf"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+                <View
+                    android:id="@+id/minigolf_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp">
+                <ImageView
+                    android:id="@+id/airhockey_icon"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/air_hockey_orange"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/airhockey_selected"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="-5dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_alignRight="@+id/airhockey_icon"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/selected" />
+
+                </RelativeLayout>
+                <TextView
+                    android:textColor="@color/black_font"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Air Hockey"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+                <View
+                    android:id="@+id/airhockey_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_gravity="center_vertical"
+                    android:layout_width="45dp"
+                    android:layout_height="40dp">
+                <ImageView
+                    android:id="@+id/carrom_icon"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/carrom_orange"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                    <ImageView
+                        android:visibility="invisible"
+                        android:id="@+id/carrom_selected"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginRight="-5dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_alignRight="@+id/carrom_icon"
+                        android:layout_alignParentBottom="true"
+                        android:src="@drawable/selected" />
+                </RelativeLayout>
+                <TextView
+                    android:textColor="@color/black_font"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="Carrom"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+                <View
+                    android:id="@+id/carrom_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:visibility="invisible"
+                android:id="@+id/cancelView1_btn"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/purple_border_white_bg"
+                android:text="Cancel"
+                android:textColor="@color/purple" />
+
+            <Button
+                android:id="@+id/nextView1_btn"
+                android:layout_width="100dp"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/purplebutton"
+                android:text="Next"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+        <RelativeLayout
+android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/start"
+                android:rotation="90"
+                android:src="@drawable/semi_circle"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/fill_rectangle"
+                android:layout_marginLeft="-11dp"
+                android:layout_toRightOf="@+id/start"
+                android:id="@+id/firstScreen"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@color/silver"
+                android:layout_marginLeft="0.5dp"
+                android:layout_toRightOf="@+id/firstScreen"
+                android:id="@+id/second_Screen"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/silver"
+
+                android:layout_toRightOf="@+id/second_Screen"
+                android:id="@+id/third_Screen"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/silver"
+
+                android:layout_toRightOf="@+id/third_Screen"
+                android:id="@+id/fourth_Screen"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <View
+                android:layout_marginLeft="0.5dp"
+                android:background="@color/silver"
+                android:id="@+id/fifthScreen"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/fourth_Screen"/>
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:rotation="270"
+                android:scaleType="fitXY"
+                android:src="@drawable/semi_circle_silver"
+                android:layout_toRightOf="@+id/fifthScreen"
+                android:id="@+id/fifth_Screen"
+                android:layout_marginLeft="-6dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/firstScreen"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/second_Screen"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/third_Screen"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/fourth_Screen"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/view2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Select Your Opponent"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14dp"
+            android:textColor="@color/light_grey"
+            android:text="Click to choose your opponent you want to challenge on"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_margin="10dp"
+            android:textColor="@color/black_font"
+            android:background="@drawable/rectangle"
+            android:id="@+id/search"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:layout_width="fill_parent"
+            android:layout_height="35dp" >
+
+            <requestFocus />
+        </EditText>
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="340dp">
+        <ListView
+            android:layout_alignParentTop="true"
+            android:id="@+id/players_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/backView2_btn"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/purple"
+                android:text="Back"
+                android:background="@drawable/purple_border_white_bg"
+                android:layout_width="100dp"
+                android:layout_height="35dp" />
+            <Button
+                android:id="@+id/nextView2_btn"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:text="Next"
+                android:background="@drawable/purplebutton"
+                android:layout_width="100dp"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+        <RelativeLayout
+
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/startView1"
+                android:rotation="90"
+                android:src="@drawable/semi_circle"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/fill_rectangle"
+                android:layout_marginLeft="-11dp"
+                android:layout_toRightOf="@+id/startView1"
+                android:id="@+id/firstScreenView1"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@color/purple"
+                android:layout_marginLeft="0.5dp"
+                android:layout_toRightOf="@+id/firstScreenView1"
+                android:id="@+id/second_ScreenView1"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/silver"
+
+                android:layout_toRightOf="@+id/second_ScreenView1"
+                android:id="@+id/third_ScreenView1"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/silver"
+
+                android:layout_toRightOf="@+id/third_ScreenView1"
+                android:id="@+id/fourth_ScreenView1"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <View
+                android:layout_marginLeft="0.5dp"
+                android:background="@color/silver"
+                android:id="@+id/fifthScreenView1"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/fourth_ScreenView1"/>
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:rotation="270"
+                android:scaleType="fitXY"
+                android:src="@drawable/semi_circle_silver"
+                android:layout_toRightOf="@+id/fifthScreenView1"
+                android:id="@+id/fifth_ScreenView1"
+                android:layout_marginLeft="-6dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/firstScreenView1"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/second_ScreenView1"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/third_ScreenView1"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/fourth_ScreenView1"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/view3"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Schedule your challenge"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16dp"
+            android:textColor="@color/light_grey"
+            android:text="Choose available date and time to schedule match"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+            <RelativeLayout
+                android:background="@drawable/black_rounded_"
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+                <sportsfight.com.s.common.Heading
+                    android:textSize="18dp"
+                    android:text="January"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/month" />
+
+                <sportsfight.com.s.common.DetailsCustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="center"
+
+android:layout_marginBottom="10dp"
+                    android:textSize="12dp"
+                    android:text="2018"
+                    android:textColor="@color/white"
+                    android:id="@+id/year" />
+
+                <Button
+                    android:id="@+id/previous_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:visibility="gone"
+                    android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                    android:layout_marginStart="80dp"
+                    android:background="@drawable/leftarrow" />
+
+                <Button
+                    android:id="@+id/next_btn"
+                    android:layout_width="20dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="80dp"
+                    android:visibility="gone"
+                    android:background="@drawable/rightarrow" />
+
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+android:orientation="vertical"
+android:layout_marginTop="-1dp"
+                android:background="@drawable/layerlist">
+                <LinearLayout
+
+
+                    android:layout_marginTop="5dp"
+                    android:weightSum="5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/day1_llt"
+                        android:background="@color/black_font"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <sportsfight.com.s.common.Heading
+                            android:id="@+id/date1"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@color/white"
+                            android:text="22"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:id="@+id/day1"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:textColor="@color/white"
+                            android:text="Mon"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        </LinearLayout>
+                            <View
+                                android:id="@+id/day1_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/day2_llt"
+
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                        <sportsfight.com.s.common.Heading
+                            android:id="@+id/date2"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@color/black_font"
+                            android:text="23"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:id="@+id/day2"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:textColor="@color/black_font"
+                            android:text="Tues"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                            </LinearLayout>
+                            <View
+                                android:id="@+id/day2_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/day3_llt"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <sportsfight.com.s.common.Heading
+                            android:id="@+id/date3"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@color/black_font"
+                            android:text="24"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:id="@+id/day3"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:textColor="@color/light_grey"
+                            android:text="Wed"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        </LinearLayout>
+                            <View
+                                android:id="@+id/day3_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/day4_llt"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <sportsfight.com.s.common.Heading
+                            android:id="@+id/date4"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@color/black_font"
+                            android:text="26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:id="@+id/day4"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:textColor="@color/light_grey"
+                            android:text="Thurs"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        </LinearLayout>
+                            <View
+                                android:id="@+id/day4_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/day5_llt"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        <sportsfight.com.s.common.Heading
+                            android:id="@+id/date5"
+                            android:gravity="center"
+                            android:textSize="16dp"
+                            android:textColor="@color/black_font"
+                            android:text="27"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:id="@+id/day5"
+                            android:gravity="center"
+                            android:textSize="12dp"
+                            android:textColor="@color/light_grey"
+                            android:text="Fri"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        </LinearLayout>
+                            <View
+                                android:id="@+id/day5_view"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_marginTop="3dp"
+                    android:background="@color/light_grey"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/gameIcon"
+                        android:src="@drawable/tt_orange_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+                    <sportsfight.com.s.common.Heading
+                        android:id="@+id/gameName"
+                        android:layout_marginLeft="10dp"
+                        android:text="Table Tennis"
+                        android:textSize="16dp"
+                        android:gravity="center_vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" />
+                </LinearLayout>
+                <Spinner
+                    android:visibility="gone"
+                    android:layout_marginLeft="55dp"
+                    android:background="@drawable/layerlist2"
+                    android:id="@+id/spinner1"
+                    android:layout_width="80dp"
+                    android:layout_height="40dp"/>
+                <GridView
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/grid"
+                    android:numColumns="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp">
+                    <sportsfight.com.s.common.Heading
+                        android:gravity="center"
+                        android:paddingLeft="20dp"
+                        android:text="Choose your  time slot"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <ImageView
+                        android:id="@+id/timeIcon"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/rsz_time_icon"
+                        android:layout_marginLeft="20dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+                    <sportsfight.com.s.common.Heading
+                        android:id="@+id/timeValue"
+                        android:paddingLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="click on watch icon for selecting time"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <sportsfight.com.s.common.Heading
+                        android:id="@+id/freeslotValue"
+
+                        android:paddingLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text=""
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/validate"
+                        android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+android:layout_marginLeft="15dp"
+                        android:textColor="@color/white"
+                        android:text="Check Availability"
+                        android:textAllCaps="false"
+                        android:padding="10dp"
+                        android:textSize="12dp"
+                        android:background="@drawable/purplebutton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/backView3_btn"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/purple"
+                android:text="Back"
+                android:background="@drawable/purple_border_white_bg"
+                android:layout_width="100dp"
+                android:layout_height="35dp" />
+            <Button
+                android:id="@+id/nextView3_btn"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:text="Next"
+                android:background="@drawable/purplebutton"
+                android:layout_width="100dp"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/startView3"
+                android:rotation="90"
+                android:src="@drawable/semi_circle"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/fill_rectangle"
+                android:layout_marginLeft="-11dp"
+                android:layout_toRightOf="@+id/startView3"
+                android:id="@+id/firstScreenView3"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@color/purple"
+                android:layout_marginLeft="0.5dp"
+                android:layout_toRightOf="@+id/firstScreenView3"
+                android:id="@+id/second_ScreenView3"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/purple"
+
+                android:layout_toRightOf="@+id/second_ScreenView3"
+                android:id="@+id/third_ScreenView3"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/silver"
+
+                android:layout_toRightOf="@+id/third_ScreenView3"
+                android:id="@+id/fourth_ScreenView3"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <View
+                android:layout_marginLeft="0.5dp"
+                android:background="@color/silver"
+                android:id="@+id/fifthScreenView3"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/fourth_ScreenView3"/>
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:rotation="270"
+                android:scaleType="fitXY"
+                android:src="@drawable/semi_circle_silver"
+                android:layout_toRightOf="@+id/fifthScreenView3"
+                android:id="@+id/fifth_ScreenView3"
+                android:layout_marginLeft="-6dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/firstScreenView3"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/second_ScreenView3"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/third_ScreenView3"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/fourth_ScreenView3"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/view4"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Select Points"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16dp"
+            android:textColor="@color/light_grey"
+            android:text="Choose the point you desire to and send challenge"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="380dp">
+            <LinearLayout
+                android:background="@drawable/rounded_corner_box"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <sportsfight.com.s.common.Heading
+                    android:text="23"
+                    android:id="@+id/date"
+                    android:paddingLeft="10dp"
+                    android:textSize="26dp"
+                    android:textColor="@color/black_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:id="@+id/month_year"
+                        android:text="January-2018"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:id="@+id/day_view4"
+                        android:layout_marginTop="-3dp"
+                        android:text="Tuesday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/rounded_corner_box"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <sportsfight.com.s.common.Heading
+                    android:layout_marginTop="15dp"
+                    android:paddingLeft="10dp"
+                    android:text="03:00"
+                    android:id="@+id/time"
+                    android:textSize="20dp"
+                    android:textColor="@color/black_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:id="@+id/am_pm"
+                        android:layout_marginTop="-5dp"
+                        android:gravity="end"
+                        android:text="pm"
+                        android:textSize="14dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <Button
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/available"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:textSize="18dp"
+                        android:id="@+id/game_name"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black_font"
+                        android:text="Table Tennis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <sportsfight.com.s.common.DetailsCustomTextView
+
+                        android:layout_marginTop="-5dp"
+                        android:text="Not Scheduled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+                </LinearLayout>
+
+
+        </LinearLayout>
+                <sportsfight.com.s.common.Heading
+                    android:id="@+id/opponent_name"
+                    android:textColor="@color/black_font"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:text="Vs Harshavardhan"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:textSize="18dp"
+                        android:textColor="@color/black_font"
+                        android:text="Min.Points : "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                    android:textSize="18dp"
+       android:layout_gravity="center"
+                    android:text="100"
+                        android:id="@+id/min_points"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_marginRight="10dp"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <sportsfight.com.s.common.DetailsCustomTextView
+                                android:textSize="18dp"
+                                android:textColor="@color/black_font"
+                                android:text="Max.Points : "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                            <sportsfight.com.s.common.DetailsCustomTextView
+                                android:id="@+id/max_points"
+                                android:textSize="18dp"
+                                android:layout_gravity="center"
+                                android:text="5000"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <Button
+                            android:background="@drawable/decrease"
+                            android:padding="10dp"
+                            android:id="@+id/decrease"
+                            android:layout_marginRight="10dp"
+                            android:layout_gravity="center"
+                            android:layout_width="25dp"
+                            android:layout_height="35dp" />
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:text="100"
+                            android:id="@+id/points_value"
+                            android:gravity="center"
+                            android:background="@drawable/rounded_corner_box"
+                            android:layout_width="70dp"
+                            android:layout_height="35dp" />
+                        <Button
+                            android:padding="10dp"
+                            android:id="@+id/increase"
+                            android:background="@drawable/increase"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center"
+                            android:layout_width="25dp"
+                            android:layout_height="35dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/backView4_btn"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/purple"
+                    android:text="Back"
+                    android:background="@drawable/purple_border_white_bg"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp" />
+                <Button
+                    android:id="@+id/nextView4_btn"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/white"
+                    android:text="Send"
+                    android:background="@drawable/purplebutton"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp" />
+            </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/startView4"
+                android:rotation="90"
+                android:src="@drawable/semi_circle"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/fill_rectangle"
+                android:layout_marginLeft="-11dp"
+                android:layout_toRightOf="@+id/startView4"
+                android:id="@+id/firstScreenView4"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@color/purple"
+                android:layout_marginLeft="0.5dp"
+                android:layout_toRightOf="@+id/firstScreenView4"
+                android:id="@+id/second_ScreenView4"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/purple"
+
+                android:layout_toRightOf="@+id/second_ScreenView4"
+                android:id="@+id/third_ScreenView4"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/purple"
+
+                android:layout_toRightOf="@+id/third_ScreenView4"
+                android:id="@+id/fourth_ScreenView4"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <View
+                android:layout_marginLeft="0.5dp"
+                android:background="@color/silver"
+                android:id="@+id/fifthScreenView4"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/fourth_ScreenView4"/>
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:rotation="270"
+                android:scaleType="fitXY"
+                android:src="@drawable/semi_circle_silver"
+                android:layout_toRightOf="@+id/fifthScreenView4"
+                android:id="@+id/fifth_ScreenView4"
+                android:layout_marginLeft="-6dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/firstScreenView4"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/second_ScreenView4"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/third_ScreenView4"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/fourth_ScreenView4"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/view5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="20dp"
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Confirmation"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="16dp"
+            android:textColor="@color/light_grey"
+            android:text="Challenge Sent to opponent"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:background="@drawable/rounded_corner_box"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <sportsfight.com.s.common.Heading
+                    android:id="@+id/date_view5"
+
+                    android:text="23"
+                    android:paddingLeft="5dp"
+                    android:textSize="26dp"
+                    android:textColor="@color/black_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:id="@+id/month_year_view5"
+                        android:text="January-2018"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:id="@+id/month_year_day_view5"
+                        android:layout_marginTop="-3dp"
+                        android:text="Tuesday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/rectangle"
+                android:layout_margin="5dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <sportsfight.com.s.common.Heading
+
+                        android:id="@+id/time_view5"
+                        android:paddingLeft="5dp"
+                        android:text="03:00"
+                        android:textSize="20dp"
+                        android:textColor="@color/black_font"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:id="@+id/am_pm_view5"
+
+                        android:layout_marginTop="-5dp"
+                        android:gravity="end"
+                        android:text="pm"
+                        android:textSize="14dp"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <Button
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/available"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+                <LinearLayout
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:textSize="18dp"
+                        android:id="@+id/game_name_view5"
+
+                        android:textColor="@color/black_font"
+                        android:text="Table Tennis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:layout_marginTop="-5dp"
+                        android:text="Not Scheduled"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <sportsfight.com.s.common.Heading
+                android:id="@+id/opponent_name_view5"
+                android:textColor="@color/black_font"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:text="Vs Harshavardhan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+<ImageView
+
+    android:src="@drawable/challengehand_purple"
+
+    android:layout_width="100dp"
+    android:layout_height="100dp" />
+                <LinearLayout
+                    android:layout_gravity="center"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+
+
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <sportsfight.com.s.common.Heading
+                            android:textSize="18dp"
+                            android:textColor="@color/black_font"
+                            android:text="Joined With Points : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:id="@+id/points_value_view5"
+                            android:gravity="center"
+                            android:text="250"
+                            android:textSize="18dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <sportsfight.com.s.common.Heading
+                            android:textSize="24dp"
+                            android:textColor="@color/black_font"
+                            android:text="Status : "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:textColor="@color/black_font"
+                            android:textSize="18dp"
+                            android:text="Pending"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:gravity="center"
+                android:text="*Note : please check alerts for updates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/nextView5_btn"
+                android:layout_marginRight="10dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:text="OK"
+                android:background="@drawable/purplebutton"
+                android:layout_width="80dp"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+            <ImageView
+                android:layout_centerVertical="true"
+                android:id="@+id/startView5"
+                android:rotation="90"
+                android:src="@drawable/semi_circle"
+                android:layout_width="30dp"
+                android:layout_height="40dp" />
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@drawable/fill_rectangle"
+                android:layout_marginLeft="-11dp"
+                android:layout_toRightOf="@+id/startView5"
+                android:id="@+id/firstScreenView5"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:src="@color/purple"
+                android:layout_marginLeft="0.5dp"
+                android:layout_toRightOf="@+id/firstScreenView5"
+                android:id="@+id/second_ScreenView5"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/purple"
+
+                android:layout_toRightOf="@+id/second_ScreenView5"
+                android:id="@+id/third_ScreenView5"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <ImageView
+                android:layout_marginLeft="0.5dp"
+                android:layout_centerVertical="true"
+                android:src="@color/purple"
+
+                android:layout_toRightOf="@+id/third_ScreenView5"
+                android:id="@+id/fourth_ScreenView5"
+                android:layout_width="40dp"
+                android:layout_height="30dp" />
+            <View
+                android:layout_marginLeft="0.5dp"
+                android:background="@color/purple"
+                android:id="@+id/fifthScreenView5"
+                android:layout_centerVertical="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@+id/fourth_ScreenView5"/>
+
+            <ImageView
+                android:layout_centerVertical="true"
+                android:rotation="270"
+                android:scaleType="fitXY"
+                android:src="@drawable/semi_circle"
+                android:layout_toRightOf="@+id/fifthScreenView5"
+                android:id="@+id/fifth_ScreenView5"
+                android:layout_marginLeft="-6dp"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/firstScreenView5"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/second_ScreenView5"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/third_ScreenView5"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+            <View
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/fourth_ScreenView5"
+                android:layout_width="1dp"
+                android:background="@color/light_grey"
+                android:layout_height="30dp"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+
+
+    </LinearLayout>

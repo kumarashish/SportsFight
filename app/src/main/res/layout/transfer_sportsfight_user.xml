@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <sportsfight.com.s.common.Heading
+            android:textColor="@color/black_font"
+            android:layout_alignParentTop="true"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Transfer Points to Sports Fight user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_font" />
+    </LinearLayout>
+    <sportsfight.com.s.common.Heading
+        android:textColor="@color/purple"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="Minimum points to be transfer: 500 points"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/rectangle"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/userNumber"
+                android:hint="Enter Mobile Number"
+                android:textSize="14dp"
+                android:maxLength="10"
+                android:inputType="number"
+                android:layout_margin="2dp"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:background="@color/white"
+                android:layout_weight="2.4"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:nextFocusDown="@+id/points"
+                android:imeOptions="actionNext"/>
+            <Button
+                android:id="@+id/search"
+                android:background="@drawable/search"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <View
+            android:background="@color/purple"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:id="@+id/beneficeryLayout"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <sportsfight.com.s.common.Heading
+                    android:layout_width="150dp"
+                    android:textColor="@color/black_font"
+                    android:textSize="14dp"
+                    android:text="Beneficiary Name :"
+                    android:layout_height="wrap_content" />
+                <sportsfight.com.s.common.Heading
+                    android:id="@+id/beneficeryName"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/purple"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <sportsfight.com.s.common.Heading
+                    android:layout_width="150dp"
+                    android:textColor="@color/black_font"
+                    android:textSize="14dp"
+                    android:text="Beneficiary Mobile :"
+                    android:layout_height="wrap_content" />
+                <sportsfight.com.s.common.DetailsCustomTextView
+                    android:id="@+id/beneficeryNumber"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/purple"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <sportsfight.com.s.common.Heading
+                    android:layout_width="150dp"
+                    android:textColor="@color/black_font"
+                    android:textSize="14dp"
+                    android:text="Points to transfer:"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:id="@+id/points"
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/purple"
+                    android:textSize="14dp"
+                    android:text="0"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <View
+                android:layout_marginTop="5dp"
+                android:background="@color/purple"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+            <Button
+                android:id="@+id/transfer"
+                android:textSize="12dp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:text="Transfer"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/purplebutton"
+                android:layout_width="80dp"
+                android:layout_height="30dp" />
+            <View
+                android:layout_marginTop="5dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/recetTransfersLayout"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    android:layout_gravity="center"
+                    android:background="@color/purple"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"/>
+                <sportsfight.com.s.common.Heading
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:textSize="12dp"
+                    android:textColor="@color/purple"
+                    android:text="Recent Transfers"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_gravity="center"
+                    android:background="@color/purple"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="0.5dp"/>
+            </LinearLayout>
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circularImageView"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_above="@+id/layout"
+        android:src="@drawable/user_icon"
+        android:layout_marginBottom="5dp"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

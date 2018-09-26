@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="90dp">
+    <LinearLayout
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <sportsfight.com.s.common.CircleImageView
+                android:id="@+id/winner"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/kingsxi"
+                android:layout_gravity="center"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+            <ImageView
+
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignBottom="@+id/winner"
+                android:visibility="visible"
+                android:id="@+id/player2Won"
+                android:src="@drawable/medal"
+                android:layout_marginBottom="-10dp"
+                android:layout_marginEnd="-10dp"
+                android:layout_alignEnd="@+id/winner" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <sportsfight.com.s.common.Heading
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:text="Played on"
+                android:gravity="center"
+                android:textSize="18dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:id="@+id/date"
+android:layout_marginTop="3dp"
+                android:text="12-April-2018 9:00 IST"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:id="@+id/result"
+
+                android:text=" Kings XI won !"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <sportsfight.com.s.common.CircleImageView
+                android:id="@+id/losser"
+                android:layout_marginRight="30dp"
+                android:src="@drawable/rc_logo"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+    <View
+        android:background="@color/black_font"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+</LinearLayout>

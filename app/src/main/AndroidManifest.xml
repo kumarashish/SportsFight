@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="sportsfight.com.s">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".common.AppController"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup,icon,theme,label">
+        <activity
+            android:name=".launchingmodule.Splash"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".mainmodule.TeamDetails"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.paytm.pgsdk.PaytmPGActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|keyboard"/>
+
+        <activity
+            android:name=".mainmodule.NewProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.Dashboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.NewDashBoard"
+            android:theme="@style/AppCompatTheme"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".launchingmodule.WelcomeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".loginmodule.Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginmodule.Registration"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginmodule.ForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginmodule.ResetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginmodule.PrefsScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".loginmodule.Verification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.Alerts"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.Profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.Reminders"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wallet.Wallet"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wallet.AddPoints"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".wallet.Transfer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.Challenge"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.StaticPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.MyMatchesViewAll"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ipl.IplMatches"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.NewsViewAll"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ipl.MyBid"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.UpcomingMatchesViewAll"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mainmodule.WonViewAll"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".results.DeclareResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".results.ApproveResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".results.ApproveMatches"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".launchingmodule.Test"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppCompatTheme" />
+        <activity
+            android:name=".staticpages.AboutUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".staticpages.ContactUs"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".staticpages.Policies"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".staticpages.Terms_Conditions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".staticpages.Cancellation"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.FirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

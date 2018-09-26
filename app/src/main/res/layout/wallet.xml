@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Heading
+
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Wallet"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/transfer"
+            android:background="@drawable/transfer"
+            android:layout_width="45dp"
+            android:layout_alignParentRight="true"
+       android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_height="35dp"
+
+       />
+    </RelativeLayout>
+    <View
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+    <sportsfight.com.s.common.Heading
+        android:textSize="14dp"
+        android:textColor="@color/black_font"
+        android:text="Available Points"
+        android:layout_marginTop="20dp"
+  android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:textSize="20dp"
+        android:id="@+id/availablePoints"
+        android:textColor="@color/black_font"
+        android:text="0"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:id="@+id/addPoints"
+        android:textSize="14dp"
+        android:padding="10dp"
+        android:background="@drawable/purplebutton"
+        android:textColor="@color/white"
+        android:text="@string/addpoints"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <sportsfight.com.s.common.Heading
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black_font"
+            android:text="Transaction History"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <LinearLayout
+        android:weightSum="2.1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <sportsfight.com.s.common.DetailsCustomTextView
+            android:text="Start Date"
+            android:id="@+id/startDate"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+        <sportsfight.com.s.common.DetailsCustomTextView
+            android:text="End Date"
+            android:id="@+id/endDate"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <sportsfight.com.s.common.Heading
+            android:textColor="@color/white"
+            android:text="Show"
+            android:id="@+id/show"
+            android:gravity="center"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginBottom="2.5dp"
+            android:padding="10dp"
+            android:layout_weight="0.1"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/purplebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:background="@color/silver"
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/all"
+            android:background="@color/black_font"
+            android:gravity="center"
+            android:text="All"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/won"
+            android:gravity="center"
+            android:text="Won"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/spend"
+            android:gravity="center"
+            android:text="Spend"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/added"
+            android:gravity="center"
+            android:text="Added"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+android:id="@+id/view_pager"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

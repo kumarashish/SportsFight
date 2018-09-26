@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/transaparent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/whitebox_blackcorner"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Add Beneficiary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginTop="5dp"
+            android:background="@color/light_grey"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:weightSum="5"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+            <EditText
+                android:id="@+id/beneficiaryName"
+                android:textColor="@color/black_font"
+                android:gravity="center"
+                android:hint="Beneficiary Name"
+                android:background="@drawable/rectangle"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+            <EditText
+                android:id="@+id/beneficiaryAccountNumber"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:hint="Beneficiary Account  Name"
+                android:background="@drawable/rectangle"
+                android:textColor="@color/black_font"
+                android:layout_width="match_parent"
+                android:layout_height="35dp" />
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+            <EditText
+                android:id="@+id/ifsccode"
+                android:textColor="@color/black_font"
+                android:gravity="center"
+                android:hint="IFSC Code"
+                android:background="@drawable/rectangle"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="35dp" />
+                <sportsfight.com.s.common.Heading
+                    android:id="@+id/verify"
+
+
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textSize="16dp"
+                    android:textColor="@color/red"
+                    android:text="@string/verify"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <sportsfight.com.s.common.Heading
+                android:id="@+id/bankName"
+              android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/black_font"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:id="@+id/bankDetails"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="12dp"
+                android:textColor="@color/black_font"
+                android:text=""
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            </LinearLayout>
+        <Button
+            android:id="@+id/submit"
+            android:background="@drawable/purplebutton"
+            android:textColor="@color/white"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="40dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>

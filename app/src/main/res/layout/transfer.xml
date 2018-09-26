@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Heading
+
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Transfer"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+    <View
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+    <sportsfight.com.s.common.Heading
+        android:textSize="14dp"
+        android:textColor="@color/black_font"
+        android:text="Available Points"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:textSize="20dp"
+        android:id="@+id/availablePoints"
+        android:textColor="@color/black_font"
+        android:text="0"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:background="@color/silver"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/user"
+            android:background="@color/black_font"
+            android:gravity="center"
+            android:text="Sports Fight User"
+            android:textColor="@color/white"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <sportsfight.com.s.common.Heading
+            android:visibility="gone"
+            android:id="@+id/bank"
+            android:gravity="center"
+            android:text="Bank"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

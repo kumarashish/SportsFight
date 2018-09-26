@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Heading
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="About Us"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <View
+        android:layout_above="@+id/footer"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+    <sportsfight.com.s.common.GradientTextView
+        android:layout_margin="10dp"
+       android:gravity="center"
+        android:textSize="16dp"
+        android:layout_width="match_parent"
+        android:textColor="@color/purple"
+        android:text="WE HELP PEOPLE PLAY MORE SPORT"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:textSize="12dp"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:text="Sports Fight is a sports discovery app that helps you find people and places to play 20+ sports around you.
+
+
+
+Finding people who want to play the same sport, at the same time, in the same area is hard and that's the reason why most of us end up not playing sport at all. Sports Fight helps you connect with people around you, with similar profiles, and start playing the sport of your choice.
+
+
+Until now, you have picked up sports depending upon what your neighbours or friends play. But with Sports Fight, you can discover and participate in more than 20+ sports."
+        android:layout_height="match_parent" />
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/gameIcon"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/chess_orange"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/game_name"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="Pool or Snooker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:weightSum="5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_weight="3.1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Heading
+                android:textColor="@color/black_font"
+                android:id="@+id/challengedBy"
+                android:text="Challenged by : Ashish Kumar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:textColor="@color/black_font"
+                android:id="@+id/date"
+                android:text="for match on : 12-feb-2018 3:00 pm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:id="@+id/cahllengePoints"
+                android:text="for match on : 12-feb-2018 3:00 pm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <LinearLayout
+android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginRight="5dp"
+
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/available"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+                <sportsfight.com.s.common.BoldFont
+                    android:layout_gravity="center"
+                    android:text="Accept"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textColor="@color/greencolor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <View
+                    android:id="@+id/accept"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginRight="5dp"
+        android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/notavailable"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp" />
+                <sportsfight.com.s.common.BoldFont
+                    android:layout_gravity="center"
+                    android:textSize="12dp"
+                    android:textColor="@color/red"
+                    android:text="Decline"
+                    android:textAllCaps="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+                <View
+                    android:id="@+id/reject"
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <View
+            android:background="@color/light_grey"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+    </LinearLayout>
+</LinearLayout>

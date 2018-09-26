@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            >
+            <sportsfight.com.s.common.CustomLayout
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:id="@+id/cardview"
+                android:background="@drawable/whitebox_blackcorner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/tticon"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="10dp"
+                            android:src="@drawable/football" />
+
+                        <sportsfight.com.s.common.BoldFont
+                            android:id="@+id/game_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_above="@+id/middleView"
+                            android:layout_alignEnd="@+id/linearLayout"
+                            android:gravity="center_vertical"
+                            android:text="FoosBAll"
+                            android:textColor="@color/red"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/middleView"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_below="@+id/linearLayout"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:id="@+id/leftview"
+                            android:layout_marginTop="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <sportsfight.com.s.common.CircleImageView
+                                android:src="@drawable/user_icon"
+                                android:id="@+id/circleImageView"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:layout_centerInParent="true"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginRight="5dp"
+
+                                />
+
+                            <View
+                                android:id="@+id/player1View"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"/>
+
+                        </RelativeLayout>
+                        <LinearLayout
+
+                            android:layout_weight="0.5"
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+
+                            <sportsfight.com.s.common.BoldFont
+
+                                android:layout_marginTop="15dp"
+                                android:gravity="center"
+                                android:textSize="14dp"
+                                android:textColor="@color/black_font"
+                                android:text="Played On "
+                                android:textAllCaps="false"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <sportsfight.com.s.common.BoldFont
+                                android:id="@+id/date"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:textSize="12dp"
+                                android:textColor="@color/black_font"
+                                android:text="24/11/2018"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                            <sportsfight.com.s.common.CongratsFont
+                                android:id="@+id/congrats"
+                                android:layout_marginTop="5dp"
+                                android:gravity="center"
+                                android:textSize="14dp"
+                                android:textColor="@color/black_font"
+                                android:text="Congratulation"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:id="@+id/rightView"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <sportsfight.com.s.common.CircleImageView
+                                android:id="@+id/circleImageView2"
+                                android:layout_width="65dp"
+                                android:layout_height="65dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/user_icon"
+                                android:layout_marginTop="5dp"
+
+                                />
+
+
+                            <View
+                                android:id="@+id/player2View"
+                                android:layout_width="60dp"
+                                android:layout_height="70dp"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/firstPlayer"
+                        android:layout_marginLeft="25dp"
+                        android:layout_below="@+id/middleView"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:id="@+id/player1Name"
+                            android:gravity="center"
+                            android:maxLength="12"
+                            android:textColor="@color/black_font"
+                            android:textSize="12dp"
+
+                            android:text="Billa"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/secondPlayer"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dp"
+                        android:layout_below="@+id/middleView"
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:id="@+id/player2Name"
+                            android:maxLength="12"
+                            android:textColor="@color/black_font"
+                            android:textSize="12dp"
+                            android:gravity="center"
+                            android:text="Ranga"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+
+                    </LinearLayout>
+<LinearLayout
+    android:layout_below="@+id/firstPlayer"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:layout_margin="5dp"
+                       android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+android:id="@+id/myBid"
+                        android:textColor="@color/greencolor"
+                        android:text="My Bid"/>
+    <sportsfight.com.s.common.DetailsCustomTextView
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:gravity="center"
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="@color/red"
+        android:text="Result"/>
+</LinearLayout>
+                </RelativeLayout>
+
+
+
+            </sportsfight.com.s.common.CustomLayout>
+        </LinearLayout>
+    </LinearLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/menu"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/nav_icon"
+            android:foregroundTint="@color/tabselected"
+            android:layout_alignParentLeft="true"
+            android:layout_width="25dp"
+            android:padding="10dp"
+            android:layout_height="20dp" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/yourLocation_tv"
+            android:textColor="@color/light_grey"
+            android:text="Your location"
+            android:textSize="14dp"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_marginTop="-10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <sportsfight.com.s.common.Bold_TextView
+                android:id="@+id/heading_tv"
+                android:textColor="@color/black_font"
+                android:gravity="center_vertical"
+                android:text="Hitech City, Madhapur"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/distance_tv"
+                     android:layout_marginLeft="5dp"
+                    android:textColor="@color/light_grey"
+                    android:text="(5 km)"
+                    android:textSize="10dp"
+                    android:gravity="center_vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout >
+        <LinearLayout
+            android:layout_marginBottom="60dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/add_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

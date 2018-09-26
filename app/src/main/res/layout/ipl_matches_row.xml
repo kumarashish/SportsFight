@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="180dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:id="@+id/topView"
+    android:weightSum="3"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="135dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+android:orientation="vertical"
+        android:layout_weight="1">
+
+        <sportsfight.com.s.common.CircleImageView
+            android:id="@+id/team1Icon"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+     android:layout_marginTop="10dp"
+            android:padding="2dp"
+            android:src="@drawable/user_icon" />
+        <sportsfight.com.s.common.BoldFont
+            android:textColor="@color/purple"
+            android:id="@+id/team1"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Player1 "
+            android:gravity="center"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/player1Bid"
+          android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Bid : "
+            android:gravity="center"
+            android:textSize="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <sportsfight.com.s.common.Heading
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="5dp"
+            android:text="Scheduled"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/match_date"
+
+            android:text=""
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/venue"
+            android:maxLines="2"
+            android:text=""
+            android:textSize="12dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/totalBid"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/red"
+            android:text=""
+            android:gravity="center"
+            android:textSize="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <sportsfight.com.s.common.CircleImageView
+            android:layout_marginRight="30dp"
+            android:src="@drawable/user_icon"
+            android:id="@+id/team2Icon"
+          android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"
+            android:padding="2dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
+
+        <sportsfight.com.s.common.BoldFont
+            android:textColor="@color/purple"
+            android:id="@+id/team2"
+            android:layout_below="@+id/team2Icon"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:text="Player2 "
+            android:gravity="center"
+            android:textSize="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Heading
+            android:layout_below="@+id/team2"
+            android:layout_marginTop="5dp"
+            android:id="@+id/player2Bid"
+            android:text="Bid : "
+            android:gravity="center"
+            android:textSize="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+        <View
+            android:id="@+id/view"
+            android:paddingBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_font"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <Button
+
+
+            android:layout_marginRight="15dp"
+            android:layout_below="@+id/topView"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:id="@+id/placeBid"
+            android:textAllCaps="false"
+            android:text="Place Bid"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:background="@drawable/purplebutton"
+            android:layout_width="100dp"
+            android:layout_height="35dp" />
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/myBid"
+
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="120dp"
+            android:paddingBottom="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="My Bid :"
+            android:gravity="left"
+         android:textColor="@color/greencolor"
+            android:layout_below="@+id/topView"
+            android:textSize="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

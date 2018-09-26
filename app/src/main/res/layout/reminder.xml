@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Heading
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Reminders"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <ListView
+
+        android:id="@+id/reminder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <sportsfight.com.s.common.Heading
+
+        android:visibility="gone"
+        android:gravity="center"
+        android:text="No Reminder"
+        android:textColor="@color/black_font"
+        android:textSize="20dp"
+        android:id="@+id/noItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

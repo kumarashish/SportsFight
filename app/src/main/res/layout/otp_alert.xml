@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="@drawable/blurr_bg_edittext"
+    android:orientation="vertical">
+    <RelativeLayout
+
+        android:background="@color/black_overlay"
+        android:layout_gravity="center"
+      android:layout_margin="20dp"
+
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+             android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="300dp">
+            <sportsfight.com.s.common.Heading
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14pt"
+                android:text="Verification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="8pt"
+                android:text="Enter Received OTP for verification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_margin="15dp"
+                    android:background="@drawable/blurr_bg_edittext"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="40dp">
+                    <ImageView
+                        android:id="@+id/icon"
+                        android:padding="6dp"
+                        android:src="@drawable/otp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp" />
+                    <View
+                        android:layout_margin="1dp"
+                        android:background="@color/white"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"/>
+
+                    <EditText
+                        android:id="@+id/otp"
+                        android:inputType="number"
+                        android:gravity="center_vertical"
+                        android:layout_margin="5dp"
+                        android:singleLine="true"
+                        android:textColorHint="@color/white"
+                        android:textColor="@color/white"
+                        android:hint="Enter OTP"
+                        android:maxLength="6"
+                        android:background="@color/blurrbg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
+<LinearLayout
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:weightSum="2"
+    android:layout_marginTop="40dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/cancel"
+android:layout_weight="1"
+        android:textColor="@color/white"
+        android:text="Cancel"
+        android:textSize="8pt"
+        android:background="@drawable/purplebutton"
+        android:layout_gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="20dp"
+        android:layout_height="40dp" />
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:text="Verify"
+                    android:textSize="8pt"
+                    android:background="@drawable/purplebutton"
+                    android:layout_gravity="center"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp" />
+</LinearLayout>
+                <sportsfight.com.s.common.DetailsCustomTextView
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="8pt"
+                    android:id="@+id/resendOTP"
+                    android:text="@string/reotp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+</RelativeLayout>
+</LinearLayout>

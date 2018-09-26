@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/back"
+            android:tint="@color/black_font"
+             android:src="@drawable/back"
+            android:layout_width="25dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_height="18dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Bold_TextView
+            android:textSize="18dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@color/black_font"
+            android:text="Profile"
+            android:textAllCaps="true"
+            android:gravity="left|center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+    <ScrollView
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <sportsfight.com.s.common.CircleImageView
+   android:layout_marginTop="20dp"
+        android:src="@drawable/prabhas"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/circleImageView4" />
+        <Button
+            android:id="@+id/edit_profile"
+            android:text="Edit"
+            android:textColor="@color/white"
+            android:background="@drawable/orange_gradient_button"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="80dp"
+            android:layout_height="35dp" />
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_toEndOf="@+id/circleImageView4"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Bold_TextView
+                android:layout_marginLeft="20dp"
+                android:textSize="16dp"
+                android:textColor="@color/black_font"
+                android:text="Bahubali"
+                android:gravity="left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:layout_marginLeft="20dp"
+                android:textSize="14dp"
+                android:textColor="@color/black_font"
+                android:text="Male"
+                android:gravity="left"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:textSize="14dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black_font"
+                android:text="Bahubali@sportsfight.com"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/black_font"
+                android:text="+91 8121484289"
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+    android:layout_marginTop="20dp"
+    android:background="@color/light_grey"
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"/>
+    <LinearLayout
+       android:weightSum="3.1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:src="@drawable/clubicon"
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+            <sportsfight.com.s.common.Bold_TextView
+
+          android:padding="5dp"
+                android:textSize="20dp"
+                android:textColor="@color/black_font"
+                android:text="Gold"
+
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="5dp"
+                android:textSize="12dp"
+                android:textColor="@color/light_grey"
+                android:text="Gold"
+                android:gravity="bottom|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <View
+            android:background="@color/light_grey"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:src="@drawable/matches"
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+            <sportsfight.com.s.common.Bold_TextView
+
+                android:padding="5dp"
+                android:textSize="20dp"
+                android:textColor="@color/black_font"
+                android:text="150"
+
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="5dp"
+                android:textSize="12dp"
+                android:textColor="@color/light_grey"
+                android:text="Total Games"
+                android:gravity="bottom|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <View
+
+            android:background="@color/light_grey"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:src="@drawable/winning"
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+            <sportsfight.com.s.common.Bold_TextView
+
+                android:padding="5dp"
+                android:textSize="20dp"
+                android:textColor="@color/black_font"
+                android:text="70%"
+
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:padding="5dp"
+                android:textSize="12dp"
+                android:textColor="@color/light_grey"
+                android:text="Winnings"
+                android:gravity="bottom|center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <sportsfight.com.s.common.Bold_TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16dp"
+        android:textColor="@color/black_font"
+        android:text="Playing Location"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/grey_box"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+
+           android:src="@drawable/gpsicon"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <TextView
+android:textColor="@color/black_font"
+            android:text="Hitech City, Madhapur"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        <sportsfight.com.s.common.GradientTextView
+
+            android:text="Change"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <sportsfight.com.s.common.Bold_TextView
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:textSize="16dp"
+        android:textColor="@color/black_font"
+        android:text="Interested Games"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <HorizontalScrollView
+            android:layout_marginTop="5dp"
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="80dp"
+                android:background="@drawable/gradient_rectangle"
+                android:layout_height="80dp">
+                <ImageView
+                    android:src="@drawable/add"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:textSize="10dp"
+                    android:textColor="@color/white"
+                    android:text="Add Games"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:id="@+id/horizontalView"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+            </LinearLayout>
+
+        </LinearLayout>
+        </HorizontalScrollView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+

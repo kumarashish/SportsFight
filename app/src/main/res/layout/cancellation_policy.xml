@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Heading
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Cancellation Policy"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <View
+        android:layout_above="@+id/footer"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <sportsfight.com.s.common.GradientTextView
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple"
+                android:text="SPORTS FIGHT"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:textSize="12dp"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="The Cancellation policy may differ from vendor(Sports Academy) to vendor.at the time of bookiing details will be provided
+
+For Details Please find below details
+
+Within 48 Hours : 25 % Cancellation Fees
+Within 24 Hours : 50 % Cancellation Fess
+Within 12 Hours: 75% Cancellation Fees
+Within 6 Hours : No Refund"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

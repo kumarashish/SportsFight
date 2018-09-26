@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/date"
+            android:textSize="18dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="Date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:weightSum="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_weight="1"
+
+                android:layout_width="0dp"
+                android:layout_height="50dp">
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/carrom_orange"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginLeft="-20dp"
+                android:orientation="vertical"
+                android:layout_weight="3.1"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <sportsfight.com.s.common.Heading
+                    android:textColor="@color/black_font"
+                    android:id="@+id/gameName"
+                    android:text="Challenged by : Ashish Kumar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <sportsfight.com.s.common.DetailsCustomTextView
+                    android:id="@+id/message"
+                    android:text="for match on : 12-feb-2018 3:00 pm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                        <sportsfight.com.s.common.BoldFont
+                            android:id="@+id/status"
+                            android:layout_gravity="center"
+                            android:textSize="12dp"
+                            android:textColor="@color/red"
+                            android:text="Decline"
+                            android:textAllCaps="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <View
+            android:background="@color/light_grey"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+    </LinearLayout>
+</LinearLayout>

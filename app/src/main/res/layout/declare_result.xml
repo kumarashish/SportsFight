@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Heading
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Result Declaration"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/approveResult"
+            android:background="@drawable/logout"
+            android:layout_width="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+<View
+    android:background="@color/light_grey"
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/yesterday"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Yesterday"
+
+            android:textColor="@color/black_font" />
+
+
+        <sportsfight.com.s.common.Heading
+            android:id="@+id/today"
+            android:background="@color/black_font"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Today"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <View
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <ListView
+
+        android:id="@+id/matcheslist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <sportsfight.com.s.common.Heading
+        android:visibility="gone"
+
+        android:gravity="center"
+        android:text="No Matches"
+        android:textColor="@color/black_font"
+        android:textSize="20dp"
+        android:id="@+id/noItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+    <LinearLayout
+        android:background="@drawable/rounded_corner_box"
+        android:layout_margin="10dp"
+        android:orientation="vertical"
+
+        android:layout_width="match_parent"
+        android:layout_height="130dp">
+
+      <sportsfight.com.s.common.Bold_TextView
+          android:layout_margin="5dp"
+          android:text="MCA Grounds"
+          android:textSize="16dp"
+          android:textColor="@color/black_font"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+        <TextView
+android:layout_marginLeft="5dp"
+            android:text="Hitech City, (5Km)"
+            android:textSize="11dp"
+         android:layout_marginTop="-5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_margin="5dp"
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+                android:src="@drawable/ground1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ground2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:scaleType="fitXY"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ground3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ground1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:scaleType="fitXY"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ground2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:orientation="vertical"
+            android:layout_marginTop="-5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="5dp"
+
+                android:text="Per Hr."
+                android:paddingTop="15dp"
+                android:textSize="16dp"
+                android:textColor="@color/black_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        <sportsfight.com.s.common.Bold_TextView
+            android:text="Rs 150"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="-5dp"
+            android:textSize="18dp"
+            android:textColor="@color/tabselected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

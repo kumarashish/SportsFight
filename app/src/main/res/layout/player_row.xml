@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <sportsfight.com.s.common.CircleImageView
+android:src="@drawable/user_icon"
+            android:id="@+id/profilePic"
+            android:layout_marginTop="10dp"
+            android:layout_centerVertical="true"
+
+            android:layout_width="60dp"
+            android:layout_height="60dp" />
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/selected_icon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignEnd="@+id/profilePic"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/selected" />
+
+            <sportsfight.com.s.common.Heading
+
+                android:layout_marginLeft="20dp"
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/selected_icon"
+                android:gravity="center_vertical"
+                android:text="Jhon Abraham"
+                android:textColor="@color/black_font"
+                android:textSize="16dp" />
+            <View
+                android:id="@+id/selectRow"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

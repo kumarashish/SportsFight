@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Heading
+
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Add Points"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <View
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+    <sportsfight.com.s.common.Heading
+        android:textSize="14dp"
+        android:textColor="@color/black_font"
+        android:text="Available Points"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:id="@+id/currentPoints"
+        android:textSize="20dp"
+        android:textColor="@color/black_font"
+        android:text="1167"
+        android:layout_marginTop="5dp"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <sportsfight.com.s.common.Heading
+            android:textSize="16dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black_font"
+            android:text="Add Points to wallet"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <EditText
+
+        android:maxLength="5"
+        android:inputType="number"
+        android:padding="5dp"
+        android:hint="Enter points to be added"
+        android:id="@+id/addPoints_Edt"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/rectangle"
+        android:singleLine="true"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <sportsfight.com.s.common.Heading
+        android:id="@+id/amountPayable"
+        android:textSize="16dp"
+        android:gravity="center"
+   android:layout_marginTop="10dp"
+        android:textColor="@color/black_font"
+        android:text="Total Amount payable : 0"
+
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+<Button
+    android:textColor="@color/white"
+    android:textAllCaps="false"
+    android:text="Pay"
+    android:id="@+id/pay"
+    android:background="@drawable/purplebutton"
+    android:layout_gravity="center"
+    android:layout_marginTop="40dp"
+    android:layout_width="100dp"
+    android:layout_height="35dp" />
+
+    <sportsfight.com.s.common.Heading
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/light_grey"
+        android:text="@string/note"
+
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

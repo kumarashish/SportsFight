@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transaparent"
+   >
+    <LinearLayout
+
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <sportsfight.com.s.common.Heading
+        android:textColor="@color/purple"
+        android:textSize="10dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="Note : 10 points = Rs 1 "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <sportsfight.com.s.common.Heading
+        android:textColor="@color/purple"
+
+        android:textSize="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="Minimum amount that can  be transfer: ₹ 50 "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+android:background="@drawable/rectangle"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:id="@+id/beneficeryLayout"
+
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Heading
+                android:layout_width="150dp"
+                android:textColor="@color/black_font"
+                android:textSize="14dp"
+                android:text="Beneficiery Name :"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:id="@+id/beneficeryName"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple"
+                android:textSize="14dp"
+                android:text="Ashish Kumar"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Heading
+                android:layout_width="150dp"
+                android:textColor="@color/black_font"
+                android:textSize="14dp"
+                android:text="Beneficiery Acc.No :"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:id="@+id/beneficeryNumber"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple"
+                android:textSize="14dp"
+                android:text="12345678909876"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Heading
+                android:layout_width="150dp"
+                android:textColor="@color/black_font"
+                android:textSize="14dp"
+                android:text="IFSC Code :"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:id="@+id/ifsccode"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple"
+                android:textSize="14dp"
+                android:text="hdfc0000586"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Heading
+                android:layout_width="150dp"
+                android:textColor="@color/black_font"
+                android:textSize="14dp"
+                android:text="Bank Details :"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:id="@+id/bankDetails"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple"
+                android:textSize="14dp"
+                android:text="hdfc bank,green park new delhi"
+                android:maxLength="30"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Heading
+                android:layout_width="150dp"
+                android:textColor="@color/black_font"
+                android:textSize="14dp"
+                android:text="Points to transfer:"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/points"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple"
+                android:textSize="14dp"
+                android:text="0"
+                android:layout_marginRight="5dp"
+                android:inputType="number"
+                android:maxLength="5"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Heading
+                android:layout_width="150dp"
+                android:textColor="@color/black_font"
+                android:textSize="14dp"
+                android:text="Process Fee  :"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:id="@+id/feeValue"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple"
+                android:textSize="14dp"
+                android:text="0"
+                android:layout_marginRight="5dp"
+                android:inputType="number"
+                android:maxLength="5"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Heading
+                android:layout_width="150dp"
+                android:textColor="@color/black_font"
+                android:textSize="14dp"
+                android:text="Receivable Amount :"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:id="@+id/amountValue"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple"
+                android:textSize="14dp"
+                android:text="0"
+                android:layout_marginRight="5dp"
+                android:inputType="number"
+                android:maxLength="5"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_marginTop="5dp"
+            android:background="@color/purple"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <Button
+            android:id="@+id/transfer"
+            android:textSize="12dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="Transfer"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/purplebutton"
+            android:layout_width="80dp"
+            android:layout_height="30dp" />
+        <View
+            android:layout_marginTop="15dp"
+            android:background="@color/purple"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+
+</LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>

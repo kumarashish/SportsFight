@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/silver"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <Button
+            android:id="@+id/back"
+            android:background="@drawable/back"
+            android:layout_width="35dp"
+            android:layout_centerVertical="true"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"/>
+        <sportsfight.com.s.common.Heading
+            android:textSize="18dp"
+            android:textColor="@color/black_font"
+            android:text="Privacy and Policies"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+    <View
+        android:layout_above="@+id/footer"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <sportsfight.com.s.common.GradientTextView
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:textColor="@color/purple"
+                android:text="SPORTS FIGHT"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Heading
+                android:textSize="12dp"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Thank you forDownloading the Sports Fight's mobile application, which is owned and operated by Digital Minds. We appreciate the importance of your trust and have set forth this privacy policy to explain how we collect, protect, share and use your information as part of our App. Your use of the App constitutes your acceptance of this Privacy Policy and consent to the practices described. You may visit and browse the App without providing personally identifiable information about yourself.
+However, this may limit your ability to receive certain features, products or services from us. If you do not accept any of the terms of our Privacy Policy, please discontinue your access to Sports Fight’s services and App immediately.
+You warrant and attest that you are at least Thirteen (13) years of age. By using the App, you are confirming that you meet the minimum age requirement and are fully able to understand the contents, meaning and impact of the Privacy Policy and warrant and represent that you are fully able and competent to enter into and be bound by the same."
+  />
+​
+ <sportsfight.com.s.common.Heading
+                android:textSize="12dp"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+     android:text="1. Applicability of Privacy Policy
+
+This Privacy Policy applies to personal information collected by Sports Fight in connection with the services offered by it. This includes information collected offline, direct marketing campaigns, sweepstakes and competitions, and online through our App, branded pages on third party platforms and applications accessed or used through such Apps or third party platforms which are operated by or on behalf of Sports Fight. This Privacy Policy is hereby incorporated into and forms part of the Terms of Use entered into between the user and Sports Fight, for use of the applicable App.
+
+​
+
+This Privacy Policy does not apply to:
+
+information collected by third party Apps, platforms and/or applications  which we do not control;
+
+information collected by Third Party Apps which you access via links on the App ; or
+
+Banners, sweepstakes and other advertisements or promotions on Third Party Apps that we may sponsor or participate in.
+
+These Third Party Apps may have their own privacy policies and terms of use. We encourage you to read them before using such Third Party Apps.
+
+​
+
+2. Consent
+
+Sports Fight will not collect, use or disclose your personal information without your consent. In most cases, we will ask for your consent explicitly but, in some cases, we may infer consent from your actions and behavior. By accessing and using the App, you are consenting to Sports Fight collecting, using and disclosing your personal information in accordance with this Privacy Policy.
+
+We may ask you to provide additional consent if we need to use your personal information for purposes not covered by this Privacy Policy. You are not obliged to provide such consent but if you decide not to then your participation in certain activities may be restricted. If you provide additional consent, the terms of that consent shall prevail in the event of any conflict with the terms of this Privacy Policy. If you do not agree to the collection, use and disclosure of your personal information in this way, please do not use the App or otherwise provide Sports Fight with any personal information.
+
+​
+
+By using the App or providing us with any information, you: (a) acknowledge that the App is subject to the laws of India, (b) consent to the collection, processing, maintenance and transfer of such information in and to India and other applicable territories in which the privacy laws may not be as comprehensive as or equivalent to those in the country where you reside and/or are a citizen, and (c) waive any claims that may arise under those laws.
+
+​
+
+3. Information collected
+
+In this Privacy Policy, your personal information includes information or pieces of information that could allow you to be identified. This typically includes information such as your name, address, username, profile picture, email address, telephone number, address, copy of government-issued identification card such as driving license, AADHAR card or PAN card, but can also include other information such as your hobbies and interests. We may collect such personal information about you from different sources, including:
+
+​
+
+A. Information you give us directly
+
+We may collect information directly from you when you provide us with personal information, e.g. when you open a new account on the App, register for prize draws or competitions, sign up to receive information, book an experience using the App, fill out a survey, or make a comment or enquiry. The types of information we may collect from you directly include your:
+
+Name;
+
+Address;
+
+E-mail;
+
+Username;
+
+Telephone number;
+
+Credit card or other payment information;
+
+Age;
+
+Date of birth;
+
+Gender;
+
+User-generated content, posts and other content you submit to the App;
+
+Chats or other communication with other users, service providers, Venue Owners, Playmakers or Customer Support;
+
+or
+
+Any other personal information you voluntarily provide to us.
+
+You may also be able to register and log in to the App using a social media account, including your Facebook. When you use a social media account to log into the App, you may also be able to use certain social features on the App. For Facebook log in, Facebook will ask your permission to share certain information from your Facebook account with the App. This may include your first name, last name, gender, profile picture, list of friends, a link to your Facebook profile, likes, and other data that is part of your or your friends’ Facebook profile(s). This information is collected by Facebook and is provided to us under the terms of Facebook’s privacy policy. You can control the information that we receive from Facebook any other social media account using the privacy settings in your Facebook.
+
+​
+
+B. Information we collect automatically when you use the App
+
+We use cookies and other tools (such as web analytic tools and pixel tags) to automatically collect information about you when you use the App, subject to the terms of this Privacy Policy and applicable Indian data protection laws and regulations including the Indian Information Technology Act, 2000 and rules / regulations thereunder. The types of information we may collect automatically include:
+
+Information about the type of browser you use;
+
+Details of the app pages you have viewed;
+
+IP address;
+
+The hyperlinks you have clicked;
+
+Your username, profile picture, gender, networks and any other information you choose to share when using Third Party Apps  or
+
+The Apps you visited before arriving at the App.
+
+​
+
+4. Use of Information
+
+We may use your personal information collected by us to:
+
+Improve our services and your experience on the App.
+
+Evaluate the use of the App, as well as its products and services.
+
+Analyze the effectiveness of our advertisements, competitions and promotions.
+
+Personalize your App experience, as well as to evaluate (anonymously and in the aggregate) statistics on  App activity, such as what time you visited it, whether you have visited it before and which App referred you to it.
+
+Make the App easier to use and to better tailor the App and our services to your interests and needs.
+
+Help speed up your future activities and experience on the App. For example, the App can recognize that you have provided your personal information and will not request the same information a second time.
+
+Collect information about the device you are using to view the App, such as your IP address or the type of Internet browser or operating system you are using, and link this to your personal information so as to ensure that the App presents the best web experience for you.
+
+​
+
+To contact you regarding services which may be of interest to you, provided you have given us consent to do so, or you have previously requested a service from us and the communication is relevant or related to that prior request and made within any timeframes established by applicable laws.
+
+Offer you the opportunity to take part in competitions or promotions.
+
+Provide you with information, products or services that you request from us.
+
+Respond to your queries or comments.
+
+Processing applications and transactions.
+
+Where we collect personal information for a specific purpose, we will not keep it for longer than is necessary to fulfill that purpose, unless we have to keep it for a legitimate business activity or legal reasons. Please note that in order to protect information from accidental or malicious destruction, when we delete information from our services we may not immediately delete residual copies from our servers or remove information from our backup systems.
+
+​
+
+5. Sports Fight account
+
+When you create a Sports Fight account, we will set up a Sports Fight account profile page for you. Your Sports Fight account profile page will include your first name and last name. You can select the other items of personal information that you wish to be included in your Sports Fight account profile page – including, but not limited to, a profile picture. We will display your profile information in your Sports Fight account profile page publicly via the App, and, with your prior permission, on Third Party Apps. Any information you choose to provide as part of your profile information will be publicly visible to all Sports Fight Users and consequently should reflect how much you want other Sports Fight Users to know about you. We recommend that you guard your anonymity and sensitive information and we encourage members to think carefully about what information about themselves they disclose in their profile pages. You can review and revise your profile information at any time.
+
+​
+
+6. Cookies
+
+A cookie is a small file placed on your computer when you visit a App that can be understood by the App that issued the cookie. We use cookies to monitor how our App is used and to help personalize your online experience. For example, when you register on our App, we may store a unique code in a cookie on your computer. The next time you come back to the App from that computer, our servers use the cookie to recognize your device. We can then use the information you provided when you registered, combined with your activities on our App to provide advertisements and offers that we believe may be of interest to you. Most internet browsers are initially set up to accept cookies. You can change the settings to block cookies or to alert you when cookies are being sent to your device. If you disable the cookies however, this may impact your experience on the App.
+
+​
+
+7. Sharing of information
+
+For the purpose of facilitating the booking of an Activity, Sports Fight shall share the following information with the users on the App:
+
+Name
+
+Photo
+
+Gender
+
+Location (not exact address)
+
+Details of the listed Experience including locations covered, time taken, event-by-event breakup of the proposed Experience.
+
+Questions asked on the App/answers given/cities visited and any other information you fill up
+
+Your App consumption information e.g. likes, votes, answers, questions, shares, booked activities etc. As a general rule, we do not share your personal information with any third party. However, we may share your personal information with trusted third parties, such as:
+
+Our advertising, marketing and promotional agencies to help us deliver and analyze the effectiveness of our advertising campaigns and promotions.
+
+Third parties required to deliver a product or service to you, such as a delivery or postal service delivering a product that you have ordered.
+
+Law enforcement or government authorities where they have followed due legal process to request us to disclose the information.
+
+Third parties who wish to send you information about their products and services, but only if you have given us consent to do so.
+
+Third party service providers which provide services to Sports Fight such as data analysis firms, customer support specialists, email vendors, webhosting companies and fulfillment companies (e.g., companies that coordinate mailings).
+
+Our affiliates and other divisions in our company which may be located in or outside India.
+
+We may also share your personal information with companies, organizations or individuals outside of Sports Fight, if we believe that disclosure of such information is necessary for legal reasons. Such reasons include to:
+
+Enforce the Terms of Use of the App.
+
+Conduct investigations into possible breaches of applicable laws.
+
+Detect, prevent and protect against fraud and any technical or security vulnerabilities.
+
+Comply with applicable laws and regulations, co-operate in any legal investigation and meet enforceable governmental requests.
+
+If we do share your personal information with a third party, we shall use our best efforts to ensure that they keep your information secure, take all reasonable steps to protect it from misuse and only use it for purposes other than providing services to Sports Fight, and in a manner consistent with this Privacy Policy and applicable data protection laws and regulations including the Indian Information Technology Act, 2000 and rules / regulations thereunder. Sports Fight will not sell personal information, except to an entity to which we divest all or a portion of our business (for example, in connection with our sale of a brand or undertaking), or otherwise in connection with a merger, consolidation, change in control, reorganization or liquidation of all or a portion of our business. While on the App, you may have the opportunity to opt-in to receive information and / or marketing offers from a third party, or to otherwise consent to the sharing of your information with a third party, including social networking Apps such as Facebook or Twitter. If you agree to have your personal information shared with such third parties, your personal information will be disclosed to the third party and will be subject to the privacy policy and business practices of that third party.
+
+​
+
+8. Sharing of information with Venue Owners and Playmakers
+
+If a Venue Owner or Playmaker configures or posts a listing about an Activity, we may publish that listing publicly via the App and may enable third parties to publish your listing on their  Apps through the use of an HTML .
+
+​
+
+9. User-generated content
+
+The App enables users to submit their own content for scores, stats, contests, blogs, videos, and other features. Please remember that any information you disclose becomes public information and you should exercise caution when deciding to disclose your personal, financial or other information in a submission. Sports Fight cannot prevent such information from being used in a manner that may violate this Privacy Policy, applicable laws, or your personal privacy and safety, and is not responsible for the result of such postings.
+
+​
+
+10. Security precautions
+
+Our App maintains stringent security measures in place to protect the loss, unauthorized use, disclosure, destruction and alteration of the information under our control. Whenever you change or access your account information, we offer the use of a secure server. Once your information is in our possession, we adhere to strict security guidelines, protecting it against such unauthorized access. However, no electronic data transmission or storage of information can be guaranteed to be absolutely secure. Please note that we cannot absolutely ensure or warrant the security of any information that you transmit to us. Sports Fight restricts authorized access to your personal information to those persons who have a legitimate purpose to know that information to provide products or services to you, and those persons who are authorized to have access to such information.
+
+​
+
+11. Transfer of information
+
+We may transfer your personal information to servers located outside the country in which you live or to affiliates or other trusted third parties based in other countries so that they may process personal information on our behalf. By using the App or otherwise providing Sports Fight with personal information, you agree to us doing so, in accordance with the terms of this Privacy Policy and applicable Indian data protection laws and regulations such as the Indian Information Technology Act, 2000 and rules / regulations laid down thereunder. You should be aware that many countries do not afford the same legal protection to personal information as you might enjoy in your country of origin. While your personal information is in another country, it may be accessed by the courts, law enforcement and national security authorities in that country in accordance with its laws. Subject to such lawful access requests, we promise that anyone processing your personal information outside your country of origin is required to implement measures to protect it and is only entitled to process it in accordance with Sports Fight’s instructions.
+
+​
+
+12. Testimonials
+
+With your consent we may post your testimonial on our App or website along with your name. If you want your testimonial removed please contact us.
+
+​
+
+13. Choice / Opt-Out
+
+We provide all users with the opportunity to opt-out of receiving non-essential (promotional, marketing related) communications from us on behalf of our partners, and from us in general. Any direct marketing communications that we send to you will provide you with the information and means necessary to opt out of receiving such communications.
+
+​
+
+14. Your privacy rights, choice and access
+
+If you wish to modify, verify, correct, delete, or update any of your personal information collected through the App, you may edit your profile preferences or contact us in relation to the same. In accordance with our routine record keeping, we may delete certain records that contain personal information you have submitted through the App. We are under no obligation to store such personal information indefinitely and disclaim any liability arising out of, or related to, the destruction of such personal information.
+
+We will retain your information for as long as your account is active or as needed to provide you services. If you wish to cancel your account or request that we no longer use your information to provide you services, please contact us in relation to the same. We will retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.
+
+​
+
+15. Other Apps
+
+The App may contain links to External Apps that are not owned or operated by Sports Fight or any affiliate of ours. This includes links from advertisers, sponsors and/or partners that may use our logo(s) as part of a co-branding or co-marketing agreement. We do not control, recommend or endorse and are not responsible for these External Apps or their content, products, services or privacy policies or practices. These other External Apps may send their own cookies or other tracking devices to your device; they may independently collect data or solicit personal information and may or may not have their own published privacy policies. The App may make available chat rooms, forums, message boards, and news groups. Remember that any information that you disclose in these areas becomes public information and is not subject to the provisions of this Privacy Policy.
+
+​
+
+16. Changes and policy updates
+
+We may change this Privacy Policy at any time without giving prior notice, and any changes will be effective immediately upon the posting of the revised Privacy Policy on the App. We will use your personal information in a manner consistent with the Privacy Policy in effect at the time you submitted the information to us, unless you consent to the revised Privacy Policy. We encourage you to periodically review this page for the latest information on our privacy practices."/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

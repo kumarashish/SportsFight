@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <sportsfight.com.s.common.Heading
+        android:textColor="@color/black_font"
+        android:layout_alignParentTop="true"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Transfer Money to bank account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_font" />
+    </LinearLayout>
+<sportsfight.com.s.common.Heading
+    android:textColor="@color/purple"
+    android:textSize="10dp"
+    android:gravity="center"
+    android:layout_alignParentBottom="true"
+    android:text="Minimum amount that can  be transfer: ₹ 50 "
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/add_beneficiery"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <sportsfight.com.s.common.Heading
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:textColor="@color/black_font"
+            android:text="Beneficiary List" />
+        <ListView
+            android:id="@+id/listview"
+            android:divider="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+    <sportsfight.com.s.common.Heading
+        android:visibility="gone"
+        android:id="@+id/no_beneficiery"
+        android:gravity="center"
+        android:textSize="16dp"
+        android:text="No Beneficiary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <sportsfight.com.s.common.Heading
+        android:id="@+id/add_beneficiery"
+        android:textColor="@color/purple"
+        android:textSize="14dp"
+        android:gravity="center"
+
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/addbeneficiaryu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
