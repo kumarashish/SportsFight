@@ -20,8 +20,11 @@ allprojects {
         google()
         mavenCentral()
         maven {
+
             url "https://s3-ap-southeast-1.amazonaws.com/godel-release/godel/"
+
         }
+        maven { url "https://jitpack.io" }
     }
 
 }
