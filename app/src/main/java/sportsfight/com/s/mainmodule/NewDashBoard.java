@@ -3,6 +3,8 @@ package sportsfight.com.s.mainmodule;
 import android.app.Dialog;
 import android.app.VoiceInteractor;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
@@ -27,10 +29,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.ms_square.etsyblur.BlurSupport;
 import com.prof.rssparser.Parser;
 import org.w3c.dom.Text;
 import butterknife.BindView;
@@ -62,6 +67,10 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
     View profile;
     DrawerLayout drawer;
     Button add_button;
+    RelativeLayout createTeam_bg;
+
+    boolean isaddTeamClicked=false;
+    LinearLayout expandedView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +90,8 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
 
         Button button=(Button)dashboardView.findViewById(R.id.menu);
         add_button=(Button) dashboardView.findViewById(R.id.add_team);
+        createTeam_bg=(RelativeLayout) dashboardView.findViewById(R.id.createTeamBg);
+        expandedView=(LinearLayout) dashboardView.findViewById(R.id.expadedView);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -97,6 +108,7 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
     {   logout.setOnClickListener(this);
         contactUs.setOnClickListener(this);
         profile.setOnClickListener(this);
+        add_button.setOnClickListener(this);
         heading=(TextView)view.findViewById(R.id.yourLocation_tv);
         yourLocation=(TextView)view.findViewById(R.id.heading_tv);
         distance=(TextView)view.findViewById(R.id.distance_tv);
@@ -114,23 +126,30 @@ public void loadfragment(int value)
             case 1:
                 fragmentA = new HomeFragment();
                 add_button.setVisibility(View.VISIBLE);
+                if(isaddTeamClicked)
+                {
+                    expandedView.setVisibility(View.VISIBLE);
+                }
                 selectedFragment=1;
                 break;
             case 2:
                 fragmentA = new WalletFragment();
                 add_button.setVisibility(View.GONE);
+                expandedView.setVisibility(View.GONE);
                 backPressedCount=0;
                 selectedFragment=2;
                 break;
             case 3:
                 fragmentA = new BookingFragment();
                 add_button.setVisibility(View.GONE);
+                expandedView.setVisibility(View.GONE);
                 backPressedCount=0;
                 selectedFragment=3;
                 break;
             case 4:
                 fragmentA = new MyGame();
                 add_button.setVisibility(View.GONE);
+                expandedView.setVisibility(View.GONE);
                 backPressedCount=0;
                 selectedFragment=4;
                 break;
@@ -201,6 +220,20 @@ public void loadfragment(int value)
             case R.id.profile:
                 startActivity(new Intent(NewDashBoard.this, NewProfile.class));
                 drawer.closeDrawer(GravityCompat.START);
+                break;
+            case R.id.add_team:
+                if(isaddTeamClicked)
+                {  layout.setAlpha(1f);
+                    isaddTeamClicked=false;
+                    expandedView.setVisibility(View.GONE);
+
+                }else {
+                    layout.setAlpha(.1f);
+
+                    //createTeam_bg.bringToFront();
+                    isaddTeamClicked=true;
+                    expandedView.setVisibility(View.VISIBLE);
+                }
                 break;
         }
     }

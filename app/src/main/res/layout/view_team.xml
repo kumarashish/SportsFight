@@ -11,8 +11,9 @@
         android:orientation="horizontal"
         android:layout_height="40dp">
         <ImageView
+            android:tint="@color/tabselected"
             android:id="@+id/back"
-            android:tint="@color/black_font"
+
             android:src="@drawable/back"
             android:layout_width="25dp"
             android:layout_centerVertical="true"

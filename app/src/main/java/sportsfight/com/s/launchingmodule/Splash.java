@@ -89,13 +89,15 @@ public class Splash extends Activity {
 //            Intent i = new Intent(Splash.this, WelcomeActivity.class);
 //            startActivity(i);
 //        } else {
-            if (controller.getPrefManager().isUserLoggedIn()) {
-                Intent i = new Intent(Splash.this, NewDashBoard.class);
-                startActivity(i);
-            } else {
-                Intent i = new Intent(Splash.this, Login.class);
-                startActivity(i);
-            }
+//            if (controller.getPrefManager().isUserLoggedIn()) {
+//                Intent i = new Intent(Splash.this, NewDashBoard.class);
+//                startActivity(i);
+//            } else {
+//                Intent i = new Intent(Splash.this, Login.class);
+//                startActivity(i);
+//            }
+        Intent i = new Intent(Splash.this, NewDashBoard.class);
+        startActivity(i);
 
 
         // close this activity
