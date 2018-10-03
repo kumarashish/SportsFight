@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#80000000"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@drawable/white_rounded_bg"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="55dp">
+    <EditText
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="20dp"
+        android:text="Hitech City, Madhapur"
+        android:textColor="@color/black_font"
+        android:singleLine="true"
+        android:focusable="false"
+        android:background="@drawable/rounded_corner_grey_bg"
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/gps"
+            android:tint="@color/tabselected"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <sportsfight.com.s.common.Heading
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp"
+            android:text="Use Current Location"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_marginTop="20dp"
+        android:background="@color/light_grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <RadioGroup
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:buttonTint="@color/tabselected"
+            android:text="5 km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:buttonTint="@color/tabselected"
+            android:text="10 km"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:buttonTint="@color/tabselected"
+            android:text="15 km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:buttonTint="@color/tabselected"
+            android:text="20 km"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
