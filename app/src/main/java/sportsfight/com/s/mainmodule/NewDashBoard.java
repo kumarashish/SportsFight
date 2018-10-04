@@ -29,7 +29,10 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,11 +69,15 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
     @BindView(R.id.profile)
     View profile;
     DrawerLayout drawer;
-    Button add_button;
+   View add_team;
     RelativeLayout createTeam_bg;
+    ImageView addIcon;
 
     boolean isaddTeamClicked=false;
     LinearLayout expandedView;
+    View createTeam;
+    View myTeam;
+    RelativeLayout addView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,9 +94,12 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         View  dashboardView=(View) findViewById(R.id.dashdoard);
-
         Button button=(Button)dashboardView.findViewById(R.id.menu);
-        add_button=(Button) dashboardView.findViewById(R.id.add_team);
+        add_team=(View) dashboardView.findViewById(R.id. add_team);
+        addIcon=(ImageView) dashboardView.findViewById(R.id.addIcon);
+        createTeam=(View) dashboardView.findViewById(R.id.createTeam);
+        myTeam=(View) dashboardView.findViewById(R.id.myTeam);
+        addView=(RelativeLayout) dashboardView.findViewById(R.id.addView);
         createTeam_bg=(RelativeLayout) dashboardView.findViewById(R.id.createTeamBg);
         expandedView=(LinearLayout) dashboardView.findViewById(R.id.expadedView);
         button.setOnClickListener(new View.OnClickListener() {
@@ -101,20 +111,21 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
         initializeAll(dashboardView);
-
     }
 
     public void initializeAll(View view)
     {   logout.setOnClickListener(this);
         contactUs.setOnClickListener(this);
         profile.setOnClickListener(this);
-        add_button.setOnClickListener(this);
+        add_team.setOnClickListener(this);
+        createTeam.setOnClickListener(this);
+        myTeam.setOnClickListener(this);
         heading=(TextView)view.findViewById(R.id.yourLocation_tv);
         yourLocation=(TextView)view.findViewById(R.id.heading_tv);
         distance=(TextView)view.findViewById(R.id.distance_tv);
         layout=(FrameLayout)view.findViewById(R.id.frame);
+        yourLocation.setOnClickListener(this);
         loadfragment(1);
-
     }
 
 
@@ -125,7 +136,7 @@ public void loadfragment(int value)
         switch (value){
             case 1:
                 fragmentA = new HomeFragment();
-                add_button.setVisibility(View.VISIBLE);
+                addView.setVisibility(View.VISIBLE);
                 if(isaddTeamClicked)
                 {
                     expandedView.setVisibility(View.VISIBLE);
@@ -134,28 +145,28 @@ public void loadfragment(int value)
                 break;
             case 2:
                 fragmentA = new WalletFragment();
-                add_button.setVisibility(View.GONE);
+                addView.setVisibility(View.GONE);
                 expandedView.setVisibility(View.GONE);
                 backPressedCount=0;
                 selectedFragment=2;
                 break;
             case 3:
                 fragmentA = new BookingFragment();
-                add_button.setVisibility(View.GONE);
+                addView.setVisibility(View.GONE);
                 expandedView.setVisibility(View.GONE);
                 backPressedCount=0;
                 selectedFragment=3;
                 break;
             case 4:
                 fragmentA = new MyGame();
-                add_button.setVisibility(View.GONE);
+                addView.setVisibility(View.GONE);
                 expandedView.setVisibility(View.GONE);
                 backPressedCount=0;
                 selectedFragment=4;
                 break;
             case 5:
                 fragmentA = new NotificationFragment();
-                add_button.setVisibility(View.GONE);
+                addView.setVisibility(View.GONE);
                 backPressedCount=0;
                 selectedFragment=5;
                 break;
@@ -165,8 +176,6 @@ public void loadfragment(int value)
     android.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
     fragmentTransaction.replace(layout.getId(), fragmentA);
     fragmentTransaction.commit();
-
-
 }
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -221,15 +230,25 @@ public void loadfragment(int value)
                 startActivity(new Intent(NewDashBoard.this, NewProfile.class));
                 drawer.closeDrawer(GravityCompat.START);
                 break;
+            case R.id.createTeam:
+                Toast.makeText(NewDashBoard.this,"Comming soon",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.myTeam:
+                Toast.makeText(NewDashBoard.this,"Comming soon",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.heading_tv:
+                showChangeLocationAlert();
+                break;
             case R.id.add_team:
                 if(isaddTeamClicked)
-                {  layout.setAlpha(1f);
+                {  addIcon.setImageDrawable(getApplicationContext().getDrawable(R.drawable.add));
+                    layout.setAlpha(1f);
                     isaddTeamClicked=false;
                     expandedView.setVisibility(View.GONE);
 
                 }else {
+                    addIcon.setImageDrawable(getApplicationContext().getDrawable(R.drawable.minus));
                     layout.setAlpha(.1f);
-
                     //createTeam_bg.bringToFront();
                     isaddTeamClicked=true;
                     expandedView.setVisibility(View.VISIBLE);
@@ -307,6 +326,29 @@ public void loadfragment(int value)
                 finish();
             }
         });
+        dialog.show();
+    }
+
+    public void showChangeLocationAlert() {
+        final Dialog dialog = new Dialog(this);
+        LottieAnimationView animationView;
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.choose_location_popup);
+        final Window window = dialog.getWindow();
+        window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
+        window.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
+        window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        RadioGroup group=(RadioGroup)dialog.findViewById(R.id.radio_gp) ;
+        group.check(R.id.radio3);
+        Button done = (Button) dialog.findViewById(R.id.done);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.cancel();
+            }
+        });
+
+
         dialog.show();
     }
 

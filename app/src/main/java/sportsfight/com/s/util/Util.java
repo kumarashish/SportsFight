@@ -341,10 +341,7 @@ int month=c.get(Calendar.MONTH)+1;
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         window.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        animationView = (LottieAnimationView) dialog.findViewById(R.id.animation_view);
-        animationView.setAnimation("data.json");
-        animationView.loop(true);
-        animationView.playAnimation();
+
         dialog.show();
         return dialog;
     }

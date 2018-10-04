@@ -51,7 +51,7 @@
         android:layout_height="wrap_content">
     <sportsfight.com.s.common.CircleImageView
    android:layout_marginTop="20dp"
-        android:src="@drawable/prabhas"
+
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:id="@+id/circleImageView4" />
@@ -71,10 +71,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <sportsfight.com.s.common.Bold_TextView
+                android:id="@+id/name"
                 android:layout_marginLeft="20dp"
                 android:textSize="16dp"
                 android:textColor="@color/black_font"
-                android:text="Bahubali"
+                android:text=""
                 android:gravity="left"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -82,26 +83,29 @@
                 android:layout_marginLeft="20dp"
                 android:textSize="14dp"
                 android:textColor="@color/black_font"
-                android:text="Male"
+                android:text=""
+                android:id="@+id/gender"
                 android:gravity="left"
                 android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <sportsfight.com.s.common.Heading
                 android:textSize="14dp"
+                android:id="@+id/emailId"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="@color/black_font"
-                android:text="Bahubali@sportsfight.com"
+                android:text=""
                 android:gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <sportsfight.com.s.common.Heading
+                android:id="@+id/mobileNumber"
                 android:layout_marginTop="5dp"
                 android:textSize="14dp"
                 android:layout_marginLeft="20dp"
                 android:textColor="@color/black_font"
-                android:text="+91 8121484289"
+                android:text=""
                 android:gravity="left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
@@ -129,12 +133,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="25dp" />
             <sportsfight.com.s.common.Bold_TextView
-
+             android:id="@+id/club"
           android:padding="5dp"
                 android:textSize="20dp"
                 android:textColor="@color/black_font"
-                android:text="Gold"
-
+                android:text=""
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -142,7 +145,7 @@
                 android:padding="5dp"
                 android:textSize="12dp"
                 android:textColor="@color/light_grey"
-                android:text="Gold"
+                android:text="Club"
                 android:gravity="bottom|center_horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
@@ -167,8 +170,8 @@
                 android:padding="5dp"
                 android:textSize="20dp"
                 android:textColor="@color/black_font"
-                android:text="150"
-
+                android:text=""
+                android:id="@+id/totalGames"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -201,12 +204,13 @@
                 android:padding="5dp"
                 android:textSize="20dp"
                 android:textColor="@color/black_font"
-                android:text="70%"
-
+                android:text=""
+                android:id="@+id/winning_percentage"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
             <TextView
+
                 android:padding="5dp"
                 android:textSize="12dp"
                 android:textColor="@color/light_grey"
@@ -251,7 +255,8 @@
             android:layout_height="25dp" />
         <TextView
 android:textColor="@color/black_font"
-            android:text="Hitech City, Madhapur"
+            android:id="@+id/locationName"
+            android:text=""
             android:layout_marginLeft="5dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"

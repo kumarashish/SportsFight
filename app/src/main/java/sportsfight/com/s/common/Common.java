@@ -13,8 +13,8 @@ public class Common {
  public static int TransferPoint=1;
  public static int TransferMoney=2;
 
-    public static String BaseUrl = "http://192.168.100.92:9191/api/";
-    //public static String BaseUrl = "http://www.dmss.co.in/sportsfight/api/";
+    //public static String BaseUrl = "http://192.168.100.92:9191/api/";
+    public static String BaseUrl = "http://api.sportsfight.co.in/api/";
     //public static String LoginUrl = BaseUrl + "login/userlogin";
     public static String LoginUrl = BaseUrl +"login/userloginWithAppVersion";
     public static String SignUpUrl = BaseUrl + "login/Register";
@@ -27,6 +27,8 @@ public class Common {
     public static  String getUpdateMobileUrl=BaseUrl + "login/send-otp-update?";
     public static  String getValidateMobileUrl=BaseUrl + "user/update-mobile?";
     public static  String getProfile_Url=BaseUrl + "user/getprofile?";
+    public static  String getProfile_UrlNew=BaseUrl + "user/getuserprofile?";
+
     public static String getUpdateProfilePic_Url=BaseUrl + "user/update-profileimage";
     public static String getGender_Url=BaseUrl + "user/update-personalinfo?";
     public static String getUpdateGame_Url=BaseUrl + "user/update-usergames?";
@@ -62,6 +64,7 @@ public class Common {
     public static String isSlotAvailable=BaseUrl + "challenge/IsGameSlotValidate";
     public static String isUserAlreadyRegistered=BaseUrl+"login/useralreadyregistered?mobile=";
     public static String validateTransactionUrl="https://securegw.paytm.in/merchant-status/getTxnStatus";
+    public static String contactUs=BaseUrl+"sports/getcontactUs";
     /*****************************************paymentgateway***************************************/
     public static String paymentGatewayUrlLive="https://api.instamojo.com/oauth2/token/";
     public static String paymentVerificationUrlLive="https://api.instamojo.com/v2/payments/";
@@ -228,6 +231,11 @@ public class Common {
         } else {
             return getValidateOTPURL + "id=" + id + "&otp=" + otp + "&otpTypeId=" + type;
         }
+    }
+
+    public static String getGetProfile_UrlNew(String userId)
+    {
+        return getProfile_UrlNew+"id="+userId;
     }
     public static String isUserAlreadyExist(String mobileNumber,String email)
     {

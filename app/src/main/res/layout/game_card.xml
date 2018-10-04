@@ -12,6 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent">
         <ImageView
+            android:id="@+id/gameIcon"
             android:src="@drawable/tt_new"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
@@ -151,6 +152,7 @@ android:id="@+id/enabledView"
                     android:paddingLeft="5dp"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:id="@+id/levelValue"
                     android:textSize="11dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
@@ -176,6 +178,7 @@ android:id="@+id/enabledView"
                     android:paddingLeft="5dp"
                     android:layout_height="wrap_content" />
                 <TextView
+                    android:id="@+id/rankValue"
                     android:textSize="11dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"

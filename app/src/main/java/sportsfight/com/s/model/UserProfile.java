@@ -14,7 +14,15 @@ public class UserProfile  {
     String email="";
     String mobile="";
     String profilePic=null;
-    Integer gender=1;
+   String CompanyName;
+    String LocationName;
+    String Latitude;
+    String Longitude;
+    int TotalGames;
+    int TotalPoints;
+   int WinPercentage;
+    String ClubName;
+   String gender;
      ArrayList<InterestedGameModel> interestedGame=new ArrayList<>();
       int userId;
       int winPercentage;
@@ -28,15 +36,23 @@ public class UserProfile  {
             email = jsonObject.getString("Email");
             mobile = jsonObject.getString("Mobile");
             profilePic = jsonObject.isNull("ImageUrl") ? "" : jsonObject.getString("ImageUrl");
-            gender = jsonObject.isNull("Gender") ? 1 : jsonObject.getInt("Gender");
+            gender = jsonObject.isNull("Gender") ? "": jsonObject.getString("Gender");
             winPercentage=jsonObject.isNull("WinPercentage") ? 0 : jsonObject.getInt("WinPercentage");
             totalPoints=jsonObject.isNull("TotalPoints") ? 0 : jsonObject.getInt("TotalPoints");
             isEmailVerified=jsonObject.isNull("IsEmailVerified") ? false : jsonObject.getBoolean("IsEmailVerified");
+             CompanyName =jsonObject.isNull("CompanyName") ? "" : jsonObject.getString("CompanyName");
+            LocationName= jsonObject.isNull("LocationName") ? "" : jsonObject.getString("LocationName");
+             Latitude =jsonObject.isNull("Latitude") ? "" : jsonObject.getString("Latitude");
+             Longitude= jsonObject.isNull("Longitude") ? "" : jsonObject.getString("Longitude");
+             TotalGames=jsonObject.isNull("TotalGames") ? 0 : jsonObject.getInt("TotalGames");
+           TotalPoints=jsonObject.isNull("TotalPoints") ? 0 : jsonObject.getInt("TotalPoints");
+             WinPercentage=jsonObject.isNull("WinPercentage") ? 0 : jsonObject.getInt("WinPercentage");
+            ClubName=jsonObject.isNull("ClubName") ? "" : jsonObject.getString("ClubName");
             if (!jsonObject.isNull("UserInterestedGamesDTO")) {
                 JSONArray prefferedGame = jsonObject.getJSONArray("UserInterestedGamesDTO");
                 for (int i = 0; i < prefferedGame.length(); i++) {
                     JSONObject game = prefferedGame.getJSONObject(i);
-                    InterestedGameModel model = new InterestedGameModel(game.getString("Name"), game.getString("GameId"));
+                    InterestedGameModel model = new InterestedGameModel( game);
                     interestedGame.add(model);
                 }
             }
@@ -70,7 +86,7 @@ public class UserProfile  {
         return userName;
     }
 
-    public int getGender() {
+    public String getGender() {
         return gender;
     }
 
@@ -94,7 +110,31 @@ public class UserProfile  {
         return userId;
     }
 
-    public void setGender(int gender) {
+    public String getClubName() {
+        return ClubName;
+    }
+
+    public String getCompanyName() {
+        return CompanyName;
+    }
+
+    public int getTotalGames() {
+        return TotalGames;
+    }
+
+    public String getLatitude() {
+        return Latitude;
+    }
+
+    public String getLocationName() {
+        return LocationName;
+    }
+
+    public String getLongitude() {
+        return Longitude;
+    }
+
+    public void setGender(String gender) {
         this.gender = gender;
     }
     public void setProfilePic(String ProfilePic) {

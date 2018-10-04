@@ -99,7 +99,7 @@ public class AppController extends Application {
         prefManager.setUserProfile(userProfileString);
     }
 
-    public void updateGender(int gender) {
+    public void updateGender(String gender) {
         profile.setGender(gender);
         Gson gson = new Gson();
         String userProfileString = gson.toJson(profile);

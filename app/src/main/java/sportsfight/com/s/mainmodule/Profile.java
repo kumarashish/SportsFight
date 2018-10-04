@@ -222,13 +222,13 @@ public class Profile extends Activity implements View.OnClickListener,WebApiResp
         } else {
             noInterest.setVisibility(View.VISIBLE);
         }
-        switch (profile.getGender()) {
-            case 1:
-                radioGroup.check(male.getId());
-                break;
-            case 2:
-                radioGroup.check(female.getId());
-        }
+//        switch (profile.getGender()) {
+//            case 1:
+//                radioGroup.check(male.getId());
+//                break;
+//            case 2:
+//                radioGroup.check(female.getId());
+//        }
 
     }
 
@@ -460,7 +460,7 @@ public class Profile extends Activity implements View.OnClickListener,WebApiResp
         switch (apiCall) {
             case updateGender:
                 if (Util.getStatus(value) == true) {
-                    controller.updateGender(genderid);
+                   // controller.updateGender(genderid);
                 }
                 break;
             case updateProfilePic:

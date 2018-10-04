@@ -68,12 +68,12 @@
         android:text="Sports Fight"
         android:layout_height="wrap_content" />
     <sportsfight.com.s.common.Heading
+        android:id="@+id/address"
         android:textSize="12dp"
 android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
         android:gravity="center"
-        android:text="A-Wing, 2nd Floor,#4, Infocity,Madhapur, Hyderabad,
-Telangana, India -500 081"
+        android:text=""
            android:layout_height="wrap_content" />
     </LinearLayout>
     <LinearLayout
@@ -101,11 +101,12 @@ Telangana, India -500 081"
                 android:layout_width="0.5dp"
                 android:layout_height="match_parent"/>
     <sportsfight.com.s.common.Heading
+        android:id="@+id/contact_number"
         android:textSize="12dp"
         android:layout_margin="5dp"
         android:layout_width="match_parent"
         android:gravity="center_vertical"
-        android:text="+91 40 6688 5666"
+        android:text=""
         android:layout_height="match_parent" />
         </LinearLayout>
         <View
@@ -130,12 +131,12 @@ Telangana, India -500 081"
                 android:layout_width="0.5dp"
                 android:layout_height="match_parent"/>
             <sportsfight.com.s.common.Heading
-
+                android:id="@+id/emailId"
                 android:textSize="12dp"
                 android:layout_margin="5dp"
                 android:layout_width="match_parent"
                 android:gravity="center_vertical"
-                android:text="ashishk@dmss.co.in"
+                android:text=""
                 android:layout_height="match_parent" />
         </LinearLayout>
     </LinearLayout>

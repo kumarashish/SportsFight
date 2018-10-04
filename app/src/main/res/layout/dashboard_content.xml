@@ -103,14 +103,31 @@ android:textColor="@color/black_font"
                     android:text="Create Team"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
-            <ImageButton
 
-                android:layout_gravity="center"
-                android:background="@drawable/blue_circle"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/blue_circle">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:drawablePadding="10dp"
+                        android:scaleType="centerInside"
+
+                        android:src="@drawable/create_team"
+                        android:tint="@color/white" />
+                    <View
+                        android:id="@+id/createTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
             </LinearLayout>
             <LinearLayout
+                android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
@@ -125,27 +142,55 @@ android:textColor="@color/black_font"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent" />
 
+                <RelativeLayout
 
-            <ImageButton
-                android:layout_marginBottom="10dp"
-                android:layout_marginRight="10dp"
-                android:layout_gravity="end"
-               android:background="@drawable/green_circle"
-                android:layout_width="50dp"
-                android:layout_height="50dp" />
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/green_circle">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:drawablePadding="10dp"
+                        android:scaleType="centerInside"
+
+                        android:src="@drawable/myteam"
+                        android:tint="@color/white" />
+                    <View
+                        android:id="@+id/myTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                </RelativeLayout>
         </LinearLayout>
             </LinearLayout>
-
-            <Button
-                android:scaleType="center"
-
-                android:src="@drawable/add"
+            <RelativeLayout
+               android:id="@+id/addView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_gravity="end"
+                android:background="@drawable/orange_gradient_circle">
 
-                android:background="@drawable/orange_gradient_circle"
-                android:id="@+id/add_team"
-                android:layout_width="80dp"
-                android:layout_height="80dp" />
+                <ImageView
+                    android:id="@+id/addIcon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:drawablePadding="10dp"
+                    android:scaleType="centerInside"
+
+                    android:src="@drawable/add"
+                    android:tint="@color/white" />
+                <View
+                    android:id="@+id/add_team"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"/>
+            </RelativeLayout>
+
         </LinearLayout>
 
         </RelativeLayout>

@@ -63,10 +63,7 @@ public class Splash extends Activity {
 
 
     public void runThread()
-
-
     {
-
         new Handler().postDelayed(new Runnable() {
 
             /*
@@ -86,18 +83,17 @@ public class Splash extends Activity {
     public void launchHomeScreen() {
 //        if (controller.getPrefManager().isFirstTimeLaunch()) {
 //            controller.getPrefManager().setFirstTimeLaunch(false);
-//            Intent i = new Intent(Splash.this, WelcomeActivity.class);
+//            Intent i = new Intent(Splash.this,Sign.class);
 //            startActivity(i);
 //        } else {
-//            if (controller.getPrefManager().isUserLoggedIn()) {
-//                Intent i = new Intent(Splash.this, NewDashBoard.class);
-//                startActivity(i);
-//            } else {
-//                Intent i = new Intent(Splash.this, Login.class);
-//                startActivity(i);
-//            }
-        Intent i = new Intent(Splash.this, NewDashBoard.class);
-        startActivity(i);
+            if (controller.getPrefManager().isUserLoggedIn()) {
+                Intent i = new Intent(Splash.this, NewDashBoard.class);
+                startActivity(i);
+            } else {
+                Intent i = new Intent(Splash.this, Login.class);
+                startActivity(i);
+            }
+
 
 
         // close this activity

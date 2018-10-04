@@ -55,7 +55,6 @@ public class PaymentGateway extends Activity  {
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
     }
 
-
     private void initOrderId() {
         long r = System.currentTimeMillis();
         orderId = "SportsFight" + r;
@@ -63,5 +62,5 @@ public class PaymentGateway extends Activity  {
 
 
 
-  
+
 }

@@ -8,7 +8,7 @@
     <LinearLayout
         android:background="@drawable/white_rounded_bg"
         android:layout_width="match_parent"
-        android:layout_height="220dp"
+        android:layout_height="260dp"
         android:orientation="vertical"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -55,28 +55,32 @@
         android:layout_width="match_parent"
         android:layout_height="0.5dp"/>
     <RadioGroup
+        android:id="@+id/radio_gp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <RadioButton
+            android:id="@+id/radio1"
             android:buttonTint="@color/tabselected"
             android:text="5 km"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <RadioButton
+            android:id="@+id/radio2"
             android:buttonTint="@color/tabselected"
             android:text="10 km"
-            android:checked="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <RadioButton
+            android:id="@+id/radio3"
             android:buttonTint="@color/tabselected"
             android:text="15 km"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <RadioButton
+            android:id="@+id/radio4"
             android:buttonTint="@color/tabselected"
             android:text="20 km"
             android:layout_width="wrap_content"
@@ -84,5 +88,16 @@
 
 
     </RadioGroup>
+        <Button
+            android:id="@+id/done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:text="Done"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+        android:background="@drawable/orange_gradient_button"
+        android:layout_width="100dp"
+        android:layout_height="40dp" />
     </LinearLayout>
+
 </LinearLayout>

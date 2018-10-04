@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import org.json.JSONArray;
@@ -46,8 +47,7 @@ public class HomeFragment  extends Fragment {
 
 
     public void prepareData()
-    {
-        try{
+    {try{
             JSONObject jsonObject=new JSONObject(StaticJson.json);
             JSONArray data=jsonObject.getJSONArray("GameDetails");
             for(int i=0;i<data.length();i++)
@@ -71,6 +71,7 @@ public void updateList(int position)
      LinearLayout playerList=(LinearLayout)  playerView.findViewById(R.id.playerList);
      TextView heading = (TextView) playerView.findViewById(R.id.playerListHeading);
      TextView viewAll = (TextView) playerView.findViewById(R.id.viewall);
+     TextView viewAllGrounds = (TextView) availableGroundView.findViewById(R.id.viewall);
      int availablePlayer = 0;
      if (gameList.get( position).getMinPlayers() > 1) {
          availablePlayer = gameList.get( position).getTeamList().size();
@@ -101,7 +102,12 @@ public void updateList(int position)
              playerList.addView(playerRow);
          }
      }
-
+     viewAll.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+             Toast.makeText(getActivity(),"Under Development",Toast.LENGTH_SHORT).show();
+         }
+     });
      TextView groundCount = (TextView) availableGroundView.findViewById(R.id.available_players);
      TextView groundheading = (TextView) availableGroundView.findViewById(R.id.playerListHeading);
      TextView groundviewAll = (TextView) availableGroundView.findViewById(R.id.viewall);
@@ -126,6 +132,12 @@ public void updateList(int position)
              suggestedGounds.addView(groundsRow);
          }
      }
+     viewAllGrounds.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+             Toast.makeText(getActivity(),"Under Development",Toast.LENGTH_SHORT).show();
+         }
+     });
      groundheading.setText("Suggested Grounds ");
      groundCount.setText("(" + availableGround + ")");
      verticalView.addView(openTournaments);

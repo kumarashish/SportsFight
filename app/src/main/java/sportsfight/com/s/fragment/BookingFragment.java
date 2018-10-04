@@ -19,7 +19,7 @@ public class BookingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.home_page,
+        View view = inflater.inflate(R.layout.under_development,
                 container, false);
 
 
