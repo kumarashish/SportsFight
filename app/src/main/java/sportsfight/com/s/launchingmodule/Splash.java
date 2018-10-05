@@ -20,6 +20,7 @@ import sportsfight.com.s.common.AppController;
 
 import sportsfight.com.s.common.PrefManager;
 import sportsfight.com.s.loginmodule.Login;
+import sportsfight.com.s.loginmodule.Registration;
 import sportsfight.com.s.mainmodule.Dashboard;
 import sportsfight.com.s.mainmodule.NewDashBoard;
 import sportsfight.com.s.util.AESHelper;
@@ -81,11 +82,12 @@ public class Splash extends Activity {
     }
 
     public void launchHomeScreen() {
-//        if (controller.getPrefManager().isFirstTimeLaunch()) {
-//            controller.getPrefManager().setFirstTimeLaunch(false);
-//            Intent i = new Intent(Splash.this,Sign.class);
-//            startActivity(i);
-//        } else {
+        if (controller.getPrefManager().isFirstTimeLaunch()) {
+            controller.getPrefManager().setFirstTimeLaunch(false);
+            Intent i = new Intent(Splash.this,Registration.class);
+            Registration.isCalledFromSplash=true;
+            startActivity(i);
+        } else {
             if (controller.getPrefManager().isUserLoggedIn()) {
                 Intent i = new Intent(Splash.this, NewDashBoard.class);
                 startActivity(i);
@@ -95,7 +97,7 @@ public class Splash extends Activity {
             }
 
 
-
+        }
         // close this activity
         finish();
     }

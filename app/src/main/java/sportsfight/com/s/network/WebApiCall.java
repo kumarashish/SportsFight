@@ -66,8 +66,8 @@ public class WebApiCall {
     }
     public void getData(String url,String token, final WebApiResponseCallback callback) {
         OkHttpClient client = new OkHttpClient.Builder().connectTimeout(60, TimeUnit.SECONDS)
-                .writeTimeout(30, TimeUnit.SECONDS)
-                .readTimeout(30, TimeUnit.SECONDS).build();
+                .writeTimeout(60, TimeUnit.SECONDS)
+                .readTimeout(60, TimeUnit.SECONDS).build();
         final Request request = new Request.Builder().header("Token", token).url(url).build();
         client.newCall(request).enqueue(new Callback() {
             @Override

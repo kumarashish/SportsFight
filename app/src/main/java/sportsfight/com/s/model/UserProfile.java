@@ -35,7 +35,7 @@ public class UserProfile  {
             userName = jsonObject.getString("Name");
             email = jsonObject.getString("Email");
             mobile = jsonObject.getString("Mobile");
-            profilePic = jsonObject.isNull("ImageUrl") ? "" : jsonObject.getString("ImageUrl");
+            profilePic = jsonObject.isNull("profileImageUrl") ? "" : jsonObject.getString("profileImageUrl");
             gender = jsonObject.isNull("Gender") ? "": jsonObject.getString("Gender");
             winPercentage=jsonObject.isNull("WinPercentage") ? 0 : jsonObject.getInt("WinPercentage");
             totalPoints=jsonObject.isNull("TotalPoints") ? 0 : jsonObject.getInt("TotalPoints");

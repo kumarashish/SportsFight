@@ -350,7 +350,7 @@ int month=c.get(Calendar.MONTH)+1;
         act.runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                Toast.makeText(act, message, Toast.LENGTH_SHORT).show();
+                Toast.makeText(act, message, Toast.LENGTH_LONG).show();
             }
         });
 

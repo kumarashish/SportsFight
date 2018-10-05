@@ -17,7 +17,7 @@ int maxPoints;
         try {
             this.gameId = jsonObject.isNull("Id") ? -1 : jsonObject.getInt("Id");
             this.gameName = jsonObject.isNull("Name") ? "" : jsonObject.getString("Name");
-            this.gameImage = jsonObject.isNull("image") ? "" : jsonObject.getString("image");
+            this.gameImage = jsonObject.isNull("Image") ? "" : jsonObject.getString("Image");
             this.gameDescription = jsonObject.isNull("Description") ? "" : jsonObject.getString("Description");
             this.minPoints=jsonObject.isNull("MinimumPoints") ? 0 : jsonObject.getInt("MinimumPoints");
             this.maxPoints=jsonObject.isNull("MaximumPoints")? 0 : jsonObject.getInt("MaximumPoints");

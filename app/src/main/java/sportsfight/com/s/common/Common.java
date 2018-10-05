@@ -41,7 +41,7 @@ public class Common {
     public static String getReminderUrl=BaseUrl + "user/reminders?";
     public static String getAlertUrl=BaseUrl + "user/alerts?";
     public static String getAccept_RejectUrl=BaseUrl + "challenge/accept-reject-challenge";
-    public static String getDashBoardrl=BaseUrl + "user/dashboard?";
+    public static String getDashBoardUrl=BaseUrl + "user/dashboard?";
     public static String getPlaceBidUrl=BaseUrl + "bid/addBid";
     public static String getUpdateBidUrl=BaseUrl + "bid/updateBid";
     public static String getMatchesForResultDeclarationUrl=BaseUrl + "referee/getallmatches_referee?id=8";
@@ -65,6 +65,7 @@ public class Common {
     public static String isUserAlreadyRegistered=BaseUrl+"login/useralreadyregistered?mobile=";
     public static String validateTransactionUrl="https://securegw.paytm.in/merchant-status/getTxnStatus";
     public static String contactUs=BaseUrl+"sports/getcontactUs";
+    public static String getNewDashBoardUrl=BaseUrl+"dashboard/dashboard?";
     /*****************************************paymentgateway***************************************/
     public static String paymentGatewayUrlLive="https://api.instamojo.com/oauth2/token/";
     public static String paymentVerificationUrlLive="https://api.instamojo.com/v2/payments/";
@@ -186,7 +187,7 @@ public class Common {
     }
 
     public static String getGetDashBoardrl(int userId){
-        return getDashBoardrl+"id="+userId;
+        return getDashBoardUrl+"id="+userId;
     }
 
     public static String getPaymentStatusUrl(String paymentId) {
@@ -240,6 +241,11 @@ public class Common {
     public static String isUserAlreadyExist(String mobileNumber,String email)
     {
       return isUserAlreadyRegistered+mobileNumber+"&email=" +email;
+    }
+
+    public static String getNewDashBoard(String id,String gameId,String lat,String lon,String distance )
+    {
+        return getNewDashBoardUrl+"id="+id+"&gameId="+gameId+"&latitude="+lat+"&longitude="+lon+"&distance="+distance+"";
     }
 
 }

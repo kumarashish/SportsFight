@@ -137,6 +137,7 @@ public class Login extends Activity  implements View.OnClickListener,WebApiRespo
                 break;
             case R.id.signup:
                  in=new Intent(Login.this,Registration.class);
+                 Registration.isCalledFromSplash=false;
                 startActivity(in);
                 break;
         }
@@ -147,21 +148,20 @@ public class Login extends Activity  implements View.OnClickListener,WebApiRespo
         if (mobile_email.getText().length() > 0) {
             if (mobile_email.getText().toString().contains("@")) {
                 if (controller.getValidation().isEmailIdValid(mobile_email)) {
-                    if (password.getText().length() > 2) {
+
+                    if (password.getText().length() > 0) {
                         status = true;
                     } else {
-                        Toast.makeText(this, "Please enter valid password ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Please enter  password ", Toast.LENGTH_SHORT).show();
                     }
                 }
             } else {
                 if (controller.getValidation().isPhoneNumberValid(mobile_email)) {
-                    if (password.getText().length() > 2) {
+                    if (password.getText().length() > 0) {
                         status = true;
                     } else {
-                        Toast.makeText(this, "Please enter valid password ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, "Please enter  password ", Toast.LENGTH_SHORT).show();
                     }
-                } else {
-                    Toast.makeText(this, "Please enter valid mobile number ", Toast.LENGTH_SHORT).show();
                 }
             }
         } else {

@@ -32,6 +32,7 @@ import sportsfight.com.s.util.Validation;
  */
 
 public class Registration extends Activity implements View.OnClickListener,WebApiResponseCallback {
+    public static boolean isCalledFromSplash;
 
     AppController controller;
     @BindView(R.id.name)
@@ -63,6 +64,7 @@ public class Registration extends Activity implements View.OnClickListener,WebAp
 
         ButterKnife.bind(this);
         controller = (AppController) getApplicationContext();
+        controller.getPrefManager().setFirstTimeLaunch(false);
         name.setTypeface(controller.getDetailsFont());
         email.setTypeface(controller.getDetailsFont());
         mobile.setTypeface(controller.getDetailsFont());
@@ -98,14 +100,18 @@ public void callGetGames()
                 }
                 break;
             case R.id.signIn:
-            onBackPressed();
+                if(isCalledFromSplash)
+                {
+                    Intent intent=new Intent(Registration.this,Login.class);
+                    startActivity(intent);
+                    finish();
+                }else {
+                    onBackPressed();
+                }
                 break;
         }
     }
- public void isUserAlreadyRegistered()
- {
-     //http://192.168.100.92:9191/api/login/useralreadyregistered?mobile=89000000000&email=test123@dmss.co.in
- }
+
     @Override
     public void onSucess(final String value) {
         if (progressDialog != null) {
@@ -157,13 +163,4 @@ public void callGetGames()
     }
 }
 
-//    public void onResume() {
-//        super.onResume();
-//        registerReceiver(myBroadcastReceiver, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
-//    }
-//
-//    public void onPause() {
-//        super.onPause();
-//        unregisterReceiver(myBroadcastReceiver);
-//    }
 

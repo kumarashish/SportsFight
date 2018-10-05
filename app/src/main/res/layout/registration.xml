@@ -32,13 +32,14 @@
                     <sportsfight.com.s.common.DetailsCustomTextView
                         android:layout_marginTop="10dp"
                         android:gravity="center"
-                        android:textColor="@color/white"
+                        android:textColor="@color/light_grey"
                         android:textSize="8pt"
                         android:text="@string/signupdetaill"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         />
                     <ScrollView
+                        android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                     <LinearLayout
@@ -54,7 +55,7 @@
                             android:layout_height="40dp">
                             <ImageView
                                 android:id="@+id/icon"
-                                android:padding="6dp"
+                                android:padding="9dp"
                                 android:src="@drawable/username"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp" />
@@ -67,9 +68,13 @@
 
                             <EditText
                                 android:singleLine="true"
+
                                 android:id="@+id/name"
                                 android:gravity="center_vertical"
-                                android:layout_margin="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
                                 android:inputType="text|textNoSuggestions"
                                 android:textColorHint="@color/white"
                                 android:textColor="@color/white"
@@ -88,7 +93,7 @@
                             android:layout_height="40dp">
                             <ImageView
 
-                                android:padding="6dp"
+                                android:padding="9dp"
                                 android:src="@drawable/email"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp" />
@@ -103,7 +108,10 @@
                                 android:maxLength="50"
                                 android:id="@+id/email"
                                 android:gravity="center_vertical"
-                                android:layout_margin="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
                                 android:singleLine="true"
                                 android:inputType="textEmailAddress|textNoSuggestions"
                                 android:textColorHint="@color/white"
@@ -123,7 +131,7 @@
                             android:layout_height="40dp">
                             <ImageView
 
-                                android:padding="6dp"
+                                android:padding="9dp"
                                 android:src="@drawable/mobile"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp" />
@@ -137,7 +145,10 @@
                                 android:maxLength="10"
                                 android:id="@+id/mobile"
                                 android:gravity="center_vertical"
-                                android:layout_margin="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
                                 android:singleLine="true"
                                 android:inputType="number|textNoSuggestions"
                                 android:textColorHint="@color/white"
@@ -156,11 +167,7 @@
                             android:layout_width="match_parent"
                             android:orientation="horizontal"
                             android:layout_height="40dp">
-                            <ImageView
-                                android:padding="7dp"
-                                android:src="@drawable/password"
-                                android:layout_width="40dp"
-                                android:layout_height="40dp" />
+
                             <View
                                 android:visibility="invisible"
                                 android:layout_margin="1dp"
@@ -168,11 +175,20 @@
                                 android:layout_width="0.5dp"
                                 android:layout_height="match_parent"/>
 
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:padding="9dp"
+                                android:src="@drawable/password" />
+
                             <EditText
                                 android:singleLine="true"
                                 android:id="@+id/password"
                                 android:gravity="center_vertical"
-                                android:layout_margin="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
                                 android:hint="Set Password"
                                 android:inputType="textPassword|textNoSuggestions"
                                 android:textColorHint="@color/white"
@@ -190,7 +206,7 @@
                             android:orientation="horizontal"
                             android:layout_height="40dp">
                             <ImageView
-                                android:padding="7dp"
+                                android:padding="9dp"
                                 android:src="@drawable/password"
                                 android:layout_width="40dp"
                                 android:layout_height="40dp" />
@@ -205,7 +221,10 @@
                                 android:singleLine="true"
                                 android:id="@+id/conf_password"
                                 android:gravity="center_vertical"
-                                android:layout_margin="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
                                 android:hint="Confirm Password"
                                 android:inputType="textPassword|textNoSuggestions"
                                 android:textColorHint="@color/white"

@@ -15,6 +15,9 @@ public class GameModelNew {
     String GameEnabledIcon;
     String GameDisabledIcon;
     int MinPlayers;
+    Double DistanceKM;
+
+
     ArrayList<OpenTournaments>tournamentlist=new ArrayList<>();
     ArrayList<AvailableGrounds>groundlist=new ArrayList<>();
     ArrayList<AvailablePlayersModel>playerlist=new ArrayList<>();
@@ -28,6 +31,7 @@ public class GameModelNew {
              GameEnabledIcon=jsonObject.isNull("GameEnabledIcon")?"":jsonObject.getString("GameEnabledIcon");
              GameDisabledIcon=jsonObject.isNull("GameDisabledIcon")?"":jsonObject.getString("GameDisabledIcon");
              MinPlayers=jsonObject.isNull("MinPlayers")?1:jsonObject.getInt("MinPlayers");
+             DistanceKM=jsonObject.isNull("DistanceKM")?0.0:jsonObject.getDouble("DistanceKM");
             if (MinPlayers > 1) {
                 JSONArray teams = jsonObject.getJSONArray("AvailableTeams");
                 for (int i = 0; i < teams.length(); i++) {

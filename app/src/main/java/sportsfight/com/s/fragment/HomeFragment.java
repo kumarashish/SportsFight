@@ -1,5 +1,6 @@
 package sportsfight.com.s.fragment;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -22,26 +23,35 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 import sportsfight.com.s.R;
+import sportsfight.com.s.common.AppController;
 import sportsfight.com.s.common.Common;
 import sportsfight.com.s.common.StaticJson;
+import sportsfight.com.s.interfaces.WebApiResponseCallback;
 import sportsfight.com.s.mainmodule.TeamDetails;
 import sportsfight.com.s.model.GameModelNew;
 import sportsfight.com.s.model.ViewModel;
+import sportsfight.com.s.util.Util;
 
-public class HomeFragment  extends Fragment {
+public class HomeFragment  extends Fragment implements WebApiResponseCallback{
    ArrayList<GameModelNew> gameList=new ArrayList<>();
    LinearLayout horizontalView,verticalView;
-
- ArrayList<ViewModel> addedView=new ArrayList<>();
-
+   ArrayList<ViewModel> addedView=new ArrayList<>();
+   AppController controller;
+Dialog dialog;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         addedView.clear();
         View view = inflater.inflate(R.layout.home_page, container, false);
+        controller=(AppController)getActivity().getApplicationContext();
         horizontalView=(LinearLayout)view.findViewById(R.id.horizontalView);
         verticalView=(LinearLayout)view.findViewById(R.id.verticalView);
-        prepareData();
+       // prepareData();
+        if(Util.isNetworkAvailable(getActivity()))
+        {
+            dialog=Util.showPogress(getActivity());
+            controller.getApiCall().getData(Common.getNewDashBoard(Integer.toString(controller.getProfile().getUserId()),"0","17.441660","78.386940","5"),controller.getPrefManager().getUserToken(),this);
+        }
         return view;
     }
 
@@ -200,6 +210,30 @@ public void updateList(int position)
             }
         }
         return value;
+    }
+
+    @Override
+    public void onSucess(String value) {
+
+if(Util.getStatus(value)==true)
+{
+    JSONArray jsonArray=Util.getResultJsonArray(value);
+}else{
+    Util.showToast(getActivity(),Util.getMessage(value));
+}
+        if(dialog!=null)
+        {
+            dialog.cancel();
+        }
+    }
+
+    @Override
+    public void onError(String value) {
+        if(dialog!=null)
+        {
+            dialog.cancel();
+        }
+       Util.showToast(getActivity(),Util.getMessage(value));
     }
 }
 

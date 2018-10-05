@@ -40,7 +40,7 @@
             <sportsfight.com.s.common.DetailsCustomTextView
                 android:layout_marginTop="10dp"
                 android:gravity="center"
-                android:textColor="@color/white"
+                android:textColor="@color/light_grey"
                 android:textSize="8pt"
                 android:text="@string/logindetaill"
                 android:layout_width="match_parent"
@@ -52,15 +52,15 @@
                 android:layout_height="wrap_content">
           <LinearLayout
               android:layout_marginTop="10dp"
-              android:layout_marginLeft="20dp"
-              android:layout_marginRight="20dp"
+              android:layout_marginLeft="30dp"
+              android:layout_marginRight="30dp"
               android:background="@drawable/blurr_bg_edittext"
               android:layout_width="match_parent"
               android:orientation="horizontal"
               android:layout_height="40dp">
               <ImageView
                   android:id="@+id/icon"
-                  android:padding="6dp"
+                  android:padding="9dp"
                   android:src="@drawable/username"
                   android:layout_width="40dp"
                   android:layout_height="40dp" />
@@ -72,15 +72,21 @@
                   android:layout_height="match_parent"/>
 
               <EditText
+
                   android:id="@+id/emailId_mobile_edt"
                   android:gravity="center_vertical"
-                  android:layout_margin="5dp"
+                  android:layout_marginRight="5dp"
+                  android:layout_marginTop="5dp"
+                  android:layout_marginBottom="5dp"
+                  android:layout_marginLeft="-5dp"
                   android:inputType="textEmailAddress|textNoSuggestions"
                   android:maxLength="50"
                   android:singleLine="true"
                   android:textColorHint="@color/white"
                   android:textColor="@color/white"
 
+
+                  android:textSize="16dp"
                   android:hint="Enter Email Id/Mobile Number"
                   android:background="@color/blurrbg"
                   android:layout_width="match_parent"
@@ -89,14 +95,14 @@
 
             <LinearLayout
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:background="@drawable/blurr_bg_edittext"
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="40dp">
                 <ImageView
-                    android:padding="7dp"
+                    android:padding="9dp"
                     android:src="@drawable/password"
                     android:layout_width="40dp"
                     android:layout_height="40dp" />
@@ -108,10 +114,14 @@
                     android:layout_height="match_parent"/>
 
                 <EditText
+                    android:textSize="16dp"
                     android:singleLine="true"
                     android:id="@+id/password"
                     android:gravity="center_vertical"
-                    android:layout_margin="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="-5dp"
                     android:inputType="textPassword|textNoSuggestions"
                     android:hint="Enter Password"
                     android:textColorHint="@color/white"
@@ -130,7 +140,7 @@
                 android:text="@string/forgetpasswordu"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingRight="10dp" />
+                android:paddingRight="30dp" />
             <Button
 
                 android:id="@+id/login"
