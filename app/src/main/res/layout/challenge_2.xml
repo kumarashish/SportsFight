@@ -82,7 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <TextView
+        <sportsfight.com.s.common.Bold_TextView
 
             android:textSize="16dp"
             android:layout_marginLeft="10dp"
