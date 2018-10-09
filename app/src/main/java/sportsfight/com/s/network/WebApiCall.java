@@ -39,24 +39,6 @@ public class WebApiCall {
         this.context = context;
     }
 
-//public void getAUthentication(String userId,String Password)
-//    {
-//        client1 = new OkHttpClient.Builder();
-//        client1.authenticator(new Authenticator() {
-//            @Override
-//            public Request authenticate(Route route, Response response) throws IOException {
-//                if (responseCount(response) >= 3) {
-//                    return null; // If we've failed 3 times, give up. - in real life, never give up!!
-//                }
-//
-//                return response.request().newBuilder().header("Authorization", credential).build();
-//            }
-//        });
-//        client1.connectTimeout(10, TimeUnit.SECONDS);
-//        client1.writeTimeout(10, TimeUnit.SECONDS);
-//        client1.readTimeout(30, TimeUnit.SECONDS);
-//    }
-
     private int responseCount(Response response) {
         int result = 1;
         while ((response = response.priorResponse()) != null) {

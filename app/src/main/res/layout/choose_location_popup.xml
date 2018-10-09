@@ -13,27 +13,31 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="55dp">
-    <EditText
+    <AutoCompleteTextView
+        android:id="@+id/mAutocompleteTextView"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         android:paddingLeft="20dp"
-        android:text="Hitech City, Madhapur"
+           android:hint="Location"
         android:textColor="@color/black_font"
         android:singleLine="true"
-        android:focusable="false"
         android:background="@drawable/rounded_corner_grey_bg"
 
         android:layout_width="match_parent"
         android:layout_height="50dp" />
-    <LinearLayout
+    <RelativeLayout
         android:orientation="horizontal"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <ImageView
             android:layout_marginLeft="10dp"
             android:layout_gravity="center_vertical"
@@ -48,7 +52,18 @@
             android:layout_gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-    </LinearLayout>
+        </LinearLayout>
+        <View
+
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </RelativeLayout>
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     <View
         android:layout_marginTop="20dp"
         android:background="@color/light_grey"

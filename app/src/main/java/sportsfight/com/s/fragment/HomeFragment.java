@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -71,22 +72,7 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback{
     }
 
 
-//    public void prepareData()
-//    {try{
-//            JSONObject jsonObject=new JSONObject(StaticJson.json);
-//            JSONArray data=jsonObject.getJSONArray("GameDetails");
-//            for(int i=0;i<data.length();i++)
-//            {
-//               GameModelNew model=new GameModelNew(data.getJSONObject(i)) ;
-//               gameList.add(model);
-//            }
-//        }catch (Exception ex)
-//        {
-//            ex.fillInStackTrace();
-//        }
-//        addHeader();
-//        updateList(0);
-//    }
+
 public void updateList(int position)
  {   View playerView = getActivity().getLayoutInflater().inflate(R.layout.available_players, null, false);
      View availableGroundView = getActivity().getLayoutInflater().inflate(R.layout.available_players, null, false);
@@ -97,6 +83,7 @@ public void updateList(int position)
      TextView heading = (TextView) playerView.findViewById(R.id.playerListHeading);
      TextView viewAll = (TextView) playerView.findViewById(R.id.viewall);
      TextView viewAllGrounds = (TextView) availableGroundView.findViewById(R.id.viewall);
+
      int availablePlayer = 0;
      if (gameList.get( position).getMinPlayers() > 1) {
          selectedGameId=(gameList.get( position).getGameId());

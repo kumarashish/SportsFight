@@ -45,7 +45,7 @@ public class GameModelNew {
                     playerlist.add(new AvailablePlayersModel(player));
                 }
             }
-             JSONArray availableGround=jsonObject.getJSONArray("AvailableGrounds");
+             JSONArray availableGround=jsonObject.getJSONArray("SuggestedPlaces");
              for(int i=0;i<availableGround.length();i++){
                  JSONObject availableGrounds = availableGround.getJSONObject(i);
                  groundlist.add(new AvailableGrounds(availableGrounds));
@@ -74,6 +74,14 @@ public class GameModelNew {
         return teamList;
     }
 
+    public void updateList(GameModelNew modelNew) {
+        playerlist.clear();
+        teamList.clear();
+        groundlist.clear();
+        playerlist.addAll(modelNew.getPlayerlist());
+        groundlist.addAll(modelNew.getGroundlist());
+        teamList.addAll(modelNew.getTeamList());
+    }
     public ArrayList<AvailablePlayersModel> getPlayerlist() {
         return playerlist;
     }
@@ -81,6 +89,7 @@ public class GameModelNew {
     public ArrayList<AvailableGrounds> getGroundlist() {
         return groundlist;
     }
+
 
     public ArrayList<OpenTournaments> getTornamentlist() {
         return tournamentlist;

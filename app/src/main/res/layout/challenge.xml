@@ -455,7 +455,7 @@
                 android:layout_width="100dp"
                 android:layout_height="35dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/purple_border_white_bg"
+                android:background="@drawable/orangebox_white_bg"
                 android:text="Cancel"
                 android:textColor="@color/purple" />
 
@@ -622,7 +622,7 @@ android:layout_marginTop="20dp"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/purple"
                 android:text="Back"
-                android:background="@drawable/purple_border_white_bg"
+                android:background="@drawable/orangebox_white_bg"
                 android:layout_width="100dp"
                 android:layout_height="35dp" />
             <Button
@@ -1117,7 +1117,7 @@ android:layout_marginLeft="15dp"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/purple"
                 android:text="Back"
-                android:background="@drawable/purple_border_white_bg"
+                android:background="@drawable/orangebox_white_bg"
                 android:layout_width="100dp"
                 android:layout_height="35dp" />
             <Button
@@ -1464,7 +1464,7 @@ android:layout_marginLeft="15dp"
                     android:layout_marginLeft="10dp"
                     android:textColor="@color/purple"
                     android:text="Back"
-                    android:background="@drawable/purple_border_white_bg"
+                    android:background="@drawable/orangebox_white_bg"
                     android:layout_width="100dp"
                     android:layout_height="35dp" />
                 <Button

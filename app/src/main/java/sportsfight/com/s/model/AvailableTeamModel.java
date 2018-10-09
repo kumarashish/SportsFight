@@ -1,5 +1,6 @@
 package sportsfight.com.s.model;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
@@ -25,8 +26,14 @@ public class AvailableTeamModel {
             TeamId = team.isNull("TeamId") ? "" : team.getString("TeamId");
             PlayerLocation = team.isNull("Location") ? "" : team.getString("Location");
             Distance = team.isNull("Distance") ? "" : team.getString("Distance");
-            Rank = team.isNull("Rank") ? "" : team.getString("Rank");
+            Rank = team.isNull("Rank") ? "N/A" : team.getString("Rank");
             WinningPercentage = team.isNull("WinPercentage") ? "" : team.getString("WinPercentage");
+            JSONArray jsonArray = team.isNull("PlayerList") ? null : team.getJSONArray("PlayerList");
+            if (jsonArray != null) {
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    playerList.add(new TeamPlayers(jsonArray.getJSONObject(i)));
+                }
+            }
         } catch (Exception ex) {
             ex.fillInStackTrace();
         }
@@ -59,5 +66,9 @@ public class AvailableTeamModel {
 
     public String getTeamName() {
         return TeamName;
+    }
+
+    public ArrayList<TeamPlayers> getPlayerList() {
+        return playerList;
     }
 }

@@ -2,10 +2,12 @@ package sportsfight.com.s.common;
 
 import android.app.Application;
 import android.graphics.Typeface;
+import android.location.Location;
 import android.os.Environment;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 
+import com.google.android.gms.maps.model.LatLng;
 import com.google.gson.Gson;
 
 import org.json.JSONObject;
@@ -33,6 +35,8 @@ public class AppController extends Application {
     UserProfile profile;
    int points=0;
     String paymentGatewayToken=null;
+    String address="";
+    LatLng currentLocation=null;
     @Override
     public void onCreate() {
         super.onCreate();
@@ -53,7 +57,28 @@ public class AppController extends Application {
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
     }
+    public void setAddress(String address, LatLng loc) {
+        this.address = address;
+        this.currentLocation=loc;
+    }
+    public void setCurrentAddress(String address) {
+        this.address = address;
 
+    }
+
+    public void setLocation(LatLng loc) {
+        double latitude = loc.latitude;
+        double longitude = loc.longitude;
+        currentLocation = loc;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public LatLng getCurrentLocation() {
+        return currentLocation;
+    }
     public void setPoints(int points) {
         profile.setTotalPoints(points);
         Gson gson = new Gson();

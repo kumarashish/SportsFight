@@ -9,6 +9,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".common.AppController"
@@ -20,6 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:allowBackup,icon,theme,label">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDgeyhsRfULiqC95_gQI97_yX83waaBRws"/>
         <activity
             android:name=".launchingmodule.Splash"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -141,6 +149,8 @@
         <activity
             android:name=".staticpages.Cancellation"
             android:screenOrientation="portrait" />
+        <activity android:name=".common.LocationSearch"
+            android:screenOrientation="portrait"/>
 
         <service android:name=".services.MyFirebaseMessagingService">
             <intent-filter>

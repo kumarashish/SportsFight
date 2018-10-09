@@ -12,6 +12,8 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.location.Address;
+import android.location.Geocoder;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -42,6 +44,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 import sportsfight.com.s.R;
@@ -68,6 +71,23 @@ public static String[] months={"Jan","Feb","March","April","May","June","July","
             Toast.makeText(act, "Internet Unavailable", Toast.LENGTH_SHORT).show();
             return false;
         }
+    }
+
+    public static String getCompleteAddressString(final Activity act, final double LATITUDE, final double LONGITUDE) {
+        List<Address> list;
+        String strAdd=null;
+        Geocoder geocoder = new Geocoder(act, Locale.getDefault());
+        try {
+            list = geocoder.getFromLocation(LATITUDE, LONGITUDE, 1);
+            for (int n = 0; n <= list.get(0).getMaxAddressLineIndex()-2; n++) {
+                strAdd +=   list.get(0).getAddressLine(n) + ", ";
+            }
+            strAdd = list.get(0).getAddressLine(0);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return strAdd;
+
     }
     public static int getCardBgInt(String gameName,Activity act)
     {int d=-1;

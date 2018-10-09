@@ -19,17 +19,18 @@ public class AvailableGrounds {
 
     public AvailableGrounds(JSONObject availableGrounds) {
         try {
-            GroundId = availableGrounds.isNull("GroundId") ? "" : availableGrounds.getString("GroundId");
-            GroundName= availableGrounds.isNull("GroundName") ? "" : availableGrounds.getString("GroundName");
+            GroundId = availableGrounds.isNull("PlaceId") ? "" : availableGrounds.getString("PlaceId");
+            GroundName= availableGrounds.isNull("PlaceName") ? "" : availableGrounds.getString("PlaceName");
            Location= availableGrounds.isNull("Location") ? "" : availableGrounds.getString("Location");
             Distance= availableGrounds.isNull("Distance") ? "" : availableGrounds.getString("Distance");
             Price= availableGrounds.isNull("Price") ? "" : availableGrounds.getString("Price");
-            JSONArray jsonArray=availableGrounds.getJSONArray("Gallery");
-            for(int i=0;i<jsonArray.length();i++)
-            {
-                Gallery.add(jsonArray.getString(i));
+            JSONArray jsonArray=availableGrounds.isNull("Gallery")?null:availableGrounds.getJSONArray("Gallery");
+            if(jsonArray!=null) {
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                    Gallery.add(jsonObject.getString("Name"));
+                }
             }
-            ArrayList Gallery;
         }catch (Exception ex)
         {
             ex.fillInStackTrace();

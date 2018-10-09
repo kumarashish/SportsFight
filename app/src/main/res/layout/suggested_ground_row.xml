@@ -15,6 +15,7 @@
         android:layout_height="130dp">
 
       <sportsfight.com.s.common.Bold_TextView
+          android:id="@+id/ground_name"
           android:layout_margin="5dp"
           android:text="MCA Grounds"
           android:textSize="16dp"
@@ -22,6 +23,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
         <TextView
+            android:id="@+id/location"
 android:layout_marginLeft="5dp"
             android:text="Hitech City, (5Km)"
             android:textSize="11dp"
@@ -36,37 +38,41 @@ android:layout_marginLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
+                android:id="@+id/image1"
+                android:layout_weight="1"
+                android:scaleType="fitXY"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_marginLeft="5dp"
 
                 android:layout_weight="1"
-                android:scaleType="fitXY"
-                android:src="@drawable/ground1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent" />
-            <ImageView
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/ground2"
-                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:scaleType="fitXY"
                 android:layout_height="match_parent" />
             <ImageView
+                android:id="@+id/image3"
                 android:scaleType="fitXY"
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/ground3"
+
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent" />
             <ImageView
+                android:id="@+id/image4"
                 android:scaleType="fitXY"
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/ground1"
+
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent" />
             <ImageView
+                android:id="@+id/image5"
                 android:scaleType="fitXY"
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/ground2"
+
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent" />
@@ -90,6 +96,7 @@ android:layout_marginLeft="5dp"
                 android:layout_height="wrap_content" />
         <sportsfight.com.s.common.Bold_TextView
             android:text="Rs 150"
+            android:id="@+id/price"
             android:layout_marginRight="15dp"
             android:layout_marginTop="-5dp"
             android:textSize="18dp"

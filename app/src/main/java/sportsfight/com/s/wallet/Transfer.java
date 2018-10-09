@@ -18,7 +18,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
-import com.google.android.gms.common.api.ApiException;
+
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
