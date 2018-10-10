@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
+    android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
@@ -19,6 +20,7 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -53,7 +55,7 @@
         android:layout_height="wrap_content" />
     <LinearLayout
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
         android:background="@drawable/rectangle"
@@ -65,125 +67,145 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
             android:textColor="@color/black_font"
-            android:text="Where do to you want to play "
+            android:text="Minimum Coins 50 per match "
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:orientation="horizontal"
-            android:weightSum="2"
+            android:weightSum="5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <LinearLayout
 
-                android:background="@drawable/orangebox_white_bg"
+        <Button
+            android:id="@+id/btn_50"
+            android:background="@drawable/orange_gradient_button"
+            android:layout_weight="1"
+            android:text="50"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="30dp" />
+
+            <Button
+                android:id="@+id/btn_100"
+                android:text="100"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/grey_gradient_button"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content">
-                <RadioButton
-
-                    android:buttonTint="@color/tabselected"
-                    android:text="Organization"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-            <LinearLayout
-                android:background="@drawable/orangebox_white_bg"
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/btn_200"
+                android:text="200"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/grey_gradient_button"
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:buttonTint="@color/tabselected"
-                    android:text="Play Academy"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/btn_400"
+                android:text="400"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/grey_gradient_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp" />
+            <Button
+                android:id="@+id/btn_500"
+                android:text="500"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/grey_gradient_button"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="30dp" />
         </LinearLayout>
+
         <LinearLayout
-            android:background="@drawable/orangebox_white_bg"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <RadioButton
-
-                android:buttonTint="@color/tabselected"
-                android:text="Play Academy"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <View
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
             android:layout_marginTop="20dp"
-            android:background="@color/black_font"
+
+            android:layout_marginBottom="20dp"
+            android:weightSum="4"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"/>
+            android:layout_height="25dp">
+
+            <View
+                android:layout_weight="1.5"
+                android:layout_gravity="center"
+                android:background="@color/black_font"
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"/>
+            <Button
+                android:layout_weight="1"
+                android:background="@drawable/white_button"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:text="OR"
+                android:layout_height="match_parent" />
+            <View
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:background="@color/black_font"
+
+                android:layout_width="0dp"
+                android:layout_height="0.5dp"/>
+        </LinearLayout>
         <LinearLayout
-            android:weightSum="2"
+            android:weightSum="5"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <LinearLayout
+   <ImageView
+       android:id="@+id/decrease"
+       android:src="@drawable/minus"
+       android:tint="@color/black_font"
+       android:padding="10dp"
+       android:layout_weight="1"
+       android:background="@drawable/grey_gradient_button"
+       android:layout_gravity="center"
+       android:layout_width="0dp"
+       android:layout_height="30dp" />
 
-
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_margin="5dp"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/black_font"
-                    android:text="Select Date "
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
                 <EditText
+                    android:text="50"
+                    android:inputType="number"
+                    android:id="@+id/coins"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/black_font"
-                    android:paddingLeft="10dp"
-                    android:hint="MM/DD/YYYY"
+                    android:gravity="center"
+                    android:hint="Enter points"
                     android:textSize="14dp"
-                    android:focusable="false"
+                    android:maxLength="4"
                     android:background="@drawable/rectangle"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
                     android:layout_height="40dp" />
-            </LinearLayout>
-            <View
-                android:layout_width="80dp"
-                android:layout_height="60dp"/>
-            <LinearLayout
-
+            <ImageView
+                android:id="@+id/increase"
+                android:src="@drawable/add"
+                android:tint="@color/black_font"
+                android:padding="10dp"
+                android:background="@drawable/grey_gradient_button"
                 android:layout_weight="1"
-                android:orientation="vertical"
+                android:layout_gravity="center"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_margin="5dp"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/black_font"
-                    android:text="Select Time "
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <EditText
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/black_font"
-                    android:paddingLeft="10dp"
-                    android:textSize="14dp"
-                    android:focusable="false"
-                    android:hint="HH/MM"
-                    android:background="@drawable/rectangle"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp" />
+                android:layout_height="30dp" />
             </LinearLayout>
-        </LinearLayout>
+
+
         <View
             android:layout_width="match_parent"
             android:layout_height="40dp"/>
@@ -200,6 +222,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
             <Button
+                android:id="@+id/cancel"
                 android:background="@drawable/grey_gradient_button"
                 android:text="Cancel"
                 android:textColor="@color/white"
@@ -213,6 +236,7 @@
                 android:layout_height="match_parent"/>
             <Button
                 android:text="Next"
+                android:id="@+id/next"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:layout_gravity="center_vertical"

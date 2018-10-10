@@ -17,6 +17,7 @@ import java.util.ArrayList;
 
 import sportsfight.com.s.interfaces.WebApiResponseCallback;
 import sportsfight.com.s.model.InterestedGameModel;
+import sportsfight.com.s.model.SendChallengeModel;
 import sportsfight.com.s.model.UserProfile;
 import sportsfight.com.s.network.WebApiCall;
 import sportsfight.com.s.util.Util;
@@ -37,10 +38,12 @@ public class AppController extends Application {
     String paymentGatewayToken=null;
     String address="";
     LatLng currentLocation=null;
+    SendChallengeModel challengeModel;
     @Override
     public void onCreate() {
         super.onCreate();
         prefManager = new PrefManager(this);
+        challengeModel=new SendChallengeModel();
         detailsFont = Typeface.createFromAsset(getApplicationContext().getAssets(), "detailsfont.otf");
         congratulation_font = Typeface.createFromAsset(getApplicationContext().getAssets(), "congratulation_font.ttf");
         match_font = Typeface.createFromAsset(getApplicationContext().getAssets(), "vs_font.ttf");
@@ -70,6 +73,10 @@ public class AppController extends Application {
         double latitude = loc.latitude;
         double longitude = loc.longitude;
         currentLocation = loc;
+    }
+
+    public SendChallengeModel getChallengeModel() {
+        return challengeModel;
     }
 
     public String getAddress() {

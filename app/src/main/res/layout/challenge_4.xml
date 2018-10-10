@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
+    android:background="@color/white"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
@@ -20,6 +21,7 @@
     <TextView
         android:textSize="18dp"
         android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
         android:textColor="@color/black_font"
         android:text="Finalize details"
         android:layout_width="match_parent"
@@ -59,139 +61,132 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-
-            android:textSize="16dp"
+            android:id="@+id/teamLabel"
+            android:textSize="14dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/black_font"
-            android:text="Where do to you want to play "
+            android:layout_marginTop="10dp"
+            android:textColor="@color/light_grey"
+            android:text="Team Name "
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <LinearLayout
-            android:layout_marginTop="10dp"
+        <TextView
+            android:id="@+id/teamValue"
+            android:textSize="14dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:orientation="horizontal"
-            android:weightSum="2"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black_font"
+            android:text=""
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-
-                android:background="@drawable/orangebox_white_bg"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-                <RadioButton
-
-                    android:buttonTint="@color/tabselected"
-                    android:text="Organization"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-            <LinearLayout
-                android:background="@drawable/orangebox_white_bg"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:buttonTint="@color/tabselected"
-                    android:text="Play Academy"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:background="@drawable/orangebox_white_bg"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <RadioButton
-
-                android:buttonTint="@color/tabselected"
-                android:text="Play Academy"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+            android:layout_height="wrap_content" />
         <View
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:background="@color/black_font"
             android:layout_width="match_parent"
-            android:layout_height="0.5dp"/>
-        <LinearLayout
-            android:weightSum="2"
-            android:layout_marginRight="10dp"
+            android:layout_height="1dp"/>
+        <TextView
+
+            android:textSize="14dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
+            android:textColor="@color/light_grey"
+            android:text="Game "
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/game"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black_font"
+            android:text=" "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_font"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/light_grey"
+            android:text="Ground "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/ground"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black_font"
+            android:text="N/A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_font"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/light_grey"
+            android:text="Date and  Time "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/date_time"
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black_font"
+            android:text="  "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black_font"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <TextView
+
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/light_grey"
+            android:text="Challenge Coins "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+
+            android:textSize="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/black_font"
+            android:text=""
+            android:id="@+id/challenge_Coins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
 
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:orientation="vertical"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_margin="5dp"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/black_font"
-                    android:text="Select Date "
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <EditText
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/black_font"
-                    android:paddingLeft="10dp"
-                    android:hint="MM/DD/YYYY"
-                    android:textSize="14dp"
-                    android:focusable="false"
-                    android:background="@drawable/rectangle"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp" />
-            </LinearLayout>
-            <View
-                android:layout_width="80dp"
-                android:layout_height="60dp"/>
-            <LinearLayout
 
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_margin="5dp"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="5dp"
-                    android:textColor="@color/black_font"
-                    android:text="Select Time "
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-                <EditText
-                    android:layout_marginTop="5dp"
-                    android:textColor="@color/black_font"
-                    android:paddingLeft="10dp"
-                    android:textSize="14dp"
-                    android:focusable="false"
-                    android:hint="HH/MM"
-                    android:background="@drawable/rectangle"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp" />
-            </LinearLayout>
-        </LinearLayout>
         <View
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+            android:layout_height="10dp"/>
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout
-            android:layout_marginTop="30dp"
+
             android:weightSum="2"
             android:orientation="horizontal"
             android:layout_marginLeft="30dp"
@@ -199,6 +194,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
             <Button
+                android:id="@+id/cancel"
                 android:background="@drawable/grey_gradient_button"
                 android:text="Cancel"
                 android:textColor="@color/white"
@@ -211,6 +207,7 @@
                 android:layout_width="80dp"
                 android:layout_height="match_parent"/>
             <Button
+                android:id="@+id/submit"
                 android:text="Submit"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -232,23 +229,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
+                    android:background="@drawable/grey_circle"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+                <ImageView
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/grey_circle"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+                <ImageView
+                    android:layout_marginLeft="3dp"
+                    android:background="@drawable/grey_circle"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+                <ImageView
+                    android:layout_marginLeft="3dp"
                     android:background="@drawable/orange_gradient_button"
+
                     android:layout_width="30dp"
-                    android:layout_height="15dp" />
-                <ImageView
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/grey_circle"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp" />
-                <ImageView
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/grey_circle"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp" />
-                <ImageView
-                    android:layout_marginLeft="3dp"
-                    android:background="@drawable/grey_circle"
-                    android:layout_width="15dp"
                     android:layout_height="15dp"/>
 
             </LinearLayout>

@@ -22,7 +22,7 @@ public class AvailablePlayersModel {
         try{
             PlayerName=player.isNull("Name")?"":player.getString("Name");
             PlayerImage=player.isNull("PlayerImage")?"":player.getString("PlayerImage");
-            PlayerId=player.isNull("PlayerId")?"":player.getString("PlayerId");
+            PlayerId=player.isNull("PlayerId")?player.getString("RegistraionId"):player.getString("PlayerId");
             PlayerLocation=player.isNull("Location")?"":player.getString("Location");
             Distance=player.isNull("Distance")?"":player.getString("Distance");
             Rank=player.isNull("Rank")?"":player.getString("Rank");

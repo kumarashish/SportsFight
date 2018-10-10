@@ -2,12 +2,14 @@
 <LinearLayout
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
     <RelativeLayout
 
         android:layout_width="match_parent"
         android:layout_height="40dp">
         <Button
+
             android:backgroundTint="@color/black_font"
             android:id="@+id/back"
             android:background="@drawable/back"
@@ -19,6 +21,7 @@
     </RelativeLayout>
     <TextView
         android:textSize="18dp"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="30dp"
         android:textColor="@color/black_font"
         android:text="Fill the Details"
@@ -52,7 +55,7 @@
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp"
         android:background="@drawable/rectangle"
@@ -76,24 +79,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
-
+                android:layout_marginRight="5dp"
                 android:background="@drawable/orangebox_white_bg"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
                 <RadioButton
-
+                    android:id="@+id/organization_radio_btn"
                     android:buttonTint="@color/tabselected"
                     android:text="Organization"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
             </LinearLayout>
             <LinearLayout
+                android:layout_marginLeft="5dp"
                 android:background="@drawable/orangebox_white_bg"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
                 <RadioButton
+                    android:id="@+id/academy_radio_btn"
                     android:buttonTint="@color/tabselected"
                     android:text="Play Academy"
                     android:layout_width="match_parent"
@@ -105,12 +110,12 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content">
             <RadioButton
-
+                android:id="@+id/others_radio_btn"
                 android:buttonTint="@color/tabselected"
-                android:text="Play Academy"
+                android:text="Others"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
@@ -144,12 +149,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <EditText
+                    android:id="@+id/date"
                     android:layout_marginTop="5dp"
                     android:textColor="@color/black_font"
                     android:paddingLeft="10dp"
                     android:hint="MM/DD/YYYY"
                     android:textSize="14dp"
                     android:focusable="false"
+                    android:drawableTint="@color/white"
                     android:background="@drawable/rectangle"
                     android:layout_width="match_parent"
                     android:layout_height="40dp" />
@@ -172,6 +179,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <EditText
+                    android:id="@+id/time"
+
                     android:layout_marginTop="5dp"
                     android:textColor="@color/black_font"
                     android:paddingLeft="10dp"
@@ -199,6 +208,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
             <Button
+                android:id="@+id/cancel"
                 android:background="@drawable/grey_gradient_button"
                 android:text="Cancel"
                 android:textColor="@color/white"
@@ -212,6 +222,7 @@
                 android:layout_height="match_parent"/>
             <Button
                 android:text="Next"
+                android:id="@+id/next"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:layout_gravity="center_vertical"

@@ -26,6 +26,7 @@ import org.w3c.dom.Text;
 import java.util.ArrayList;
 
 import sportsfight.com.s.R;
+import sportsfight.com.s.challenge.Challenge1;
 import sportsfight.com.s.common.AppController;
 import sportsfight.com.s.common.Common;
 import sportsfight.com.s.common.StaticJson;
@@ -62,7 +63,6 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback{
         controller=(AppController)getActivity().getApplicationContext();
         horizontalView=(LinearLayout)view.findViewById(R.id.horizontalView);
         verticalView=(LinearLayout)view.findViewById(R.id.verticalView);
-       // prepareData();
         if (Util.isNetworkAvailable(getActivity())) {
             apiCall = getCompleteData;
             dialog = Util.showPogress(getActivity());
@@ -88,7 +88,6 @@ public void updateList(int position)
      if (gameList.get( position).getMinPlayers() > 1) {
          selectedGameId=(gameList.get( position).getGameId());
          availablePlayer = gameList.get( position).getTeamList().size();
-
          heading.setText("Available Teams ");
          int loop=3;
          if (gameList.get(position).getTeamList().size() < 3) {
@@ -101,7 +100,7 @@ public void updateList(int position)
              ImageView icon=(ImageView) playerRow.findViewById(R.id.icon);
              Button rank=(Button)playerRow.findViewById(R.id.rank);
              TextView name = (TextView) playerRow.findViewById(R.id.name);
-             TextView company = (TextView) playerRow.findViewById(R.id.company);
+             final TextView company = (TextView) playerRow.findViewById(R.id.company);
              TextView location = (TextView) playerRow.findViewById(R.id.location);
              TextView level = (TextView) playerRow.findViewById(R.id.level);
              Button challenge=(Button) playerRow.findViewById(R.id.challenge);
@@ -113,10 +112,15 @@ public void updateList(int position)
              level.setText("");
              rank.setText(model.getRank());
              winning_percentage.setText(""+model.getWinningPercentage() +" %");
+             final String teamName=model.getTeamName();
+             final String teamId=model.getTeamId();
              challenge.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View view) {
-
+                     controller.getChallengeModel().setTeam(true);
+                     controller.getChallengeModel().setTeamName(teamName);
+                     controller.getChallengeModel().setTeamId(teamId);
+                     startActivity(new Intent(getActivity(), Challenge1.class));
                  }
              });
              details.setOnClickListener(new View.OnClickListener() {
@@ -157,6 +161,17 @@ public void updateList(int position)
              level.setText(model.getGameLevel());
              rank.setText(model.getRank());
              winning_percentage.setText(""+model.getWinningPercentage() +" %");
+             final String playerName=model.getPlayerName();
+             final String playerId=model.getPlayerId();
+             challenge.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View view) {
+                     controller.getChallengeModel().setTeam(false);
+                     controller.getChallengeModel().setTeamName(playerName);
+                     controller.getChallengeModel().setTeamId(playerId);
+                     startActivity(new Intent(getActivity(), Challenge1.class));
+                 }
+             });
              playerList.addView(playerRow);
          }
      }
@@ -315,6 +330,8 @@ public void updateList(int position)
                 gameBg.setBackground(getActivity().getResources().getDrawable(R.drawable.selected_game));
                 TextView text = (TextView) view.findViewById(R.id.game_name);
                 text.setTextColor(getActivity().getResources().getColor(R.color.white));
+                controller.getChallengeModel().setGameId(addedView.get(i).getView().getId());
+                controller.getChallengeModel().setGameName(text.getText().toString());
             }
         }
         verticalView.removeAllViews();
@@ -333,6 +350,8 @@ public void updateList(int position)
                 gameBg.setBackgroundColor(getActivity().getResources().getColor(R.color.white));
                 gameName.setText(gameList.get(i).getGameName().toUpperCase());
                 gameName.setTextColor(getActivity().getResources().getColor(R.color.disabled_color));
+                controller.getChallengeModel().setGameName(gameList.get(i).getGameName());
+                controller.getChallengeModel().setGameId(gameList.get(i).getGameId());
             }
             inflatedLayout.setId(i);
             clickedView.setId(i);

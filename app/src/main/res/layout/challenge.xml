@@ -1576,7 +1576,7 @@ android:layout_marginLeft="15dp"
     </LinearLayout>
 
     <LinearLayout
-        android:visibility="gone"
+
         android:id="@+id/view5"
         android:orientation="vertical"
         android:layout_width="match_parent"
