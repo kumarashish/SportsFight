@@ -41,6 +41,7 @@
                 android:id="@+id/heading_tv"
                 android:textColor="@color/black_font"
                 android:gravity="center_vertical"
+                android:maxLength="22"
                 android:text="Hitech City, Madhapur"
                 android:textSize="16dp"
                 android:layout_width="wrap_content"

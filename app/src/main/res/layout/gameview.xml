@@ -17,14 +17,14 @@
         <ImageView
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:src="@drawable/cricket"
+
             android:id="@+id/game_icon"
             android:layout_width="30dp"
             android:layout_height="30dp" />
         <sportsfight.com.s.common.Bold_TextView
             android:id="@+id/game_name"
             android:gravity="center"
-            android:text="Cricket"
+            android:text=""
             android:textSize="10dp"
             android:textColor="@color/white"
             android:layout_width="match_parent"

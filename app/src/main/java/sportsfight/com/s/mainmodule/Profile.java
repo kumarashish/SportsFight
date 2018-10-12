@@ -466,16 +466,16 @@ public class Profile extends Activity implements View.OnClickListener,WebApiResp
             case updateProfilePic:
                 if (Util.getStatus(value) == true) {
 
-                    final String url = Util.getProfilePicUrl(Profile.this, value);
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-
-                            Picasso.with(Profile.this).load(url).resize(200, 200)
-                                    .centerInside().placeholder(R.drawable.user_icon).into(profilePic);
-
-                        }
-                    });
+//                   // final String url = Util.getProfilePicUrl(Profile.this, value);
+//                    runOnUiThread(new Runnable() {
+//                        @Override
+//                        public void run() {
+//
+//                            Picasso.with(Profile.this).load(url).resize(200, 200)
+//                                    .centerInside().placeholder(R.drawable.user_icon).into(profilePic);
+//
+//                        }
+//                    });
                     if (alertDialog != null) {
                         Util.cancelDialog(Profile.this, alertDialog);
                     }

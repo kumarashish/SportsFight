@@ -43,6 +43,7 @@
             android:layout_height="0dp">
             <LinearLayout
 android:id="@+id/enabledView"
+
                 android:orientation="horizontal"
                 android:layout_centerVertical="true"
                 android:layout_centerHorizontal="true"
@@ -62,6 +63,10 @@ android:id="@+id/enabledView"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
             </LinearLayout>
+            <View
+                android:id="@+id/disableButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
             <LinearLayout
                 android:visibility="gone"
                 android:id="@+id/disabledView"
@@ -74,11 +79,17 @@ android:id="@+id/enabledView"
                     android:weightSum="3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_marginTop="1dp"
                         android:layout_weight="1.5"
                         android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_marginTop="1dp"
+
+                        android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="match_parent">
                         <ImageView
@@ -95,14 +106,25 @@ android:id="@+id/enabledView"
                             android:text="Enable"
                             android:layout_height="match_parent" />
                     </LinearLayout>
+                        <View
+                            android:id="@+id/enableButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </RelativeLayout>
                     <View
                         android:background="@color/light_grey"
                         android:layout_width="0.5dp"
                         android:layout_height="match_parent"></View>
-                    <LinearLayout
+                    <RelativeLayout
                         android:layout_marginTop="1dp"
                         android:layout_weight="1.5"
                         android:layout_width="0dp"
+                        android:orientation="vertical"
+                        android:layout_height="match_parent">
+                    <LinearLayout
+
+
+                        android:layout_width="match_parent"
                         android:orientation="vertical"
                         android:layout_height="match_parent">
                         <ImageView
@@ -120,6 +142,11 @@ android:id="@+id/enabledView"
                             android:text="Delete"
                             android:layout_height="match_parent" />
                     </LinearLayout>
+                        <View
+                            android:id="@+id/deleteButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+                    </RelativeLayout>
                 </LinearLayout>
             </LinearLayout>
 

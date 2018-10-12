@@ -28,9 +28,10 @@ public class Common {
     public static  String getValidateMobileUrl=BaseUrl + "user/update-mobile?";
     public static  String getProfile_Url=BaseUrl + "user/getprofile?";
     public static  String getProfile_UrlNew=BaseUrl + "user/getuserprofile?";
-
+    public static String updateProfileInfo=BaseUrl+"user/update-profile";
     public static String getUpdateProfilePic_Url=BaseUrl + "user/update-profileimage";
     public static String getGender_Url=BaseUrl + "user/update-personalinfo?";
+    public static String getupdateLocation_Url=BaseUrl +"user/updatelocation?";
     public static String getUpdateGame_Url=BaseUrl + "user/update-usergames?";
     public static String getWalletPoints_Url=BaseUrl + "wallet/getpoints?";
     public static String getTransactionHistory_Url=BaseUrl + "wallet/get-transactions-bydate?";
@@ -66,6 +67,7 @@ public class Common {
     public static String validateTransactionUrl="https://securegw.paytm.in/merchant-status/getTxnStatus";
     public static String contactUs=BaseUrl+"sports/getcontactUs";
     public static String getNewDashBoardUrl=BaseUrl+"dashboard/dashboard?";
+    public static String getUpdateGameUrl=BaseUrl+"user/addupdategames?";
     /*****************************************paymentgateway***************************************/
     public static String paymentGatewayUrlLive="https://api.instamojo.com/oauth2/token/";
     public static String paymentVerificationUrlLive="https://api.instamojo.com/v2/payments/";
@@ -247,5 +249,10 @@ public class Common {
     {
         return getNewDashBoardUrl+"id="+id+"&gameId="+gameId+"&latitude="+lat+"&longitude="+lon+"&distance="+distance+"";
     }
-
+    public static String getupdateLocation_Url(String id,String locationName,double lat,double lon)
+    {
+        return getupdateLocation_Url+"id="+id+"&location="+locationName+"&latitude="+lat+"&longitude="+lon+"";
+    }
+    public static String getUpdateGamePreferencesUrl(String userId)
+    {return getUpdateGameUrl+"id="+userId+"";}
 }

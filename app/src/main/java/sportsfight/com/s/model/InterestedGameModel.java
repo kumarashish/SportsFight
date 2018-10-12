@@ -62,6 +62,9 @@ public InterestedGameModel(JSONObject jsonObject)
         return GameLevelId;
     }
 
+    public void setGameIsActive(boolean gameIsActive) {
+        GameIsActive = gameIsActive;
+    }
 
     public int getGameId() {
         return gameId;

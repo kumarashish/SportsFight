@@ -207,7 +207,8 @@ public class LocationSearch extends FragmentActivity implements View.OnClickList
             LatLng loc=new LatLng(location.getLatitude(),location.getLongitude());
             controller.setAddress(address, loc);
             pb.setVisibility(View.GONE);
-
+            Intent in = new Intent();
+            setResult(RESULT_OK, in);
             finish();
         }
     }

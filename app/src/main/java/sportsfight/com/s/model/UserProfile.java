@@ -36,12 +36,12 @@ public class UserProfile  {
             email = jsonObject.getString("Email");
             mobile = jsonObject.getString("Mobile");
             profilePic = jsonObject.isNull("profileImageUrl") ? "" : jsonObject.getString("profileImageUrl");
-            gender = jsonObject.isNull("Gender") ? "": jsonObject.getString("Gender");
+            gender = jsonObject.isNull("Gender") ? "Male": jsonObject.getString("Gender");
             winPercentage=jsonObject.isNull("WinPercentage") ? 0 : jsonObject.getInt("WinPercentage");
             totalPoints=jsonObject.isNull("TotalPoints") ? 0 : jsonObject.getInt("TotalPoints");
             isEmailVerified=jsonObject.isNull("IsEmailVerified") ? false : jsonObject.getBoolean("IsEmailVerified");
              CompanyName =jsonObject.isNull("CompanyName") ? "" : jsonObject.getString("CompanyName");
-            LocationName= jsonObject.isNull("LocationName") ? "" : jsonObject.getString("LocationName");
+             LocationName= jsonObject.isNull("LocationName") ? "" : jsonObject.getString("LocationName");
              Latitude =jsonObject.isNull("Latitude") ? "" : jsonObject.getString("Latitude");
              Longitude= jsonObject.isNull("Longitude") ? "" : jsonObject.getString("Longitude");
              TotalGames=jsonObject.isNull("TotalGames") ? 0 : jsonObject.getInt("TotalGames");
@@ -61,6 +61,32 @@ public class UserProfile  {
         }
     }
 
+    public void updateUserProfile(String json, int value) {
+        try {JSONObject jsonObject=new JSONObject(json);
+            userId = jsonObject.getInt("RegistrationId");
+            userName = jsonObject.getString("Name");
+            email = jsonObject.getString("Email");
+            mobile = jsonObject.getString("Mobile");
+            int genderId = jsonObject.getInt("GenderId");
+            if (genderId == 1) {
+                gender = "Male";
+            } else {
+                gender = "Female";
+            }
+        } catch (Exception ex) {
+            ex.fillInStackTrace();
+        }
+    }
+
+    public void updateUserProfileName_gender(String name, int genderId) {
+        userName = name;
+        if (genderId == 1) {
+            gender = "Male";
+        } else {
+            gender = "Female";
+        }
+
+    }
     public void setTotalPoints(int totalPoints) {
         this.totalPoints = totalPoints;
     }
@@ -88,6 +114,10 @@ public class UserProfile  {
 
     public String getGender() {
         return gender;
+    }
+
+    public void setLocationName(String locationName) {
+        LocationName = locationName;
     }
 
     public ArrayList<InterestedGameModel> getInterestedGame() {
@@ -149,6 +179,20 @@ public class UserProfile  {
         interestedGame.addAll(list);
     }
 
+    public void updateGamePreferences(int gameId, int gameLevelId, boolean isDeleted, boolean isGameActive) {
+        for (int i = 0; i < interestedGame.size(); i++) {
+            if (interestedGame.get(i).getGameId() == gameId) {
+                if (isDeleted) {
+                    interestedGame.remove(i);
+                    break;
+                } else {
+
+                    interestedGame.get(i).setGameIsActive(isGameActive);
+                    break;
+                }
+            }
+        }
+    }
     public int getTotalPoints() {
         return totalPoints;
     }

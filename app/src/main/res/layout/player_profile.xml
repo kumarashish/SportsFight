@@ -257,13 +257,14 @@
 android:textColor="@color/black_font"
             android:id="@+id/locationName"
             android:text=""
+            android:maxLength="35"
             android:layout_marginLeft="5dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
         <sportsfight.com.s.common.GradientTextView
-
+            android:id="@+id/changelocation"
             android:text="Change"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
@@ -294,6 +295,9 @@ android:textColor="@color/black_font"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp">
 
             <LinearLayout
                 android:orientation="vertical"
@@ -316,6 +320,11 @@ android:textColor="@color/black_font"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
+                <View
+                    android:id="@+id/addgames"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </RelativeLayout>
             <LinearLayout
                 android:layout_marginLeft="10dp"
                 android:id="@+id/horizontalView"

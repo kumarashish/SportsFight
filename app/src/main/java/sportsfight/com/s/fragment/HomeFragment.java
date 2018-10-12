@@ -1,5 +1,6 @@
 package sportsfight.com.s.fragment;
 
+import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -30,6 +31,7 @@ import sportsfight.com.s.challenge.Challenge1;
 import sportsfight.com.s.common.AppController;
 import sportsfight.com.s.common.Common;
 import sportsfight.com.s.common.StaticJson;
+import sportsfight.com.s.interfaces.MyFragmentCallback;
 import sportsfight.com.s.interfaces.WebApiResponseCallback;
 import sportsfight.com.s.mainmodule.Dashboard;
 import sportsfight.com.s.mainmodule.TeamDetails;
@@ -41,7 +43,7 @@ import sportsfight.com.s.model.GameModelNew;
 import sportsfight.com.s.model.ViewModel;
 import sportsfight.com.s.util.Util;
 
-public class HomeFragment  extends Fragment implements WebApiResponseCallback{
+public class HomeFragment  extends Fragment implements WebApiResponseCallback {
    ArrayList<GameModelNew> gameList=new ArrayList<>();
    LinearLayout horizontalView,verticalView;
    ArrayList<ViewModel> addedView=new ArrayList<>();
@@ -54,20 +56,24 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback{
     public static int selectedRange=5;
     public static int selectedId=-1;
     int selectedGameId=-1;
+    Activity context;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public void onAttach(Activity context) {
+        this.context=context;
+
+        super.onAttach(context);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         addedView.clear();
         callback=this;
         View view = inflater.inflate(R.layout.home_page, container, false);
         controller=(AppController)getActivity().getApplicationContext();
         horizontalView=(LinearLayout)view.findViewById(R.id.horizontalView);
         verticalView=(LinearLayout)view.findViewById(R.id.verticalView);
-        if (Util.isNetworkAvailable(getActivity())) {
-            apiCall = getCompleteData;
-            dialog = Util.showPogress(getActivity());
-            controller.getApiCall().getData(Common.getNewDashBoard(Integer.toString(controller.getProfile().getUserId()), "0", "17.441660", "78.386940", Integer.toString(selectedRange)), controller.getPrefManager().getUserToken(), this);
-        }
+      // getData(0,"17.441660", "78.386940");
         return view;
     }
 
@@ -86,7 +92,7 @@ public void updateList(int position)
 
      int availablePlayer = 0;
      if (gameList.get( position).getMinPlayers() > 1) {
-         selectedGameId=(gameList.get( position).getGameId());
+
          availablePlayer = gameList.get( position).getTeamList().size();
          heading.setText("Available Teams ");
          int loop=3;
@@ -330,8 +336,7 @@ public void updateList(int position)
                 gameBg.setBackground(getActivity().getResources().getDrawable(R.drawable.selected_game));
                 TextView text = (TextView) view.findViewById(R.id.game_name);
                 text.setTextColor(getActivity().getResources().getColor(R.color.white));
-                controller.getChallengeModel().setGameId(addedView.get(i).getView().getId());
-                controller.getChallengeModel().setGameName(text.getText().toString());
+
             }
         }
         verticalView.removeAllViews();
@@ -339,6 +344,9 @@ public void updateList(int position)
     }
 
     public void addHeader() {
+        selectedGameId=(gameList.get(0 ).getGameId());
+        controller.getChallengeModel().setGameName(gameList.get(0).getGameName());
+        controller.getChallengeModel().setGameId(gameList.get(0).getGameId());
         for (int i = 0; i < gameList.size(); i++) {
             View inflatedLayout = getActivity().getLayoutInflater().inflate(R.layout.gameview, null, false);
             final LinearLayout gameBg = (LinearLayout) inflatedLayout.findViewById(R.id.gamebg);
@@ -346,13 +354,14 @@ public void updateList(int position)
             TextView gameName = (TextView) inflatedLayout.findViewById(R.id.game_name);
             final View clickedView = (View) inflatedLayout.findViewById(R.id.view);
             Picasso.with(getActivity()).load(gameList.get(i).getGameEnabledIcon()).placeholder(R.drawable.logo).resize(30,30).into(gameIcon);
+            gameName.setText(gameList.get(i).getGameName().toUpperCase());
             if (i != 0) {
                 gameBg.setBackgroundColor(getActivity().getResources().getColor(R.color.white));
-                gameName.setText(gameList.get(i).getGameName().toUpperCase());
                 gameName.setTextColor(getActivity().getResources().getColor(R.color.disabled_color));
-                controller.getChallengeModel().setGameName(gameList.get(i).getGameName());
-                controller.getChallengeModel().setGameId(gameList.get(i).getGameId());
+
             }
+
+
             inflatedLayout.setId(i);
             clickedView.setId(i);
             addedView.add(new ViewModel(inflatedLayout, i, clickedView.getId()));
@@ -363,6 +372,8 @@ public void updateList(int position)
                     dialog = Util.showPogress(getActivity());
                     int pos = position(clickedView.getId());
                     selectedGameId=gameList.get(pos).getGameId();
+                    controller.getChallengeModel().setGameName(gameList.get(pos).getGameName());
+                    controller.getChallengeModel().setGameId(gameList.get(pos).getGameId());
                     boolean isApiTobeCalled=false;
                     if (gameList.get(pos).getMinPlayers() > 1) {
                         if (gameList.get(pos).getTeamList().size() == 0) {
@@ -472,6 +483,18 @@ public void updateList(int position)
             dialog.cancel();
         }
        Util.showToast(getActivity(),Util.getMessage(value));
+    }
+
+    public void getData(int range, String lat, String lon) {
+        selectedGameId=0;
+        if (context != null) {
+            if (Util.isNetworkAvailable(context)) {
+                apiCall = getCompleteData;
+                dialog = Util.showPogress(context);
+                controller.getApiCall().getData(Common.getNewDashBoard(Integer.toString(controller.getProfile().getUserId()), Integer.toString(range), lat, lon, Integer.toString(selectedRange)), controller.getPrefManager().getUserToken(), callback);
+            }
+        }
+
     }
 }
 

@@ -56,4 +56,8 @@
     <string name="sample_checksum_generation_url">https://pguat.paytm.com/merchant-chksum/ChecksumGenerator</string>
     <string name="sample_checksum_verification_url">https://pguat.paytm.com/merchant-chksum/ValidateChksum</string>
     <string name="start_transaction">Start Transaction</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>

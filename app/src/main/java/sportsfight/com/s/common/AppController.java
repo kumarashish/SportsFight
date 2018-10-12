@@ -75,6 +75,7 @@ public class AppController extends Application {
         currentLocation = loc;
     }
 
+
     public SendChallengeModel getChallengeModel() {
         return challengeModel;
     }
@@ -130,7 +131,13 @@ public class AppController extends Application {
         String userProfileString = gson.toJson(profile);
         prefManager.setUserProfile(userProfileString);
     }
+    public void setUserProfile( UserProfile userProfile) {
 
+        this.profile=userProfile;
+        Gson gson = new Gson();
+        String userProfileString = gson.toJson(profile);
+        prefManager.setUserProfile(userProfileString);
+    }
     public void updateGender(String gender) {
         profile.setGender(gender);
         Gson gson = new Gson();

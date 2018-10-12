@@ -83,6 +83,10 @@ public static String[] months={"Jan","Feb","March","April","May","June","July","
                 strAdd +=   list.get(0).getAddressLine(n) + ", ";
             }
             strAdd = list.get(0).getAddressLine(0);
+            if(strAdd.length()>22)
+            {
+                strAdd= strAdd.substring(0,22);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -430,13 +434,12 @@ int month=c.get(Calendar.MONTH)+1;
         return status;
     }
 
-    public static String getProfilePicUrl(Activity act, String value) {
+    public static String getProfilePicUrl(String value) {
         String url = "";
         try {
-            AppController controller = (AppController) act.getApplicationContext();
+
             JSONObject job = new JSONObject(value);
             url = job.getString("ImageUrl");
-            controller.updateProfilePic(url);
         } catch (Exception ex) {
             ex.fillInStackTrace();
         }
