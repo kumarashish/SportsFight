@@ -38,6 +38,7 @@ import sportsfight.com.s.launchingmodule.Test;
 import sportsfight.com.s.mainmodule.Dashboard;
 import sportsfight.com.s.mainmodule.NewDashBoard;
 import sportsfight.com.s.model.RegistrationModel;
+import sportsfight.com.s.model.UserProfile;
 import sportsfight.com.s.network.WebApiCall;
 
 import sportsfight.com.s.util.Util;
@@ -182,6 +183,8 @@ public class Login extends Activity  implements View.OnClickListener,WebApiRespo
                     Intent in = new Intent(Login.this,NewDashBoard.class);
                     controller.getPrefManager().setUserToken(value);
                     controller.getPrefManager().setUserLoggedIn(true);
+                    UserProfile  profile=new UserProfile(Util.getResultJson(value));
+                    controller.setUserProfile(profile);
                     Util.startActivityCommon(Login.this, in);
                     finish();
                 } else {

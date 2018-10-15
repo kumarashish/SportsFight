@@ -73,13 +73,12 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback {
         controller=(AppController)getActivity().getApplicationContext();
         horizontalView=(LinearLayout)view.findViewById(R.id.horizontalView);
         verticalView=(LinearLayout)view.findViewById(R.id.verticalView);
-      // getData(0,"17.441660", "78.386940");
         return view;
     }
 
 
 
-public void updateList(int position)
+public void updateList(final int position)
  {   View playerView = getActivity().getLayoutInflater().inflate(R.layout.available_players, null, false);
      View availableGroundView = getActivity().getLayoutInflater().inflate(R.layout.available_players, null, false);
    //  View openTournaments = getActivity().getLayoutInflater().inflate(R.layout.tournament_nearyou, null, false);
@@ -114,7 +113,7 @@ public void updateList(int position)
              Picasso.with(getActivity()).load( model.getTeamImage()).placeholder(R.drawable.logo_s).resize(60,60).into(icon);
              name.setText(model.getTeamName());
              company.setVisibility(View.GONE);
-             location.setText(model.getPlayerLocation()+"("+model.getDistance()+" Km )");
+             location.setText(model.getPlayerLocation().trim()+"("+model.getDistance()+" Km )");
              level.setText("");
              rank.setText(model.getRank());
              winning_percentage.setText(""+model.getWinningPercentage() +" %");
@@ -129,10 +128,15 @@ public void updateList(int position)
                      startActivity(new Intent(getActivity(), Challenge1.class));
                  }
              });
+             final AvailableTeamModel model1=gameList.get(position).getTeamList().get(i);
              details.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View view) {
-                      startActivity(new Intent(getActivity(),TeamDetails.class));
+                     controller.getChallengeModel().setTeam(true);
+                     controller.getChallengeModel().setTeamName(teamName);
+                     controller.getChallengeModel().setTeamId(teamId);
+                     TeamDetails.teamModel=model1;
+                     startActivity(new Intent(getActivity(),TeamDetails.class).putExtra("isTeamCalled",true));
                  }
              });
              playerList.addView(playerRow);
@@ -145,7 +149,7 @@ public void updateList(int position)
              loop =  availablePlayer;
          }
          for (int i = 0; i < loop; i++) {
-             AvailablePlayersModel model=gameList.get(position).getPlayerlist().get(i);
+             final AvailablePlayersModel model=gameList.get(position).getPlayerlist().get(i);
              View playerRow = getActivity().getLayoutInflater().inflate(R.layout.available_player_row, null, false);
              TextView winning_percentage=(TextView)playerRow.findViewById(R.id.winning_percentage);
              ImageView icon=(ImageView) playerRow.findViewById(R.id.icon);
@@ -169,13 +173,26 @@ public void updateList(int position)
              winning_percentage.setText(""+model.getWinningPercentage() +" %");
              final String playerName=model.getPlayerName();
              final String playerId=model.getPlayerId();
+
              challenge.setOnClickListener(new View.OnClickListener() {
+                 @Override
+                 public void onClick(View view) {
+
+                     controller.getChallengeModel().setTeam(false);
+                     controller.getChallengeModel().setTeamName(playerName);
+                     controller.getChallengeModel().setTeamId(playerId);
+                     startActivity(new Intent(getActivity(), Challenge1.class));
+                 }
+             });
+             final AvailablePlayersModel model1=gameList.get(position).getPlayerlist().get(i);
+             details.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View view) {
                      controller.getChallengeModel().setTeam(false);
                      controller.getChallengeModel().setTeamName(playerName);
                      controller.getChallengeModel().setTeamId(playerId);
-                     startActivity(new Intent(getActivity(), Challenge1.class));
+                     TeamDetails.model=model1;
+                      startActivity(new Intent(getActivity(),TeamDetails.class).putExtra("isTeamCalled",false));
                  }
              });
              playerList.addView(playerRow);
@@ -224,7 +241,7 @@ public void updateList(int position)
              ImageView image4 = (ImageView) groundsRow.findViewById(R.id.image4);
              ImageView image5 = (ImageView) groundsRow.findViewById(R.id.image5);
              ground_name.setText(groundModel.getGroundName());
-             location.setText(groundModel.getLocation()+", ("+groundModel.getDistance()+ "km)");
+             location.setText(groundModel.getLocation().trim()+", ( "+groundModel.getDistance()+ " km )");
              price.setText("Rs "+groundModel.getPrice());
              if( groundModel.getGallery().size()==0)
              {   Picasso.with(getActivity()).load("https://treefurniturerental.ca/wp-content/uploads/2017/05/sorry-image-not-available.jpg").placeholder(R.drawable.logo).resize(100,100).into(image1);
@@ -344,6 +361,8 @@ public void updateList(int position)
     }
 
     public void addHeader() {
+        horizontalView.removeAllViews();
+        addedView.clear();
         selectedGameId=(gameList.get(0 ).getGameId());
         controller.getChallengeModel().setGameName(gameList.get(0).getGameName());
         controller.getChallengeModel().setGameId(gameList.get(0).getGameId());
@@ -353,7 +372,7 @@ public void updateList(int position)
             ImageView gameIcon = (ImageView) inflatedLayout.findViewById(R.id.game_icon);
             TextView gameName = (TextView) inflatedLayout.findViewById(R.id.game_name);
             final View clickedView = (View) inflatedLayout.findViewById(R.id.view);
-            Picasso.with(getActivity()).load(gameList.get(i).getGameEnabledIcon()).placeholder(R.drawable.logo).resize(30,30).into(gameIcon);
+            Picasso.with(getActivity()).load(gameList.get(i).getGameEnabledIcon()).placeholder(R.drawable.logo).resize(200,200).into(gameIcon);
             gameName.setText(gameList.get(i).getGameName().toUpperCase());
             if (i != 0) {
                 gameBg.setBackgroundColor(getActivity().getResources().getColor(R.color.white));
@@ -387,7 +406,6 @@ public void updateList(int position)
                     UpdateHeader(pos);
                     if (isApiTobeCalled) {
                         apiCall = updateGameList;
-
                         controller.getApiCall().getData(Common.getNewDashBoard(Integer.toString(controller.getProfile().getUserId()), Integer.toString(selectedGameId), "17.441660", "78.386940", "5"), controller.getPrefManager().getUserToken(), callback);
                     }else{
 
@@ -491,7 +509,7 @@ public void updateList(int position)
             if (Util.isNetworkAvailable(context)) {
                 apiCall = getCompleteData;
                 dialog = Util.showPogress(context);
-                controller.getApiCall().getData(Common.getNewDashBoard(Integer.toString(controller.getProfile().getUserId()), Integer.toString(range), lat, lon, Integer.toString(selectedRange)), controller.getPrefManager().getUserToken(), callback);
+                controller.getApiCall().getData(Common.getNewDashBoard(Integer.toString(controller.getProfile().getUserId()), Integer.toString(selectedGameId), lat, lon, Integer.toString(selectedRange)), controller.getPrefManager().getUserToken(), callback);
             }
         }
 

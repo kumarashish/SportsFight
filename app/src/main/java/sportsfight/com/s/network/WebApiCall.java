@@ -1,7 +1,12 @@
 package sportsfight.com.s.network;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.provider.Settings;
+
 import sportsfight.com.s.util.Contants;
 import org.json.JSONObject;
 

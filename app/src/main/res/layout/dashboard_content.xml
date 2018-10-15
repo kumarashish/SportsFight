@@ -42,7 +42,7 @@
                 android:textColor="@color/black_font"
                 android:gravity="center_vertical"
                 android:maxLength="22"
-                android:text="Hitech City, Madhapur"
+                android:text=""
                 android:textSize="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent" />
@@ -50,7 +50,7 @@
                     android:id="@+id/distance_tv"
                      android:layout_marginLeft="5dp"
                     android:textColor="@color/light_grey"
-                    android:text="(5 km)"
+                    android:text=""
                     android:textSize="10dp"
                     android:gravity="center_vertical"
                     android:layout_width="match_parent"

@@ -1,8 +1,11 @@
 package sportsfight.com.s.mainmodule;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.VoiceInteractor;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -14,6 +17,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
@@ -27,8 +31,10 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -131,9 +137,10 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
     int radiusDistance = 5;
     Fragment currentFragment;
     Dialog dialog;
+    Dialog progressDialog;
     final int permission = 2;
 
-
+    private LocationManager mlocManager;
     @Override
     protected void onPause() {
         super.onPause();
@@ -163,6 +170,7 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         addView = (RelativeLayout) dashboardView.findViewById(R.id.addView);
         createTeam_bg = (RelativeLayout) dashboardView.findViewById(R.id.createTeamBg);
         expandedView = (LinearLayout) dashboardView.findViewById(R.id.expadedView);
+        mlocManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -180,7 +188,16 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
                 .build();
         mPlaceArrayAdapter = new PlaceArrayAdapter(this, android.R.layout.simple_list_item_1, BOUNDS_MOUNTAIN_VIEW, null);
         createLocationRequest();
-        dialog = Util.showPogress(NewDashBoard.this);
+        if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+            fetchCurrentLocation();
+        } else {
+            showGpsDisabledAlert();
+        }
+
+    }
+
+    public void fetchCurrentLocation()
+    {
         if (ActivityCompat.checkSelfPermission(NewDashBoard.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(NewDashBoard.this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
@@ -192,43 +209,62 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
             ActivityCompat.requestPermissions(NewDashBoard.this,
                     new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
                     permission);
-        } else {
-            new Handler().postDelayed(new Runnable() {
+        }
+        progressDialog = Util.showPogress(NewDashBoard.this);
+        new Handler().postDelayed(new Runnable() {
 
             /*
              * Showing splash screen with a timer. This will be useful when you
              * want to show case your app logo / company
              */
 
-                @Override
-                public void run() {
-                    // This method will be executed once the timer is over
-                    // Start your app main activity
-                    if (mGoogleApiClient.isConnected()) {
-                        if (ActivityCompat.checkSelfPermission(NewDashBoard.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(NewDashBoard.this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                            // TODO: Consider calling
-                            //    ActivityCompat#requestPermissions
-                            // here to request the missing permissions, and then overriding
-                            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-                            //                                          int[] grantResults)
-                            // to handle the case where the user grants the permission. See the documentation
-                            // for ActivityCompat#requestPermissions for more details.
-                            ActivityCompat.requestPermissions(NewDashBoard.this,
-                                    new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
-                                    permission);
-                            dialog.cancel();
-                            return;
-                        }
+            @Override
+            public void run() {
 
+                // This method will be executed once the timer is over
+                // Start your app main activity
+                if (mGoogleApiClient.isConnected()) {
+                    if (ActivityCompat.checkSelfPermission(NewDashBoard.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(NewDashBoard.this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                        // TODO: Consider calling
+                        //    ActivityCompat#requestPermissions
+                        // here to request the missing permissions, and then overriding
+                        //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                        //                                          int[] grantResults)
+                        // to handle the case where the user grants the permission. See the documentation
+                        // for ActivityCompat#requestPermissions for more details.
+                        ActivityCompat.requestPermissions(NewDashBoard.this,
+                                new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},
+                                permission);
+                        progressDialog.cancel();
 
-                        LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, NewDashBoard.this);
+                        return;
                     }
 
-                }
-            }, 5000);
-        }
-    }
 
+                    LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, NewDashBoard.this);
+                }
+
+            }
+        }, 2000);
+    }
+    private  void showGpsDisabledAlert() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Your GPS seems to be disabled, Do you want to   enable it to  ?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(@SuppressWarnings("unused") final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        startActivityForResult(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS),22);
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog, @SuppressWarnings("unused") final int id) {
+                        dialog.cancel();
+                       showChangeLocationAlert();
+                    }
+                });
+        final AlertDialog alert = builder.create();
+        alert.show();
+    }
     public void initializeAll(View view) {
         logout.setOnClickListener(this);
         contactUs.setOnClickListener(this);
@@ -309,8 +345,15 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
             case R.id.navigation_home:
                 heading.setVisibility(View.VISIBLE);
                 distance.setVisibility(View.VISIBLE);
-                yourLocation.setText("Hitech City,Madhapur");
+                yourLocation.setText(controller.getAddress());
+                distance.setText("(" + radiusDistance + "km)");
                 loadfragment(1);
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        updateScreen();
+                    }
+                }, 500);
                 return true;
             case R.id.navigation_wallet:
                 heading.setVisibility(View.GONE);
@@ -508,6 +551,7 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
             // Selecting the first object buffer.
             final Place place = places.get(0);
             CharSequence attributions = places.getAttributions();
+            mAutocompleteTextView.dismissDropDown();
 
             // mNameView.setText(Html.fromHtml(place.getAddress() + ""));
 
@@ -544,7 +588,7 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
     }
 
     public void showChangeLocationAlert() {
-        final Dialog dialog = new Dialog(this);
+        dialog = new Dialog(this);
         LottieAnimationView animationView;
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.choose_location_popup);
@@ -560,12 +604,34 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
 
         mAutocompleteTextView.setAdapter(mPlaceArrayAdapter);
         progressbar = (ProgressBar) dialog.findViewById(R.id.progressbar);
+        RelativeLayout gps_location_button=(RelativeLayout)dialog.findViewById(R.id.gps_location_button);
 
         if (HomeFragment.selectedId != -1) {
             group.check(HomeFragment.selectedId);
         } else {
             group.check(R.id.radio1);
         }
+        if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)==false) {
+            gps_location_button.setVisibility(View.GONE);
+        }else {
+            gps_location_button.setVisibility(View.VISIBLE);
+        }
+        mAutocompleteTextView.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -577,8 +643,8 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
                     return;
                 }
                 progressbar.setVisibility(View.VISIBLE);
-                progressbar.bringToFront();
-                PendingResult<Status> pendingResult = LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, NewDashBoard.this);
+                //progressbar.bringToFront();
+                LocationServices.FusedLocationApi.requestLocationUpdates(mGoogleApiClient, mLocationRequest, NewDashBoard.this);
                 Log.d(TAG, "Location update started ..............: ");
             }
         });
@@ -587,7 +653,6 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 radiusDistance = getDistance(group.getCheckedRadioButtonId());
-                stopLocationUpdates();
                 yourLocation.setText(controller.getAddress());
                 distance.setText("(" + radiusDistance + "km)");
                 updateScreen();
@@ -632,16 +697,16 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
     public void onLocationChanged(Location location) {
         if (location != null) {
             String address = Util.getCompleteAddressString(NewDashBoard.this, location.getLatitude(), location.getLongitude());
-            if (mAutocompleteTextView != null) {
-                mAutocompleteTextView.setText(address);
-                progressbar.setVisibility(View.GONE);
-            }
-
             LatLng loc = new LatLng(location.getLatitude(), location.getLongitude());
             controller.setAddress(address, loc);
             stopLocationUpdates();
-            if (dialog != null) {
-                dialog.cancel();
+            if (mAutocompleteTextView != null) {
+                mAutocompleteTextView.setText(address);
+                progressbar.setVisibility(View.GONE);
+            }else if (progressDialog != null){
+                progressDialog.cancel();
+                yourLocation.setText(  controller.getAddress());
+                distance.setText("("+radiusDistance+" km )");
                 updateScreen();
 
             }
@@ -693,6 +758,13 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
             location.setText(controller.getProfile().getLocationName());
             location.setText(controller.getProfile().getLocationName());
             Picasso.with(NewDashBoard.this).load(controller.getProfile().getProfilePic()).placeholder(R.drawable.user_icon).resize(60, 60).into(profilePic);
+        }else if(requestCode==22)
+        {
+            if(mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                fetchCurrentLocation();
+            }else{
+                showGpsDisabledAlert();
+            }
         }
     }
 

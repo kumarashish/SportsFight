@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="130dp">
+        android:layout_height="170dp">
 
     <LinearLayout
         android:background="@drawable/rounded_corner_box"
@@ -12,12 +12,13 @@
         android:orientation="vertical"
 
         android:layout_width="match_parent"
-        android:layout_height="130dp">
+        android:layout_height="170dp">
 
       <sportsfight.com.s.common.Bold_TextView
           android:id="@+id/ground_name"
+          android:paddingRight="60dp"
           android:layout_margin="5dp"
-          android:text="MCA Grounds"
+          android:text=""
           android:textSize="16dp"
           android:textColor="@color/black_font"
           android:layout_width="match_parent"
@@ -25,8 +26,9 @@
         <TextView
             android:id="@+id/location"
 android:layout_marginLeft="5dp"
-            android:text="Hitech City, (5Km)"
+            android:text=""
             android:textSize="11dp"
+            android:layout_marginRight="80dp"
          android:layout_marginTop="-5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -36,7 +38,7 @@ android:layout_marginLeft="5dp"
             android:weightSum="5"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="90dp">
             <ImageView
                 android:id="@+id/image1"
                 android:layout_weight="1"
@@ -90,12 +92,13 @@ android:layout_marginLeft="5dp"
 
                 android:text="Per Hr."
                 android:paddingTop="15dp"
+                android:layout_marginRight="15dp"
                 android:textSize="16dp"
                 android:textColor="@color/black_font"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         <sportsfight.com.s.common.Bold_TextView
-            android:text="Rs 150"
+            android:text=""
             android:id="@+id/price"
             android:layout_marginRight="15dp"
             android:layout_marginTop="-5dp"
