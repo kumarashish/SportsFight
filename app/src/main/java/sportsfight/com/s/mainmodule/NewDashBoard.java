@@ -193,7 +193,6 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         } else {
             showGpsDisabledAlert();
         }
-
     }
 
     public void fetchCurrentLocation()
@@ -335,8 +334,6 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         android.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(layout.getId(), fragmentA);
         fragmentTransaction.commit();
-
-
     }
 
     @Override
@@ -353,7 +350,7 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
                     public void run() {
                         updateScreen();
                     }
-                }, 500);
+                }, 100);
                 return true;
             case R.id.navigation_wallet:
                 heading.setVisibility(View.GONE);

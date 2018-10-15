@@ -66,15 +66,27 @@ public class TeamDetails  extends Activity implements View.OnClickListener {
             totalGamesplayed.setText("N/A");
             winning_percent.setText(teamModel.getWinningPercentage() + "%");
             name.setText(teamModel.getTeamName());
-            playing_location.setText(teamModel.getPlayerLocation().trim()+"( "+model.getDistance()+" km )");
+            playing_location.setText(teamModel.getPlayerLocation().trim()+"( "+teamModel.getDistance()+" km )");
+            playerList_llt.setVisibility(View.VISIBLE);
+            addTeamPlayers();
             Picasso.with(TeamDetails.this).load(teamModel.getTeamImage()).resize(80, 80).placeholder(R.drawable.user_icon).into(profile_pic);
         }else {
             totalGamesplayed.setText("N/A");
             winning_percent.setText(model.getWinningPercentage() + "%");
             name.setText(model.getPlayerName());
             playing_location.setText(model.getPlayerLocation());
-            team_playerlist.setVisibility(View.GONE);
+            playerList_llt.setVisibility(View.GONE);
             Picasso.with(TeamDetails.this).load(model.getPlayerImage()).resize(80, 80).placeholder(R.drawable.user_icon).into(profile_pic);
+        }
+    }
+
+
+    public void addTeamPlayers()
+    {
+        for(int i=0;i<teamModel.getPlayerList().size();i++)
+        {
+            View playerRow = getLayoutInflater().inflate(R.layout.team_row, null, false);
+           team_playerlist.addView(playerRow);
         }
     }
     @Override

@@ -55,6 +55,7 @@
             android:orientation="vertical"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <sportsfight.com.s.common.Bold_TextView
@@ -140,24 +141,26 @@
         </LinearLayout>
     </LinearLayout>
         <LinearLayout
-            android:visibility="gone"
+
             android:id="@+id/playerList_llt"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
     <sportsfight.com.s.common.Bold_TextView
         android:layout_marginTop="10dp"
+
         android:textColor="@color/black_font"
         android:layout_gravity="left"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="20dp"
         android:text="Players List"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <LinearLayout
         android:id="@+id/playerList"
         android:orientation="vertical"
-        android:layout_margin="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

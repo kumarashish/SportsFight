@@ -81,7 +81,6 @@ public class PrefsScreen extends Activity implements View.OnClickListener ,WebAp
                 list.add(model);
             }
         } catch (Exception ex) {
-
         }
         updateList();
         dialog.cancel();

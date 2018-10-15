@@ -21,7 +21,6 @@
                 android:id="@+id/profilePic"
                 android:layout_marginTop="10dp"
                 android:layout_centerVertical="true"
-
                 android:layout_width="60dp"
                 android:layout_height="60dp" />
 </LinearLayout>
@@ -56,7 +55,7 @@
            android:layout_centerVertical="true"
            android:layout_toEndOf="@+id/selected_icon"
            android:gravity="center_vertical"
-           android:text="Hitech City"
+
 
            android:textSize="12dp" />
    </LinearLayout>
@@ -66,6 +65,7 @@
                android:layout_width="0dp"
                android:layout_height="wrap_content">
                <sportsfight.com.s.common.Bold_TextView
+                   android:id="@+id/captain"
                    android:text="Captain"
                    android:textColor="@color/BeginnerColor"
                    android:layout_width="match_parent"
