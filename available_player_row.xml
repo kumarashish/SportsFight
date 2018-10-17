@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@drawable/rounded_corner_box"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="0.6"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <sportsfight.com.s.common.CircleImageView
+                android:id="@+id/icon"
+                android:padding="0.5dp"
+                android:layout_marginTop="5dp"
+                android:layout_width="60dp"
+                android:src="@drawable/prabhas"
+                android:layout_gravity="center"
+
+                android:layout_height="60dp" />
+            <Button
+                android:id="@+id/rank"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:text="123"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/blue_gradient_button"
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.4"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <sportsfight.com.s.common.Bold_TextView
+                android:textSize="16dp"
+                android:id="@+id/name"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/black_font"
+                android:text="Bahubali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:textSize="12dp"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/black_font"
+                android:id="@+id/company"
+                android:text="Microsoft Hyderabad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="12dp"
+                android:id="@+id/location"
+                android:text="Hitech City (5 Km)"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <sportsfight.com.s.common.Bold_TextView
+                android:textColor="@color/BeginnerColor"
+                android:id="@+id/level"
+                android:textSize="12dp"
+                android:text="Beginner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/cup"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp" />
+                <sportsfight.com.s.common.Bold_TextView
+                    android:id="@+id/winning_percentage"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="5dp"
+                    android:text="55 %"
+                    android:textColor="@color/BeginnerColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/challenge"
+                android:layout_marginBottom="10dp"
+                android:textSize="10dp"
+                android:textAllCaps="false"
+                android:text="Challenge"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/orange_gradient_button"
+                android:layout_width="100dp"
+                android:layout_height="35dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+        <View
+            android:id="@+id/player_details"
+            android:layout_marginRight="130dp"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"/>
+    </RelativeLayout>
+
+</LinearLayout>
