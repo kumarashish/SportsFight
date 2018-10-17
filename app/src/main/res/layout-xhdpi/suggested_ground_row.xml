@@ -4,14 +4,15 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="170dp">
+        android:layout_height="160dp">
 
     <LinearLayout
         android:background="@drawable/rounded_corner_box"
         android:layout_margin="10dp"
         android:orientation="vertical"
+
         android:layout_width="match_parent"
-        android:layout_height="170dp">
+        android:layout_height="160dp">
 
       <sportsfight.com.s.common.Bold_TextView
           android:id="@+id/ground_name"
@@ -19,7 +20,6 @@
           android:layout_margin="5dp"
           android:text=""
           android:textSize="16dp"
-
           android:textColor="@color/black_font"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
@@ -42,7 +42,7 @@ android:layout_marginLeft="5dp"
             <ImageView
                 android:id="@+id/image1"
                 android:layout_weight="1"
-                android:scaleType="fitXY"
+
 
                 android:layout_width="0dp"
                 android:layout_height="match_parent" />
@@ -52,11 +52,11 @@ android:layout_marginLeft="5dp"
 
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:scaleType="fitXY"
+
                 android:layout_height="match_parent" />
             <ImageView
                 android:id="@+id/image3"
-                android:scaleType="fitXY"
+
                 android:layout_marginLeft="5dp"
 
                 android:layout_weight="1"
@@ -64,7 +64,7 @@ android:layout_marginLeft="5dp"
                 android:layout_height="match_parent" />
             <ImageView
                 android:id="@+id/image4"
-                android:scaleType="fitXY"
+
                 android:layout_marginLeft="5dp"
 
                 android:layout_weight="1"
@@ -72,7 +72,7 @@ android:layout_marginLeft="5dp"
                 android:layout_height="match_parent" />
             <ImageView
                 android:id="@+id/image5"
-                android:scaleType="fitXY"
+
                 android:layout_marginLeft="5dp"
 
                 android:layout_weight="1"

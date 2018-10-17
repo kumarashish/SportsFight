@@ -65,7 +65,7 @@
             android:layout_width="80dp"
             android:layout_height="35dp" />
         <LinearLayout
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:layout_toEndOf="@+id/circleImageView4"
             android:orientation="vertical"
             android:layout_width="match_parent"

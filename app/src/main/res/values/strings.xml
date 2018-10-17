@@ -21,7 +21,7 @@
     <string name="newuser">New User? Create Account</string>
     <string name="cancel"><u>Cancel</u></string>
     <string name="signup"><u>Sign Up</u></string>
-    <string name="signin"><u>SignIn</u></string>
+    <string name="signin"><u>Sign In</u></string>
     <string name="forgetpassworddetails">Please enter details below to receive OTP for Password reset</string>
     <string name="setnewpassword">Set New Password</string>
     <string name="setnewpassworddetails">Enter received OTP &amp; Set New Password</string>

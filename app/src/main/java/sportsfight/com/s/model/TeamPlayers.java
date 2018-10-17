@@ -16,12 +16,14 @@ public  class TeamPlayers {
     double WinPercentage;
     String GameLevel;
     String Location;
+    String PlayerImage;
     public TeamPlayers(JSONObject jsonObject)
     {
           try{
               RegistraionId = jsonObject.isNull("RegistraionId") ? 0 : jsonObject.getInt("RegistraionId");
               GameId = jsonObject.isNull("GameId") ? 0 : jsonObject.getInt("GameId");
               Name = jsonObject.isNull("Name") ? "" : jsonObject.getString("Name");
+              PlayerImage=jsonObject.isNull("PlayerImage") ? "" : jsonObject.getString("PlayerImage");
               CompanyName = jsonObject.isNull("CompanyName") ? "" : jsonObject.getString("CompanyName");
               isCaptain = jsonObject.isNull("IsCaptain") ? false : jsonObject.getBoolean("IsCaptain");
               Rank = jsonObject.isNull("Rank") ? 0 : jsonObject.getInt("Rank");
@@ -68,5 +70,8 @@ public  class TeamPlayers {
 
     public boolean isCaptain() {
         return isCaptain;
+    }
+    public String getPlayerImage() {
+        return PlayerImage;
     }
 }

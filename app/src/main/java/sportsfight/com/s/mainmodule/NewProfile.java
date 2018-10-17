@@ -96,6 +96,7 @@ public class NewProfile extends Activity implements View.OnClickListener,WebApiR
     String tempName;
     int tempgenderId;
 boolean isProfileUpdated=false;
+boolean isGameEdited=false;
     final public static int SELECT_FILE = 02;
     public final int permissionReadCamera = 1;
     public static final int CAMERA_CAPTURE_IMAGE_REQUEST_CODE = 100;
@@ -110,6 +111,7 @@ boolean isProfileUpdated=false;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.player_profile);
         ButterKnife.bind(this);
+        isGameEdited=false;
         controller=(AppController)getApplicationContext();
         back.setOnClickListener(this);
         edit_profile.setOnClickListener(this);
@@ -188,7 +190,11 @@ boolean isProfileUpdated=false;
         Button update_profilepic=(Button) dialogg.findViewById(R.id.update_profilepic);
         Button cancel = (Button)dialogg.findViewById(R.id.cancel);
         Button save = (Button) dialogg.findViewById(R.id.save);
-        Picasso.with(NewProfile.this).load(controller.getProfile().getProfilePic()).resize(60,60).placeholder(R.drawable.logo).into(profile_pic);
+        if (controller.getProfile().getProfilePic().length() > 0) {
+            Picasso.with(NewProfile.this).load(controller.getProfile().getProfilePic()).resize(60, 60).placeholder(R.drawable.user_icon).into(profile_pic);
+        } else {
+            Picasso.with(NewProfile.this).load(Common.noImageUrl).placeholder(R.drawable.user_icon).resize(60, 60).into(profile_pic);
+        }
         name.setText(controller.getProfile().getUserName());
         email.setText(controller.getProfile().getEmail());
         mobile.setText(controller.getProfile().getMobile());
@@ -360,7 +366,7 @@ boolean isProfileUpdated=false;
     public void setInterestedGames() {
         LinearLayout horizontalView=(LinearLayout)findViewById(R.id.horizontalView);
         horizontalView.removeAllViews();
-        for (int i = 1; i < profile.getInterestedGame().size(); i++) {
+        for (int i = 0; i < profile.getInterestedGame().size(); i++) {
            final InterestedGameModel model=profile.getInterestedGame().get(i);
             View inflatedLayout = getLayoutInflater().inflate(R.layout.game_card, horizontalView, false);
             LinearLayout rightSidebox = (LinearLayout) inflatedLayout.findViewById(R.id.rightSidebox);
@@ -398,6 +404,7 @@ boolean isProfileUpdated=false;
                     if(Util.isNetworkAvailable(NewProfile.this)) {
                         dialog = Util.showPogress(NewProfile.this);
                         apiCall = enableDisableGame;
+
                         controller.getApiCall().postData(Common.getUpdateGamePreferencesUrl(Integer.toString(controller.getProfile().getUserId())), getUpdateGamePrefs(model.getGameId(), 2, false, true).toString(), controller.getPrefManager().getUserToken(), NewProfile.this);
                     }
                 }
@@ -509,6 +516,8 @@ boolean isProfileUpdated=false;
                 }
             }else if(apiCall==enableDisableGame)
             {
+                isGameEdited=true;
+                isProfileUpdated=true;
             profile.updateGamePreferences(gameId,gameLevelId,isDeleted,GameIsActive);
                 controller.setUserProfile( profile);
                 runOnUiThread(new Runnable() {
@@ -542,7 +551,11 @@ boolean isProfileUpdated=false;
         mobileNumber.setText(profile.getMobile());
         switch (id) {
             case 0:
-                Picasso.with(NewProfile.this).load(profile.getProfilePic()).resize(80, 80).placeholder(R.drawable.user_icon).into(profilePic);
+                if(controller.getProfile().getProfilePic().length()>0) {
+                    Picasso.with(NewProfile.this).load(profile.getProfilePic()).placeholder(R.drawable.user_icon).resize(80, 80).into(profilePic);
+                }else{
+                    Picasso.with(NewProfile.this).load(Common.noImageUrl).placeholder(R.drawable.user_icon).resize(80, 80).into(profilePic);
+                }
                 winning_percentage.setText(Integer.toString(profile.getWinPercentage()) + "%");
                 club.setText(profile.getClubName());
                 totalGames.setText(Integer.toString(profile.getTotalGames()));
@@ -550,7 +563,12 @@ boolean isProfileUpdated=false;
                 setInterestedGames();
                 break;
             case 2:
-                Picasso.with(NewProfile.this).load(profile.getProfilePic()).resize(80, 80).placeholder(R.drawable.user_icon).into(profilePic);
+
+                if(controller.getProfile().getProfilePic().length()>0) {
+                    Picasso.with(NewProfile.this).load(profile.getProfilePic()).placeholder(R.drawable.user_icon).resize(80, 80).into(profilePic);
+                }else{
+                    Picasso.with(NewProfile.this).load(Common.noImageUrl).placeholder(R.drawable.user_icon).resize(80, 80).into(profilePic);
+                }
                 break;
             case 3:
                 locationName.setText(controller.getProfile().getLocationName());
@@ -580,6 +598,7 @@ boolean isProfileUpdated=false;
     public void onBackPressed() {
         if (isProfileUpdated) {
             Intent _result = new Intent();
+            _result.putExtra("isGameEdited",isGameEdited);
             setResult(Activity.RESULT_OK, _result);
         }
             finish();

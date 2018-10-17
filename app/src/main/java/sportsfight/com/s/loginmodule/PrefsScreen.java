@@ -145,7 +145,11 @@ public class PrefsScreen extends Activity implements View.OnClickListener ,WebAp
                         controller.getApiCall().postData(Common.SignUpUrl, getRegistrationJson().toString(),"", this);
                     }
                 }else{
-                    Toast.makeText(PrefsScreen.this,"Please select atleast 1 game",Toast.LENGTH_SHORT).show();
+                    if( list.size()>0) {
+                        Toast.makeText(PrefsScreen.this, "Please select atleast 1 game", Toast.LENGTH_SHORT).show();
+                    }else{
+                        Toast.makeText(PrefsScreen.this, "We are unable to fetch games list,please try later", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 break;
         }

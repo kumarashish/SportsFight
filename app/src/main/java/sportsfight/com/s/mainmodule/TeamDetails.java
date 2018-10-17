@@ -19,6 +19,7 @@ import sportsfight.com.s.R;
 import sportsfight.com.s.challenge.Challenge1;
 import sportsfight.com.s.model.AvailablePlayersModel;
 import sportsfight.com.s.model.AvailableTeamModel;
+import sportsfight.com.s.model.TeamPlayers;
 import sportsfight.com.s.util.Util;
 
 /**
@@ -84,9 +85,20 @@ public class TeamDetails  extends Activity implements View.OnClickListener {
     public void addTeamPlayers()
     {
         for(int i=0;i<teamModel.getPlayerList().size();i++)
-        {
+        {TeamPlayers model=teamModel.getPlayerList().get(i);
             View playerRow = getLayoutInflater().inflate(R.layout.team_row, null, false);
-           team_playerlist.addView(playerRow);
+            ImageView profilePic=(ImageView)playerRow.findViewById(R.id.profilePic);
+            TextView name=(TextView)playerRow.findViewById(R.id.name);
+            TextView location=(TextView)playerRow.findViewById(R.id.location);
+            TextView captain=(TextView)playerRow.findViewById(R.id.captain);
+            name.setText(model.getName());
+            location.setText(model.getLocation());
+            if(model.isCaptain()==false)
+            {
+                captain.setText("");
+            }
+            Picasso.with(TeamDetails.this).load(model.getPlayerImage()).resize(80,80).placeholder(R.drawable.user_icon).into(profilePic);
+            team_playerlist.addView(playerRow);
         }
     }
     @Override

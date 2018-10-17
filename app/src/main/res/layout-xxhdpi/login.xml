@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:showIn="@layout/activity_welcome" android:background="@drawable/app_bg">
+
+        <LinearLayout
+
+            android:background="@color/black_overlay"
+            android:layout_marginLeft="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="140dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <sportsfight.com.s.common.Heading
+                android:layout_marginTop="60dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14pt"
+                android:text="@string/welcome_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/light_grey"
+                android:textSize="8pt"
+                android:text="@string/logindetaill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+          <LinearLayout
+              android:layout_marginTop="20dp"
+              android:layout_marginLeft="30dp"
+              android:layout_marginRight="30dp"
+              android:background="@drawable/blurr_bg_edittext"
+              android:layout_width="match_parent"
+              android:orientation="horizontal"
+              android:layout_height="40dp">
+              <ImageView
+                  android:id="@+id/icon"
+                  android:padding="9dp"
+                  android:src="@drawable/username"
+                  android:layout_width="40dp"
+                  android:layout_height="40dp" />
+              <View
+                  android:layout_margin="1dp"
+                  android:visibility="invisible"
+                  android:background="@color/white"
+                  android:layout_width="0.5dp"
+                  android:layout_height="match_parent"/>
+
+              <EditText
+
+                  android:id="@+id/emailId_mobile_edt"
+                  android:gravity="center_vertical"
+                  android:layout_marginRight="5dp"
+                  android:layout_marginTop="5dp"
+                  android:layout_marginBottom="5dp"
+                  android:layout_marginLeft="-5dp"
+                  android:inputType="textEmailAddress|textNoSuggestions"
+                  android:maxLength="50"
+                  android:singleLine="true"
+                  android:textColorHint="@color/white"
+                  android:textColor="@color/white"
+
+
+                  android:textSize="16dp"
+                  android:hint="Enter Email Id/Mobile Number"
+                  android:background="@color/blurrbg"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent" />
+          </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/blurr_bg_edittext"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="40dp">
+                <ImageView
+                    android:padding="9dp"
+                    android:src="@drawable/password"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <View
+                    android:visibility="invisible"
+                    android:layout_margin="1dp"
+                    android:background="@color/white"
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"/>
+
+                <EditText
+                    android:textSize="16dp"
+                    android:singleLine="true"
+                    android:id="@+id/password"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="-5dp"
+                    android:inputType="textPassword|textNoSuggestions"
+                    android:hint="Enter Password"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:background="@color/blurrbg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+        </LinearLayout>
+            <sportsfight.com.s.common.DetailsCustomTextView
+                android:id="@+id/forgetPassword"
+                android:layout_marginTop="30dp"
+                android:gravity="end"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:textSize="8pt"
+                android:text="@string/forgetpasswordu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="30dp" />
+            <Button
+
+                android:id="@+id/login"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:text="@string/login"
+                android:textSize="8pt"
+                android:background="@drawable/purplebutton"
+                android:layout_gravity="center"
+                android:layout_width="140dp"
+                android:layout_height="40dp" />
+        </LinearLayout>
+            <sportsfight.com.s.common.DetailsCustomTextView
+
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="8pt"
+                android:text="@string/newuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp" />
+            <sportsfight.com.s.common.DetailsCustomTextView
+android:id="@+id/signup"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="8pt"
+                android:text="@string/signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp" />
+        </LinearLayout>
+        </LinearLayout>
+        <ImageView
+
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            android:layout_width="200dp"
+            android:layout_height="150dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

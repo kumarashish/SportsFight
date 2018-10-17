@@ -80,6 +80,7 @@ import butterknife.ButterKnife;
 import sportsfight.com.s.R;
 import sportsfight.com.s.adapter.PlaceArrayAdapter;
 import sportsfight.com.s.common.AppController;
+import sportsfight.com.s.common.Common;
 import sportsfight.com.s.common.LocationSearch;
 import sportsfight.com.s.fragment.BookingFragment;
 import sportsfight.com.s.fragment.HomeFragment;
@@ -278,7 +279,11 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         yourLocation.setOnClickListener(this);
         name.setText(controller.getProfile().getUserName());
         location.setText(controller.getProfile().getLocationName());
-        Picasso.with(NewDashBoard.this).load(controller.getProfile().getProfilePic()).placeholder(R.drawable.user_icon).resize(60, 60).into(profilePic);
+        if(controller.getProfile().getProfilePic().length()>0) {
+            Picasso.with(NewDashBoard.this).load(controller.getProfile().getProfilePic()).placeholder(R.drawable.user_icon).resize(60, 60).into(profilePic);
+        }else{
+            Picasso.with(NewDashBoard.this).load(Common.noImageUrl).placeholder(R.drawable.user_icon).resize(60, 60).into(profilePic);
+        }
         loadfragment(1);
     }
 
@@ -754,7 +759,16 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
             name.setText(controller.getProfile().getUserName());
             location.setText(controller.getProfile().getLocationName());
             location.setText(controller.getProfile().getLocationName());
-            Picasso.with(NewDashBoard.this).load(controller.getProfile().getProfilePic()).placeholder(R.drawable.user_icon).resize(60, 60).into(profilePic);
+            if(controller.getProfile().getProfilePic().length()>0) {
+                Picasso.with(NewDashBoard.this).load(controller.getProfile().getProfilePic()).placeholder(R.drawable.user_icon).resize(60, 60).into(profilePic);
+            }else{
+                Picasso.with(NewDashBoard.this).load(Common.noImageUrl).placeholder(R.drawable.user_icon).resize(60, 60).into(profilePic);
+            }
+
+            if(data.getBooleanExtra("isGameEdited",false))
+            {
+                updateScreen();
+            }
         }else if(requestCode==22)
         {
             if(mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {

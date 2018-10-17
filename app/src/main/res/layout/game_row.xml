@@ -20,7 +20,9 @@
         <sportsfight.com.s.common.Bold_TextView
             android:id="@+id/game_name"
             android:paddingLeft="5dp"
+            android:text=""
             android:paddingRight="5dp"
+            android:maxLines="2"
             android:textSize="12dp"
             android:layout_width="match_parent"
             android:gravity="center"

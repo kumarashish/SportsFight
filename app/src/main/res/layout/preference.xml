@@ -61,7 +61,7 @@
                 android:id="@+id/submit"
                 android:layout_marginTop="30dp"
                 android:textColor="@color/white"
-                android:textAllCaps="false"
+                android:textAllCaps="true"
                 android:text="Submit"
                 android:background="@drawable/purplebutton"
                 android:layout_gravity="center"

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:showIn="@layout/activity_welcome" android:background="@drawable/app_bg">
+            <LinearLayout
+                android:background="@color/black_overlay"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="140dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <sportsfight.com.s.common.Heading
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="14pt"
+                        android:text="@string/signup_heading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                    <sportsfight.com.s.common.DetailsCustomTextView
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/light_grey"
+                        android:textSize="8pt"
+                        android:text="@string/signupdetaill"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+                    <ScrollView
+                        android:layout_marginTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/blurr_bg_edittext"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="40dp">
+                            <ImageView
+                                android:id="@+id/icon"
+                                android:padding="9dp"
+                                android:src="@drawable/username"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+                            <View
+                                android:visibility="invisible"
+                                android:layout_margin="1dp"
+                                android:background="@color/white"
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"/>
+
+                            <EditText
+                                android:singleLine="true"
+
+                                android:id="@+id/name"
+                                android:gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
+                                android:inputType="text|textNoSuggestions"
+                                android:textColorHint="@color/white"
+                                android:textColor="@color/white"
+                                android:hint="Name"
+                                android:background="@color/blurrbg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/blurr_bg_edittext"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="40dp">
+                            <ImageView
+
+                                android:padding="9dp"
+                                android:src="@drawable/email"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+                            <View
+                                android:visibility="invisible"
+                                android:layout_margin="1dp"
+                                android:background="@color/white"
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"/>
+
+                            <EditText
+                                android:maxLength="50"
+                                android:id="@+id/email"
+                                android:gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
+                                android:singleLine="true"
+                                android:inputType="textEmailAddress|textNoSuggestions"
+                                android:textColorHint="@color/white"
+                                android:textColor="@color/white"
+                                android:hint="Email Id"
+                                android:background="@color/blurrbg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/blurr_bg_edittext"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="40dp">
+                            <ImageView
+
+                                android:padding="9dp"
+                                android:src="@drawable/mobile"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+                            <View    android:visibility="invisible"
+                                android:layout_margin="1dp"
+                                android:background="@color/white"
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"/>
+
+                            <EditText
+                                android:maxLength="10"
+                                android:id="@+id/mobile"
+                                android:gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
+                                android:singleLine="true"
+                                android:inputType="number|textNoSuggestions"
+                                android:textColorHint="@color/white"
+                                android:textColor="@color/white"
+                                android:hint="Mobile Number"
+                                android:background="@color/blurrbg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/blurr_bg_edittext"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="40dp">
+
+                            <View
+                                android:visibility="invisible"
+                                android:layout_margin="1dp"
+                                android:background="@color/white"
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"/>
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:padding="9dp"
+                                android:src="@drawable/password" />
+
+                            <EditText
+                                android:singleLine="true"
+                                android:id="@+id/password"
+                                android:gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
+                                android:hint="Set Password"
+                                android:inputType="textPassword|textNoSuggestions"
+                                android:textColorHint="@color/white"
+                                android:textColor="@color/white"
+                                android:background="@color/blurrbg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:background="@drawable/blurr_bg_edittext"
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_height="40dp">
+                            <ImageView
+                                android:padding="9dp"
+                                android:src="@drawable/password"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
+                            <View
+                                android:visibility="invisible"
+                                android:layout_margin="1dp"
+                                android:background="@color/white"
+                                android:layout_width="0.5dp"
+                                android:layout_height="match_parent"/>
+
+                            <EditText
+                                android:singleLine="true"
+                                android:id="@+id/conf_password"
+                                android:gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="-5dp"
+                                android:hint="Confirm Password"
+                                android:inputType="textPassword|textNoSuggestions"
+                                android:textColorHint="@color/white"
+                                android:textColor="@color/white"
+                                android:background="@color/blurrbg"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/btn_next"
+                            android:layout_marginTop="30dp"
+                            android:textColor="@color/white"
+                            android:text="@string/next"
+                            android:textSize="8pt"
+                            android:background="@drawable/purplebutton"
+                            android:layout_gravity="center"
+                            android:layout_width="140dp"
+                            android:layout_height="40dp" />
+
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:layout_marginTop="30dp"
+                            android:gravity="center"
+                            android:textSize="8pt"
+                            android:textColor="@color/white"
+                            android:text="Existing User ? Welcome back !"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <sportsfight.com.s.common.DetailsCustomTextView
+                            android:id="@+id/signIn"
+
+                            android:gravity="center"
+                            android:textSize="8pt"
+                            android:textColor="@color/white"
+                            android:text="@string/signin"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"/>
+                    </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+            </LinearLayout>
+            <ImageView
+
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/logo"
+                android:layout_width="200dp"
+                android:layout_height="150dp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+

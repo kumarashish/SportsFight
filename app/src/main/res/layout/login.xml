@@ -87,7 +87,7 @@
 
 
                   android:textSize="16dp"
-                  android:hint="Enter Email Id/Mobile Number"
+                  android:hint="Enter Email Id/Mobile No."
                   android:background="@color/blurrbg"
                   android:layout_width="match_parent"
                   android:layout_height="match_parent" />
