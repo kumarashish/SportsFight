@@ -17,7 +17,10 @@ import android.widget.Switch;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,11 +52,14 @@ public class Challenge1  extends Activity implements View.OnClickListener,Compou
     EditText date;
     @BindView(R.id.time)
     EditText time;
+    @BindView(R.id.endtime)
+    EditText endTime;
     private TimePicker timePicker1;
      String format;
     private Calendar calendar;
       boolean isDateSelected=false;
       boolean isTimeSelected=false;
+    boolean isEndTimeSelected=false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +71,7 @@ public class Challenge1  extends Activity implements View.OnClickListener,Compou
         next.setOnClickListener(this);
         date.setOnClickListener(this);
         time.setOnClickListener(this);
+        endTime.setOnClickListener(this);
         other.setOnCheckedChangeListener(this);
         academy.setOnCheckedChangeListener(this);
         organization.setOnCheckedChangeListener(this);
@@ -83,16 +90,22 @@ public class Challenge1  extends Activity implements View.OnClickListener,Compou
                 onBackPressed();
                 break;
             case R.id.next:
-                if((isDateSelected)&&(isTimeSelected)) {
-                    controller.getChallengeModel().setDate(date.getText().toString());
-                    controller.getChallengeModel().setTime(time.getText().toString());
-                    startActivityForResult(new Intent(Challenge1.this, Challenge2.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION), 1);
+                if((isDateSelected)&&(isTimeSelected)&(isEndTimeSelected)) {
+                    if(isTimeValidated(time.getText().toString(),endTime.getText().toString())) {
+                        controller.getChallengeModel().setDate(date.getText().toString());
+                        controller.getChallengeModel().setTime(time.getText().toString()+" - "+endTime.getText().toString());
+                        startActivityForResult(new Intent(Challenge1.this, Challenge2.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION), 1);
+                    }
                 }else {
                     if(isDateSelected==false)
                     {
                         Toast.makeText(Challenge1.this,"Please choose match date",Toast.LENGTH_SHORT).show();
-                    }else{
-                        Toast.makeText(Challenge1.this,"Please choose match time",Toast.LENGTH_SHORT).show();
+                    }else if(isTimeSelected==false){
+                        Toast.makeText(Challenge1.this,"Please choose match Start time",Toast.LENGTH_SHORT).show();
+                    }else if(isEndTimeSelected==false){
+                        Toast.makeText(Challenge1.this,"Please choose match End time",Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(Challenge1.this,"End time should be greater than start time",Toast.LENGTH_SHORT).show();
                     }
                 }
                 break;
@@ -104,7 +117,10 @@ public class Challenge1  extends Activity implements View.OnClickListener,Compou
                 showDialog(1000);
                 break;
             case R.id.time:
-                showTimePickerDialog();
+                showTimePickerDialog(1);
+                break;
+            case R.id.endtime:
+                showTimePickerDialog(2);
                 break;
 
 
@@ -140,15 +156,40 @@ public class Challenge1  extends Activity implements View.OnClickListener,Compou
             isDateSelected=true;
         }
     };
+    private boolean isTimeValidated(String time, String endtime) {
 
+        String pattern = "HH : mm";
+        SimpleDateFormat sdf = new SimpleDateFormat(pattern);
 
-    public void setTime(int hour, int min) {
+        try {
+            Date date1 = sdf.parse(time);
+            Date date2 = sdf.parse(endtime);
+
+            if(date1.before(date2)) {
+                return true;
+            } else {
+
+                return false;
+            }
+        } catch (ParseException e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public void setStartTime(int hour, int min) {
 
         time.setText(new StringBuilder().append(hour).append(" : ").append(min));
         isTimeSelected=true;
     }
 
-    public void showTimePickerDialog()
+    public void setEndTime(int hour, int min) {
+
+        endTime.setText(new StringBuilder().append(hour).append(" : ").append(min));
+        isEndTimeSelected = true;
+    }
+
+    public void showTimePickerDialog(final int i)
     {Calendar cal= Calendar.getInstance();
         int hour = cal.get(Calendar.HOUR_OF_DAY);
         int minute=cal.get(Calendar.MINUTE);
@@ -158,7 +199,15 @@ public class Challenge1  extends Activity implements View.OnClickListener,Compou
                     @Override
                     public void onTimeSet(TimePicker view, int hourOfDay,
                                           int minute) {
-                        setTime(hourOfDay, minute);
+                        if(i==1) {
+                            setStartTime(hourOfDay, minute);
+                        }else {
+                            if(isTimeValidated(time.getText().toString(),hourOfDay+" : " +minute)) {
+                                setEndTime(hourOfDay, minute);
+                            }else{
+                                Util.showToast(Challenge1.this,"End time must be greater than start time");
+                            }
+                        }
 
                     }
                 },  hour, minute, true);

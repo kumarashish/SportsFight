@@ -19,7 +19,7 @@
         <sportsfight.com.s.common.Bold_TextView
             android:textSize="18dp"
             android:textColor="@color/black_font"
-            android:text="Contact us"
+            android:text="Contact Us"
             android:layout_marginLeft="60dp"
             android:gravity="left"
             android:layout_centerVertical="true"
@@ -41,12 +41,10 @@
         android:textSize="16dp"
         android:textColor="@color/black_font"
         android:text="Contact 24x7 Help"
-
         android:gravity="center"
         android:layout_centerVertical="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
     <sportsfight.com.s.common.Heading
         android:textSize="12dp"
         android:gravity="center"

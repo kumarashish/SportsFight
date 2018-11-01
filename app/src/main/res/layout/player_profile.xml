@@ -257,10 +257,11 @@
 android:textColor="@color/black_font"
             android:id="@+id/locationName"
             android:text=""
-            android:maxLength="35"
+            android:maxLength="32"
             android:layout_marginLeft="5dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
+
             android:layout_height="wrap_content" />
     </LinearLayout>
         <sportsfight.com.s.common.GradientTextView

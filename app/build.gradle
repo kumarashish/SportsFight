@@ -7,8 +7,8 @@ android {
         applicationId "sportsfight.com.sportsfight"
         minSdkVersion 21
         targetSdkVersion 26
-        versionCode 3
-        versionName "2.0"
+        versionCode 4
+        versionName "2.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         renderscriptTargetApi 25
@@ -25,15 +25,13 @@ android {
     }
     sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
-
 dependencies {
     implementation 'com.google.firebase:firebase-messaging:10.2.1'
     implementation 'com.android.support:recyclerview-v7:26.+'
     compile 'com.ms-square:etsyblur:0.2.1'
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
+        exclude group: 'com.android.support', module: 'support-annotations' })
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:support-v4:26.+'
@@ -54,9 +52,4 @@ dependencies {
     compile 'com.paytm:pgplussdk:1.1.2'
     compile 'com.google.android.gms:play-services:10.2.1'
 }
-
-
-
-
-
 apply plugin: 'com.google.gms.google-services'

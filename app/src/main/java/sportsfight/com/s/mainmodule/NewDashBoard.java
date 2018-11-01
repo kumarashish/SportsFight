@@ -135,13 +135,14 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
     private static final int GOOGLE_API_CLIENT_ID = 0;
     ProgressBar progressbar;
     private PlaceArrayAdapter mPlaceArrayAdapter = null;
-    int radiusDistance = 5;
+    public static int radiusDistance = 5;
     Fragment currentFragment;
     Dialog dialog;
     Dialog progressDialog;
     final int permission = 2;
 
     private LocationManager mlocManager;
+    public static Boolean isThreadRunning=false;
     @Override
     protected void onPause() {
         super.onPause();
@@ -338,7 +339,11 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         android.app.FragmentManager fm = getFragmentManager();
         android.app.FragmentTransaction fragmentTransaction = fm.beginTransaction();
         fragmentTransaction.replace(layout.getId(), fragmentA);
-        fragmentTransaction.commit();
+        if((selectedFragment==1)&&(isThreadRunning==false)) {
+            fragmentTransaction.commit();
+        }else  if(selectedFragment!=1){
+            fragmentTransaction.commit();
+        }
     }
 
     @Override
@@ -603,11 +608,9 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         mAutocompleteTextView = (AutoCompleteTextView) dialog.findViewById(R.id.mAutocompleteTextView);
         mAutocompleteTextView.setThreshold(2);
         mAutocompleteTextView.setOnItemClickListener(mAutocompleteClickListener);
-
         mAutocompleteTextView.setAdapter(mPlaceArrayAdapter);
         progressbar = (ProgressBar) dialog.findViewById(R.id.progressbar);
         RelativeLayout gps_location_button=(RelativeLayout)dialog.findViewById(R.id.gps_location_button);
-
         if (HomeFragment.selectedId != -1) {
             group.check(HomeFragment.selectedId);
         } else {
@@ -637,7 +640,6 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 if (ActivityCompat.checkSelfPermission(NewDashBoard.this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(NewDashBoard.this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(NewDashBoard.this,
                             new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION},

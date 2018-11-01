@@ -34,6 +34,7 @@ import sportsfight.com.s.common.StaticJson;
 import sportsfight.com.s.interfaces.MyFragmentCallback;
 import sportsfight.com.s.interfaces.WebApiResponseCallback;
 import sportsfight.com.s.mainmodule.Dashboard;
+import sportsfight.com.s.mainmodule.NewDashBoard;
 import sportsfight.com.s.mainmodule.TeamDetails;
 import sportsfight.com.s.model.AvailableGrounds;
 import sportsfight.com.s.model.AvailablePlayersModel;
@@ -406,7 +407,7 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback {
                     UpdateHeader(pos);
                     if (isApiTobeCalled) {
                         apiCall = updateGameList;
-                        controller.getApiCall().getData(Common.getNewDashBoard(Integer.toString(controller.getProfile().getUserId()), Integer.toString(selectedGameId), "17.441660", "78.386940", "5"), controller.getPrefManager().getUserToken(), callback);
+                        controller.getApiCall().getData(Common.getNewDashBoard(Integer.toString(controller.getProfile().getUserId()), Integer.toString(selectedGameId), Double.toString(controller.getCurrentLocation().latitude), Double.toString(controller.getCurrentLocation().longitude),Integer.toString(NewDashBoard.radiusDistance)), controller.getPrefManager().getUserToken(), callback);
                     }else{
 
                         updateList(pos);
@@ -486,12 +487,12 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback {
         } else {
             Util.showToast(getActivity(), Util.getMessage(value));
         }
-
+        NewDashBoard.isThreadRunning=false;
     }
 
     @Override
     public void onError(String value) {
-
+        NewDashBoard.isThreadRunning=false;
         if (Util.isSessionExpired(value)) {
             controller.logout();
             Util.Logout(getActivity());
@@ -507,6 +508,7 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback {
         selectedGameId=0;
         if (context != null) {
             if (Util.isNetworkAvailable(context)) {
+                NewDashBoard.isThreadRunning=true;
                 apiCall = getCompleteData;
                 dialog = Util.showPogress(context);
                 controller.getApiCall().getData(Common.getNewDashBoard(Integer.toString(controller.getProfile().getUserId()), Integer.toString(selectedGameId), lat, lon, Integer.toString(selectedRange)), controller.getPrefManager().getUserToken(), callback);

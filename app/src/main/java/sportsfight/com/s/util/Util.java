@@ -124,8 +124,6 @@ public static String[] months={"Jan","Feb","March","April","May","June","July","
            default:
                 d=R.drawable.dark_brown_card;
                 break;
-
-
         }
         return d;
     }
@@ -361,11 +359,12 @@ int month=c.get(Calendar.MONTH)+1;
         LottieAnimationView animationView;
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.loader);
+       // dialog.setCancelable(false);
         final Window window = dialog.getWindow();
+
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         window.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
         dialog.show();
         return dialog;
     }
@@ -377,7 +376,6 @@ int month=c.get(Calendar.MONTH)+1;
                 Toast.makeText(act, message, Toast.LENGTH_LONG).show();
             }
         });
-
     }
 
     public static void cancelDialog(final Activity act, final Dialog dialog) {
@@ -592,7 +590,6 @@ int month=c.get(Calendar.MONTH)+1;
     private static File getOutputMediaFile(int type) {
         // External sdcard location
         File mediaStorageDir = new File(Common.sdCardPath);
-
         // Create the storage directory if it does not exist
         if (!mediaStorageDir.exists()) {
             if (!mediaStorageDir.mkdirs()) {
@@ -600,14 +597,11 @@ int month=c.get(Calendar.MONTH)+1;
                 return null;
             }
         }
-
         // Create a media file name
-        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss",
-                Locale.getDefault()).format(new Date());
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
         File mediaFile;
         if (type == Common.MEDIA_TYPE_IMAGE) {
-            mediaFile = new File(mediaStorageDir.getPath() + File.separator
-                    + "IMG_" + timeStamp + ".jpg");
+            mediaFile = new File(mediaStorageDir.getPath() + File.separator + "IMG_" + timeStamp + ".jpg");
         } else {
             return null;
         }
@@ -619,18 +613,13 @@ int month=c.get(Calendar.MONTH)+1;
         try {
             FileInputStream input = new FileInputStream(inputFile);
             ByteArrayOutputStream output = new ByteArrayOutputStream();
-
             byte[] buffer = new byte[65536];
             int l;
-
             while ((l = input.read(buffer)) > 0)
                 output.write(buffer, 0, l);
-
             input.close();
             output.close();
-
             return output.toByteArray();
-
         } catch (IOException e) {
             System.err.println(e);
             return null;
@@ -642,9 +631,7 @@ int month=c.get(Calendar.MONTH)+1;
         try {
             JSONObject jsonObject = new JSONObject(data);
             if (jsonObject.getBoolean("Status") == true) {
-
                 if (!jsonObject.isNull("Points")) {
-
                     points = jsonObject.getInt("Points");
                 }
             }

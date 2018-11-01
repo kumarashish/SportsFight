@@ -188,7 +188,11 @@ android:id="@+id/enabledView"
                     android:text="Intermediate"
                     android:layout_height="wrap_content" />
             </LinearLayout>
-
+            <View
+                android:background="@color/light_grey"
+                android:layout_width="0.5dp"
+                android:layout_marginRight="5dp"
+                android:layout_height="match_parent"/>
             <LinearLayout
                 android:layout_weight="1"
                 android:layout_width="0dp"

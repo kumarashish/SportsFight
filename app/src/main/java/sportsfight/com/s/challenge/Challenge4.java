@@ -52,6 +52,7 @@ public class Challenge4  extends Activity implements View.OnClickListener,WebApi
     @BindView(R.id.teamLabel)
     TextView teamLabel;
     Dialog dialog;
+    Dialog congratulation=null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -154,20 +155,21 @@ public class Challenge4  extends Activity implements View.OnClickListener,WebApi
 
     public void showAlert() {
 
-        final Dialog dialog = new Dialog(this);
-        LottieAnimationView animationView;
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.challenge_sucess_alert);
-        final Window window = dialog.getWindow();
+        congratulation = new Dialog(this);
+
+        congratulation .requestWindowFeature(Window.FEATURE_NO_TITLE);
+        congratulation .setContentView(R.layout.challenge_sucess_alert);
+        congratulation.setCancelable(false);
+        final Window window = congratulation .getWindow();
         window.setLayout(WindowManager.LayoutParams.MATCH_PARENT, WindowManager.LayoutParams.MATCH_PARENT);
         window.clearFlags(WindowManager.LayoutParams.FLAG_DIM_BEHIND);
         window.setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        TextView coins = (TextView) dialog.findViewById(R.id.challenge_Coins);
-        TextView date_time = (TextView) dialog.findViewById(R.id.date_time);
-        TextView game = (TextView) dialog.findViewById(R.id.game);
-        TextView teamValue = (TextView) dialog.findViewById(R.id.teamValue);
-        TextView teamLabel = (TextView) dialog.findViewById(R.id.teamLabel);
-        Button done = (Button) dialog.findViewById(R.id.done);
+        TextView coins = (TextView) congratulation .findViewById(R.id.challenge_Coins);
+        TextView date_time = (TextView) congratulation .findViewById(R.id.date_time);
+        TextView game = (TextView) congratulation .findViewById(R.id.game);
+        TextView teamValue = (TextView) congratulation .findViewById(R.id.teamValue);
+        TextView teamLabel = (TextView) congratulation .findViewById(R.id.teamLabel);
+        Button done = (Button) congratulation .findViewById(R.id.done);
         SendChallengeModel model = controller.getChallengeModel();
         coins.setText(model.getChallenge_coins());
         date_time.setText(model.getDate() + "  " + model.getTime());
@@ -186,7 +188,8 @@ public class Challenge4  extends Activity implements View.OnClickListener,WebApi
                 finish();
             }
         });
-        dialog.show();
+        congratulation .show();
     }
+
 
 }

@@ -71,8 +71,12 @@ public class Challenge3  extends Activity implements View.OnClickListener {
                 break;
             case R.id.next:
                 if ((coins.getText().length() > 0)) {
-                    controller.getChallengeModel().setChallenge_coins(coins.getText().toString());
-                    startActivityForResult(new Intent(Challenge3.this, Challenge4.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION), 1);
+                    if(Integer.parseInt(coins.getText().toString())>49) {
+                        controller.getChallengeModel().setChallenge_coins(coins.getText().toString());
+                        startActivityForResult(new Intent(Challenge3.this, Challenge4.class).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION), 1);
+                    }else{
+                        Toast.makeText(Challenge3.this, "Minimum coins for challenge is 50", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
                     Toast.makeText(Challenge3.this, "Please enter coins for challenge", Toast.LENGTH_SHORT).show();
                 }
