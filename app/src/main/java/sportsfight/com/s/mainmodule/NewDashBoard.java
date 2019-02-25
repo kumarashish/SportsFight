@@ -195,6 +195,7 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
         } else {
             showGpsDisabledAlert();
         }
+        addView.setVisibility(View.GONE);
     }
 
     public void fetchCurrentLocation()
@@ -296,7 +297,7 @@ public class NewDashBoard extends AppCompatActivity implements NavigationView.On
                 case 1:
                     fragmentA = new HomeFragment();
                     currentFragment = fragmentA;
-                    addView.setVisibility(View.VISIBLE);
+                    addView.setVisibility(View.GONE);
                     if (isaddTeamClicked) {
                         expandedView.setVisibility(View.VISIBLE);
                     }

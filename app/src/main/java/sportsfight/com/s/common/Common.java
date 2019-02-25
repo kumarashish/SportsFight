@@ -12,9 +12,8 @@ public class Common {
  public static int AddBeneficiery=3;
  public static int TransferPoint=1;
  public static int TransferMoney=2;
-
     //public static String BaseUrl = "http://192.168.100.92:9191/api/";
-    public static String BaseUrl = "http://api.sportsfight.co.in/api/";
+    public static String BaseUrl = "http://liveapi.sportsfight.co.in/api/";
     //public static String LoginUrl = BaseUrl + "login/userlogin";
     public static String LoginUrl = BaseUrl +"login/userloginWithAppVersion";
     public static String SignUpUrl = BaseUrl + "login/Register";

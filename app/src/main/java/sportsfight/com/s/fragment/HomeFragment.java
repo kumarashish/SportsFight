@@ -145,8 +145,8 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback {
         } else {
             availablePlayer = gameList.get( position).getPlayerlist().size();
             heading.setText("Available Players ");
-            int loop=3;
-            if ( availablePlayer < 3) {
+            int loop=10;
+            if ( availablePlayer < 10) {
                 loop =  availablePlayer;
             }
             for (int i = 0; i < loop; i++) {
@@ -333,7 +333,7 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback {
         groundCount.setText("(" + availableGround + ")");
         verticalView.removeAllViews();
         verticalView.addView(playerView);
-        verticalView.addView(availableGroundView);
+       // verticalView.addView(availableGroundView);
         verticalView.setVisibility(View.VISIBLE);
         if (dialog != null) {
             dialog.cancel();

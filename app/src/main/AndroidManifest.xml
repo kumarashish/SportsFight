@@ -121,15 +121,7 @@
         <activity
             android:name=".mainmodule.WonViewAll"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".results.DeclareResult"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".results.ApproveResult"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".results.ApproveMatches"
-            android:screenOrientation="portrait" />
+
         <activity
             android:name=".launchingmodule.Test"
             android:screenOrientation="portrait"

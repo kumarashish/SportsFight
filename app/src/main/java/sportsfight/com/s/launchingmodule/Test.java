@@ -57,7 +57,7 @@ import sportsfight.com.s.mainmodule.NewsViewAll;
 import sportsfight.com.s.mainmodule.Profile;
 import sportsfight.com.s.mainmodule.Reminders;
 import sportsfight.com.s.model.MatchesModel;
-import sportsfight.com.s.results.DeclareResult;
+
 import sportsfight.com.s.staticpages.AboutUs;
 import sportsfight.com.s.staticpages.Cancellation;
 import sportsfight.com.s.staticpages.ContactUs;
@@ -351,7 +351,7 @@ public class Test  extends AppCompatActivity implements NavigationView.OnNavigat
                     startActivity(new Intent(this,Alerts.class));
                     break;
                 case R.id.menu:
-                    startActivity(new Intent(this, DeclareResult.class));
+
                     break;
                 case R.id.challenge_icon:
                 case R.id.challenge_layout:

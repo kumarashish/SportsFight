@@ -56,7 +56,7 @@ import sportsfight.com.s.ipl.MyBid;
 import sportsfight.com.s.launchingmodule.WelcomeActivity;
 import sportsfight.com.s.loginmodule.Login;
 import sportsfight.com.s.model.MatchesModel;
-import sportsfight.com.s.results.DeclareResult;
+
 import sportsfight.com.s.util.Util;
 import sportsfight.com.s.wallet.Wallet;
 /**
@@ -200,7 +200,7 @@ public class Dashboard extends Activity implements View.OnClickListener ,WebApiR
                 startActivity(new Intent(this,Alerts.class));
                 break;
             case R.id.menu:
-                startActivity(new Intent(this, DeclareResult.class));
+
                 break;
             case R.id.challenge_icon:
             case R.id.challenge_layout:
