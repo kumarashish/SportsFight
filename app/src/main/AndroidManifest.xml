@@ -63,21 +63,27 @@
 
         <activity
             android:name=".loginmodule.Login"
+            android:theme="@style/AppTheme2"
             android:screenOrientation="portrait" />
         <activity
             android:name=".loginmodule.Registration"
+            android:theme="@style/AppTheme2"
             android:screenOrientation="portrait" />
         <activity
             android:name=".loginmodule.ForgetPassword"
+            android:theme="@style/AppTheme2"
             android:screenOrientation="portrait" />
         <activity
             android:name=".loginmodule.ResetPassword"
+            android:theme="@style/AppTheme2"
             android:screenOrientation="portrait" />
         <activity
             android:name=".loginmodule.PrefsScreen"
+            android:theme="@style/AppTheme2"
             android:screenOrientation="portrait" />
         <activity
             android:name=".loginmodule.Verification"
+            android:theme="@style/AppTheme2"
             android:screenOrientation="portrait" />
         <activity
             android:name=".mainmodule.Alerts"

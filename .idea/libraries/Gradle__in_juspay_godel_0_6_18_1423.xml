@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: in.juspay:godel-0.6.18.1423">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/godel-0.6.18.1423.aar/b7267ca374b71f59d8600ddf0a2d4bf1/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/godel-0.6.18.1423.aar/b7267ca374b71f59d8600ddf0a2d4bf1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/godel-0.6.18.1423.aar/b7267ca374b71f59d8600ddf0a2d4bf1/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
