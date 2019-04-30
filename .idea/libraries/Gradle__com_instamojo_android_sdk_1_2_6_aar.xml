@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.instamojo:android-sdk:1.2.6@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d9c925309673fd74ca0c310779b983f0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d9c925309673fd74ca0c310779b983f0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.instamojo/android-sdk/1.2.6/4879ebd1e09d3c552b2551ed8050ef65836c3136/android-sdk-1.2.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

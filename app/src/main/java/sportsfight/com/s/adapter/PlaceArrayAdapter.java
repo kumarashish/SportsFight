@@ -96,7 +96,6 @@ public class PlaceArrayAdapter extends ArrayAdapter<PlaceArrayAdapter.PlaceAutoc
     private ArrayList<PlaceAutocomplete> getPredictions(CharSequence constraint) {
 
         if (mGoogleApiClient != null) {
-
             Log.i(TAG, "Executing autocomplete query for: " + constraint);
 
             PendingResult<AutocompletePredictionBuffer> results = Places.GeoDataApi

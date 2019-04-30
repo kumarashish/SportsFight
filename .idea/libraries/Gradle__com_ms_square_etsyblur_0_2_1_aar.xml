@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.ms-square:etsyblur:0.2.1@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ddc9535a653a2ca4121a148814187ea/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0ddc9535a653a2ca4121a148814187ea/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.ms-square/etsyblur/0.2.1/81ea6989221863945c04eedc491042151388361a/etsyblur-0.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

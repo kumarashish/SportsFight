@@ -25,7 +25,6 @@ public class GameModelNew {
     public GameModelNew(JSONObject jsonObject)
     {
         try{
-
              GameId=jsonObject.isNull("GameId")?0:jsonObject.getInt("GameId");
              GameName=jsonObject.isNull("GameName")?"":jsonObject.getString("GameName");
              GameEnabledIcon=jsonObject.isNull("GameEnabledIcon")?"":jsonObject.getString("GameEnabledIcon");
@@ -54,7 +53,6 @@ public class GameModelNew {
             for(int i=0;i<openTournament.length();i++){
                 JSONObject openTournaments = openTournament.getJSONObject(i);
                 tournamentlist.add(new OpenTournaments(openTournaments));
-
             }
         }catch (Exception ex)
         {

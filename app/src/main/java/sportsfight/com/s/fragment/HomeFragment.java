@@ -174,11 +174,9 @@ public class HomeFragment  extends Fragment implements WebApiResponseCallback {
                 winning_percentage.setText(""+model.getWinningPercentage() +" %");
                 final String playerName=model.getPlayerName();
                 final String playerId=model.getPlayerId();
-
-                challenge.setOnClickListener(new View.OnClickListener() {
+                challenge.setOnClickListener(new View.OnClickListener(){
                     @Override
                     public void onClick(View view) {
-
                         controller.getChallengeModel().setTeam(false);
                         controller.getChallengeModel().setTeamName(playerName);
                         controller.getChallengeModel().setTeamId(playerId);
